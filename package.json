@@ -2,6 +2,7 @@
   "name": "cv-application",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mooniidev.github.io/cv-application",
   "dependencies": {
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -9,6 +10,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "eject": "react-scripts eject"
@@ -29,5 +32,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
