@@ -1,10 +1,18 @@
+@font-face {
+  font-family: 'Raleway';
+  src: local('Raleway'), url(../assets/fonts/Raleway-Regular.ttf) format('truetype');
+}
+
+:root {
+  --blue: #212C68;
+  --green: #B3D4D3;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
