@@ -1,4 +1,5 @@
 import React from 'react';
+import PersonalDetails from './PersonalDetails';
 
 class Main extends React.Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class Main extends React.Component {
   render() {
     return (
       <main id="main">
-        <p>Main Content</p>
+        <PersonalDetails />
       </main>
     );
   }
