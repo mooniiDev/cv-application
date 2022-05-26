@@ -12,3 +12,7 @@
   letter-spacing: 2px;
   border-bottom: 25px solid var(--green);
 }
+
+#main {
+  text-align: center;
+}
