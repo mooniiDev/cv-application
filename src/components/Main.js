@@ -1,6 +1,6 @@
 import React from 'react';
-import PersonalDetails from './PersonalDetails';
-import WorkExperience from './WorkExperience';
+import GeneralInformation from './GeneralInformation';
+import WorkExperience from './PracticalExperience';
 
 class Main extends React.Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class Main extends React.Component {
   render() {
     return (
       <main id="main">
-        <PersonalDetails />
+        <GeneralInformation />
         <WorkExperience />
       </main>
     );
