@@ -1,5 +1,6 @@
 import React from 'react';
 import PersonalDetails from './PersonalDetails';
+import WorkExperience from './WorkExperience';
 
 class Main extends React.Component {
   constructor(props) {
@@ -12,6 +13,7 @@ class Main extends React.Component {
     return (
       <main id="main">
         <PersonalDetails />
+        <WorkExperience />
       </main>
     );
   }
