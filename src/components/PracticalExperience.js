@@ -25,7 +25,7 @@ class PracticalExperience extends React.Component {
             </div>
             {/* Name */}
             <div>
-              <label htmlFor="company-name">Company Name*</label>
+              <label htmlFor="company-name">Company name*</label>
               <input
                 id="company-name"
                 type="text"
@@ -37,14 +37,14 @@ class PracticalExperience extends React.Component {
           <div>
             {/* Tasks */}
             <div>
-              <label htmlFor="main-tasks">Main Tasks*</label>
+              <label htmlFor="main-tasks">Main tasks*</label>
               <input id="main-tasks" type="text" name="main_asks" required />
             </div>
             {/* Type */}
             <div>
-              <label htmlFor="employment-type">Employment Type</label>
+              <label htmlFor="employment-type">Employment type</label>
               <select id="employment-type" type="text" name="employment_type">
-                <option value="">Please Select</option>
+                <option value="">Please select</option>
                 <option value="full-time">Full-time</option>
               </select>
             </div>
@@ -59,7 +59,7 @@ class PracticalExperience extends React.Component {
           <div>
             {/* Start date */}
             <fieldset>
-              <legend>Start Date*</legend>
+              <legend>Start date*</legend>
               <label htmlFor="practical-start-year">Year</label>
               <input
                 id="practical-start-year"
@@ -79,13 +79,12 @@ class PracticalExperience extends React.Component {
             </fieldset>
             {/* End date */}
             <fieldset>
-              <legend>End Date*</legend>
+              <legend>End date (or expected)</legend>
               <label htmlFor="practical-end-year">Year</label>
               <input
                 id="practical-end-year"
                 type="number"
                 name="practical_end_year"
-                required
               />
               <label htmlFor="practical-end-month">Month</label>
               <select

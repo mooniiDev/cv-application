@@ -15,12 +15,12 @@ class GeneralInformation extends React.Component {
           <div>
             {/* First name */}
             <div>
-              <label htmlFor="first-name">First Name*</label>
+              <label htmlFor="first-name">First name*</label>
               <input id="first-name" type="text" name="first_name" required />
             </div>
             {/* Last name */}
             <div>
-              <label htmlFor="last-name">Last Name*</label>
+              <label htmlFor="last-name">Last name*</label>
               <input id="last-name" type="text" name="last_name" required />
             </div>
           </div>
