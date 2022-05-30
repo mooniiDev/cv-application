@@ -20,6 +20,7 @@ class PracticalExperience extends React.Component {
                 id="position-title"
                 type="text"
                 name="position_title"
+                placeholder="Ex: Front-End Web Developer"
                 required
               />
             </div>
@@ -30,6 +31,7 @@ class PracticalExperience extends React.Component {
                 id="company-name"
                 type="text"
                 name="company_name"
+                placeholder="Ex: Tesonet"
                 required
               />
             </div>
@@ -38,7 +40,13 @@ class PracticalExperience extends React.Component {
             {/* Tasks */}
             <div>
               <label htmlFor="main-tasks">Main tasks*</label>
-              <input id="main-tasks" type="text" name="main_asks" required />
+              <input
+                id="main-tasks"
+                type="text"
+                name="main_asks"
+                placeholder="Ex: Maintaining user interface"
+                required
+              />
             </div>
             {/* Type */}
             <div>

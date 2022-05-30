@@ -16,12 +16,24 @@ class EducationalExperience extends React.Component {
             {/* Name */}
             <div>
               <label htmlFor="school-name">School*</label>
-              <input id="school-name" type="text" name="school_name" required />
+              <input
+                id="school-name"
+                type="text"
+                name="school_name"
+                placeholder="Ex: Harvard University"
+                required
+              />
             </div>
             {/* Title */}
             <div>
               <label htmlFor="study-title">Field of study*</label>
-              <input id="study-title" type="text" name="study_title" required />
+              <input
+                id="study-title"
+                type="text"
+                name="study_title"
+                placeholder="Ex: Software Engineering"
+                required
+              />
             </div>
           </div>
           <div>
@@ -32,6 +44,7 @@ class EducationalExperience extends React.Component {
                 id="educational-degree"
                 type="text"
                 name="educational_degree"
+                placeholder="Ex: Bachelor’s"
               />
             </div>
             {/* Grade */}
