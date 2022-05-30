@@ -2,6 +2,7 @@ import React from 'react';
 import GeneralInformation from './GeneralInformation';
 import PracticalExperience from './PracticalExperience';
 import EducationalExperience from './EducationalExperience';
+import Skills from './Skills';
 
 class Main extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class Main extends React.Component {
         <GeneralInformation />
         <PracticalExperience />
         <EducationalExperience />
+        <Skills />
       </main>
     );
   }
