@@ -48,7 +48,10 @@ class GeneralInformation extends React.Component {
               <input id="github" type="text" name="github" />
             </div>
           </div>
-          <input type="submit" value="Save" />
+          <div>
+            <input type="submit" value="Save" />
+            <input type="button" value="Cancel" />
+          </div>
         </form>
       </div>
     );

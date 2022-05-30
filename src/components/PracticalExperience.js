@@ -105,7 +105,10 @@ class PracticalExperience extends React.Component {
               </select>
             </fieldset>
           </div>
-          <input type="submit" value="Save" />
+          <div>
+            <input type="submit" value="Save" />
+            <input type="button" value="Cancel" />
+          </div>
         </form>
       </div>
     );

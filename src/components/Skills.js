@@ -11,16 +11,22 @@ class Skills extends React.Component {
     return (
       <div>
         <h2>SKILLS</h2>
-        {/* Skill */}
-        <div>
-          <label htmlFor="skill">Skill</label>
-          <input
-            id="skill"
-            type="text"
-            name="skill"
-            placeholder="Ex: React.js"
-          />
-        </div>
+        <form>
+          <div>
+            {/* Skill */}
+            <label htmlFor="skill">Skill</label>
+            <input
+              id="skill"
+              type="text"
+              name="skill"
+              placeholder="Ex: React.js"
+            />
+          </div>
+          <div>
+            <input type="submit" value="Save" />
+            <input type="button" value="Cancel" />
+          </div>
+        </form>
       </div>
     );
   }
