@@ -1,4 +1,7 @@
+// Packages
 import React from 'react';
+
+// Font Awesome Imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faPen } from '@fortawesome/free-solid-svg-icons';
 

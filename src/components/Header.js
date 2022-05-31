@@ -10,7 +10,7 @@ class Header extends React.Component {
   render() {
     return (
       <header id="header">
-        <h1 className="title">CV APPLICATION</h1>
+        <h1 className="cv-title">CV APPLICATION</h1>
       </header>
     );
   }

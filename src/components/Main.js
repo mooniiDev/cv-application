@@ -1,4 +1,7 @@
+// Packages
 import React from 'react';
+
+// Components Imports
 import GeneralInformation from './GeneralInformation';
 import PracticalExperience from './PracticalExperience';
 import EducationalExperience from './EducationalExperience';

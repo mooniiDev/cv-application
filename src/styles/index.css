@@ -1,3 +1,4 @@
+/* Fonts */
 @font-face {
 	font-family: 'Raleway-Regular';
 	font-weight: 400;
@@ -12,6 +13,7 @@
     url(../assets/fonts/Raleway-ExtraBold.ttf) format('truetype');
 }
 
+/* Color Palette */
 :root {
   --blue: #394066;
   --green: #c0dad9;
@@ -30,6 +32,7 @@ code {
     monospace;
 }
 
+/* Visibility Styling */
 .hidden {
   display: none;
 }
