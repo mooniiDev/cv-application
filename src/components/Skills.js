@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faPen } from '@fortawesome/free-solid-svg-icons';
 
 class Skills extends React.Component {
   constructor(props) {
@@ -10,7 +12,11 @@ class Skills extends React.Component {
   render() {
     return (
       <div>
-        <h2>SKILLS</h2>
+        <h2>
+          SKILLS
+          <FontAwesomeIcon icon={faPlus} />
+          <FontAwesomeIcon icon={faPen} />
+        </h2>
         <form>
           <div>
             {/* Skill */}
