@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/cv-application/static/css/main.5379093d.css",
-    "main.js": "/cv-application/static/js/main.7fd918b0.js",
+    "main.css": "/cv-application/static/css/main.033be86f.css",
+    "main.js": "/cv-application/static/js/main.f63b8b4c.js",
     "static/media/Raleway-Regular.ttf": "/cv-application/static/media/Raleway-Regular.9ade142e81dd8d55cd32.ttf",
     "static/media/Raleway-ExtraBold.ttf": "/cv-application/static/media/Raleway-ExtraBold.ac7bcb8a0f4abc1d6591.ttf",
     "index.html": "/cv-application/index.html",
-    "main.5379093d.css.map": "/cv-application/static/css/main.5379093d.css.map",
-    "main.7fd918b0.js.map": "/cv-application/static/js/main.7fd918b0.js.map"
+    "main.033be86f.css.map": "/cv-application/static/css/main.033be86f.css.map",
+    "main.f63b8b4c.js.map": "/cv-application/static/js/main.f63b8b4c.js.map"
   },
   "entrypoints": [
-    "static/css/main.5379093d.css",
-    "static/js/main.7fd918b0.js"
+    "static/css/main.033be86f.css",
+    "static/js/main.f63b8b4c.js"
   ]
 }
