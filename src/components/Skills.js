@@ -17,7 +17,7 @@ class Skills extends React.Component {
           <FontAwesomeIcon icon={faPlus} />
           <FontAwesomeIcon icon={faPen} />
         </h2>
-        <form>
+        <form className="hidden">
           <div>
             {/* Skill */}
             <label htmlFor="skill">Skill</label>

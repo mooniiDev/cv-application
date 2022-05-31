@@ -17,7 +17,7 @@ class EducationalExperience extends React.Component {
           <FontAwesomeIcon icon={faPlus} />
           <FontAwesomeIcon icon={faPen} />
         </h2>
-        <form>
+        <form className="hidden">
           <div>
             {/* Name */}
             <div>
