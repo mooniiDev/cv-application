@@ -15,10 +15,12 @@ class EducationalExperience extends React.Component {
   render() {
     return (
       <div>
-        <h2>
-          EDUCATIONAL EXPERIENCE
-          <FontAwesomeIcon icon={faPlus} />
-          <FontAwesomeIcon icon={faPen} />
+        <h2 className="info-title">
+          <span>EDUCATIONAL EXPERIENCE</span>
+          <span className="info-buttons">
+            <FontAwesomeIcon icon={faPlus} />
+            <FontAwesomeIcon icon={faPen} />
+          </span>
         </h2>
         <form className="hidden">
           <div>
