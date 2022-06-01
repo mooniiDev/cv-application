@@ -7,6 +7,13 @@
 }
 
 @font-face {
+	font-family: 'Raleway-SemiBold';
+	font-weight: 600;
+	src: local('Raleway'),
+    url(../assets/fonts/Raleway-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
 	font-family: 'Raleway-ExtraBold';
 	font-weight: 900;
 	src: local('Raleway'),
@@ -16,7 +23,9 @@
 /* Color Palette */
 :root {
   --blue: #394066;
-  --green: #c0dad9;
+  --green: #C0DAD9;
+  --grey: #F1F1F1;
+  --white: #FFFFFF;
 }
 
 body {

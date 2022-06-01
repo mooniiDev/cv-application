@@ -13,6 +13,24 @@
   border-bottom: 25px solid var(--green);
 }
 
+.preview-button {
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  background-color: var(--grey);
+  color: var(--blue);
+  font-family: 'Raleway-SemiBold';
+  font-size: 1.3rem;
+  border: none;
+  transition: all .1s;
+}
+
+.preview-button:hover {
+  background-color: var(--green);
+  color: var(--white);
+  cursor: pointer;
+  transition: all .1s;
+}
+
 #main {
   display: flex;
   flex-direction: column;
