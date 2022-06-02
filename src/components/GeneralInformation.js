@@ -16,7 +16,7 @@ class GeneralInformation extends React.Component {
     return (
       <div>
         <h2 className="info-title">
-          <span>GENERAL INFORMATION</span>
+          <span className="info-general">GENERAL INFORMATION</span>
           <span className="info-buttons">
             <FontAwesomeIcon icon={faPlus} className="fa-fw" />
             <FontAwesomeIcon icon={faPen} className="fa-fw" />

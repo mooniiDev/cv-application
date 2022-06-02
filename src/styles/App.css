@@ -46,6 +46,24 @@
 
 .info-title span:first-child {
   align-self: center;
+  padding: 0 10px;
+  line-height: 3px;
+}
+
+.info-general {
+  border-bottom: 16px solid var(--red);
+}
+
+.info-practical {
+  border-bottom: 16px solid var(--light-blue);
+}
+
+.info-educational {
+  border-bottom: 16px solid var(--orange);
+}
+
+.info-skills {
+  border-bottom: 16px solid var(--purple);
 }
 
 .fa-plus,
@@ -56,4 +74,9 @@
   background-color: var(--grey);
   font-size: 1rem;
   border-radius: 50%;
+}
+
+/* Visibility Styling */
+.hidden {
+  display: none;
 }

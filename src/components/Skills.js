@@ -16,7 +16,7 @@ class Skills extends React.Component {
     return (
       <div>
         <h2 className="info-title">
-          <span>SKILLS</span>
+          <span className="info-skills">SKILLS</span>
           <span className="info-buttons">
             <FontAwesomeIcon icon={faPlus} className="fa-fw" />
             <FontAwesomeIcon icon={faPen} className="fa-fw" />
