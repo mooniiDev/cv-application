@@ -18,8 +18,8 @@ class Skills extends React.Component {
         <h2 className="info-title">
           <span className="info-skills">SKILLS</span>
           <span className="info-buttons">
-            <FontAwesomeIcon icon={faPlus} className="fa-fw" />
-            <FontAwesomeIcon icon={faPen} className="fa-fw" />
+            <FontAwesomeIcon icon={faPlus} className="skills fa-fw" />
+            <FontAwesomeIcon icon={faPen} className="skills fa-fw" />
           </span>
         </h2>
         <form className="hidden">

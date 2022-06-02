@@ -26,7 +26,6 @@
 
 .preview-button:hover {
   background-color: var(--green);
-  color: var(--white);
   cursor: pointer;
   transition: all .1s;
 }
@@ -74,6 +73,26 @@
   background-color: var(--grey);
   font-size: 1rem;
   border-radius: 50%;
+  transition: all .1s;
+}
+
+.fa-plus:hover,
+.fa-pen:hover {
+  cursor: pointer;
+  transition: all .1s;
+}
+
+.general:hover {
+  background-color: var(--red);
+}
+.practical:hover {
+  background-color: var(--light-blue);
+}
+.educational:hover {
+  background-color: var(--orange);
+}
+.skills:hover {
+  background-color: var(--purple);
 }
 
 /* Visibility Styling */

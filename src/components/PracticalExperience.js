@@ -18,8 +18,8 @@ class PracticalExperience extends React.Component {
         <h2 className="info-title">
           <span className="info-practical">PRACTICAL EXPERIENCE</span>
           <span className="info-buttons">
-            <FontAwesomeIcon icon={faPlus} className="fa-fw" />
-            <FontAwesomeIcon icon={faPen} className="fa-fw" />
+            <FontAwesomeIcon icon={faPlus} className="practical fa-fw" />
+            <FontAwesomeIcon icon={faPen} className="practical fa-fw" />
           </span>
         </h2>
         <form className="hidden">
