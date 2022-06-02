@@ -43,3 +43,17 @@
   justify-content: space-between;
   min-width: 500px;
 }
+
+.info-title span:first-child {
+  align-self: center;
+}
+
+.fa-plus,
+.fa-pen {
+  height: 20px;
+  margin: 0 5px;
+  padding: 10px;
+  background-color: var(--grey);
+  font-size: 1rem;
+  border-radius: 50%;
+}

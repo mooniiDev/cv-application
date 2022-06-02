@@ -18,8 +18,8 @@ class GeneralInformation extends React.Component {
         <h2 className="info-title">
           <span>GENERAL INFORMATION</span>
           <span className="info-buttons">
-            <FontAwesomeIcon icon={faPlus} />
-            <FontAwesomeIcon icon={faPen} />
+            <FontAwesomeIcon icon={faPlus} className="fa-fw" />
+            <FontAwesomeIcon icon={faPen} className="fa-fw" />
           </span>
         </h2>
         <form className="hidden">
