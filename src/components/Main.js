@@ -3,9 +3,9 @@ import React from 'react';
 
 // Components Imports
 import GeneralInfo from './GeneralInfo';
-import PracticeForm from './PracticeForm';
-import EducationForm from './EducationForm';
-import SkillsForm from './SkillsForm';
+import PracticeInfo from './PracticeInfo';
+import EducationInfo from './EducationInfo';
+import SkillsInfo from './SkillsInfo';
 
 class Main extends React.Component {
   constructor(props) {
@@ -19,9 +19,9 @@ class Main extends React.Component {
       <main id="Main">
         <input type="button" className="preview-button" value="PREVIEW" />
         <GeneralInfo />
-        <PracticeForm />
-        <EducationForm />
-        <SkillsForm />
+        <PracticeInfo />
+        <EducationInfo />
+        <SkillsInfo />
       </main>
     );
   }
