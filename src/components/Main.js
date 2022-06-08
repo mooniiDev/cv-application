@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Components Imports
-import GeneralInfoForm from './GeneralInfoForm';
+import GeneralInfo from './GeneralInfo';
 import PracticeForm from './PracticeForm';
 import EducationForm from './EducationForm';
 import SkillsForm from './SkillsForm';
@@ -18,7 +18,7 @@ class Main extends React.Component {
     return (
       <main id="Main">
         <input type="button" className="preview-button" value="PREVIEW" />
-        <GeneralInfoForm />
+        <GeneralInfo />
         <PracticeForm />
         <EducationForm />
         <SkillsForm />

@@ -1,7 +1,7 @@
 // Packages Imports
 import React from 'react';
 
-class GeneralInfoForm extends React.Component {
+class GeneralForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -56,4 +56,4 @@ class GeneralInfoForm extends React.Component {
   }
 }
 
-export default GeneralInfoForm;
+export default GeneralForm;
