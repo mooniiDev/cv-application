@@ -1,4 +1,4 @@
-// Packages
+// Packages Imports
 import React from 'react';
 
 class SkillsForm extends React.Component {

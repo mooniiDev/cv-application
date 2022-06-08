@@ -49,19 +49,19 @@
   line-height: 3px;
 }
 
-.info-general {
+.title-general {
   border-bottom: 16px solid var(--red);
 }
 
-.info-practical {
+.title-practice {
   border-bottom: 16px solid var(--light-blue);
 }
 
-.info-educational {
+.title-education {
   border-bottom: 16px solid var(--orange);
 }
 
-.info-skills {
+.title-skills {
   border-bottom: 16px solid var(--purple);
 }
 

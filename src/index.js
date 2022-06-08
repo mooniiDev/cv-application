@@ -1,7 +1,12 @@
+// Packages Imports
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './styles/index.css';
+
+// React App Import
 import App from './App';
+
+// Styling Imports
+import './styles/index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
