@@ -1,10 +1,6 @@
 // Packages
 import React from 'react';
 
-// Font Awesome Imports
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faPen } from '@fortawesome/free-solid-svg-icons';
-
 class GeneralInformation extends React.Component {
   constructor(props) {
     super(props);
@@ -14,57 +10,48 @@ class GeneralInformation extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2 className="info-title">
-          <span className="info-general">GENERAL INFORMATION</span>
-          <span className="info-buttons">
-            <FontAwesomeIcon icon={faPlus} className="general fa-fw" />
-            <FontAwesomeIcon icon={faPen} className="general fa-fw" />
-          </span>
-        </h2>
-        <form className="hidden">
+      <form className="hidden">
+        <div>
+          {/* First name */}
           <div>
-            {/* First name */}
-            <div>
-              <label htmlFor="first-name">First name*</label>
-              <input id="first-name" type="text" name="first_name" required />
-            </div>
-            {/* Last name */}
-            <div>
-              <label htmlFor="last-name">Last name*</label>
-              <input id="last-name" type="text" name="last_name" required />
-            </div>
+            <label htmlFor="first-name">First name*</label>
+            <input id="first-name" type="text" name="first_name" required />
           </div>
-          <div className="contacts">
-            {/* Phone */}
-            <div>
-              <label htmlFor="phone">Phone*</label>
-              <input id="phone" type="tel" name="phone" required />
-            </div>
-            {/* Email */}
-            <div>
-              <label htmlFor="email">Email*</label>
-              <input id="email" type="email" name="email" required />
-            </div>
-          </div>
-          <div className="socials">
-            {/* LinkedIn */}
-            <div>
-              <label htmlFor="linkedin">LinkedIn</label>
-              <input id="linkedin" type="text" name="linkedin" />
-            </div>
-            {/* GitHub */}
-            <div>
-              <label htmlFor="github">GitHub</label>
-              <input id="github" type="text" name="github" />
-            </div>
-          </div>
+          {/* Last name */}
           <div>
-            <input type="submit" value="Save" />
-            <input type="button" value="Cancel" />
+            <label htmlFor="last-name">Last name*</label>
+            <input id="last-name" type="text" name="last_name" required />
           </div>
-        </form>
-      </div>
+        </div>
+        <div className="contacts">
+          {/* Phone */}
+          <div>
+            <label htmlFor="phone">Phone*</label>
+            <input id="phone" type="tel" name="phone" required />
+          </div>
+          {/* Email */}
+          <div>
+            <label htmlFor="email">Email*</label>
+            <input id="email" type="email" name="email" required />
+          </div>
+        </div>
+        <div className="socials">
+          {/* LinkedIn */}
+          <div>
+            <label htmlFor="linkedin">LinkedIn</label>
+            <input id="linkedin" type="text" name="linkedin" />
+          </div>
+          {/* GitHub */}
+          <div>
+            <label htmlFor="github">GitHub</label>
+            <input id="github" type="text" name="github" />
+          </div>
+        </div>
+        <div>
+          <input type="submit" value="Save" />
+          <input type="button" value="Cancel" />
+        </div>
+      </form>
     );
   }
 }

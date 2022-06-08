@@ -16,7 +16,7 @@ class Main extends React.Component {
 
   render() {
     return (
-      <main id="main">
+      <main id="Main">
         <input type="button" className="preview-button" value="PREVIEW" />
         <GeneralInformation />
         <PracticalExperience />

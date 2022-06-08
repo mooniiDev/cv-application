@@ -1,4 +1,4 @@
-#header {
+#Header {
   display: flex;
   justify-content: center;
   padding: 30px;
@@ -30,7 +30,7 @@
   transition: all .1s;
 }
 
-#main {
+#Main {
   display: flex;
   flex-direction: column;
   justify-content: center;
