@@ -2,10 +2,10 @@
 import React from 'react';
 
 // Components Imports
-import GeneralInformation from './GeneralInformation';
-import PracticalExperience from './PracticalExperience';
-import EducationalExperience from './EducationalExperience';
-import Skills from './Skills';
+import GeneralInfoForm from './GeneralInfoForm';
+import PracticeForm from './PracticeForm';
+import EducationForm from './EducationForm';
+import SkillsForm from './SkillsForm';
 
 class Main extends React.Component {
   constructor(props) {
@@ -18,10 +18,10 @@ class Main extends React.Component {
     return (
       <main id="Main">
         <input type="button" className="preview-button" value="PREVIEW" />
-        <GeneralInformation />
-        <PracticalExperience />
-        <EducationalExperience />
-        <Skills />
+        <GeneralInfoForm />
+        <PracticeForm />
+        <EducationForm />
+        <SkillsForm />
       </main>
     );
   }

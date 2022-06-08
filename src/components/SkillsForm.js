@@ -1,7 +1,7 @@
 // Packages
 import React from 'react';
 
-class Skills extends React.Component {
+class SkillsForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -30,4 +30,4 @@ class Skills extends React.Component {
   }
 }
 
-export default Skills;
+export default SkillsForm;

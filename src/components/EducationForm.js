@@ -1,7 +1,7 @@
 // Packages
 import React from 'react';
 
-class EducationalExperience extends React.Component {
+class EducationForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -106,4 +106,4 @@ class EducationalExperience extends React.Component {
   }
 }
 
-export default EducationalExperience;
+export default EducationForm;

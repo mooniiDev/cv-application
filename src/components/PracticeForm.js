@@ -1,7 +1,7 @@
 // Packages
 import React from 'react';
 
-class PracticalExperience extends React.Component {
+class PracticeForm extends React.Component {
   constructor(props) {
     super(props);
 
@@ -113,4 +113,4 @@ class PracticalExperience extends React.Component {
   }
 }
 
-export default PracticalExperience;
+export default PracticeForm;
