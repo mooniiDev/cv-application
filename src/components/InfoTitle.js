@@ -14,29 +14,31 @@ class InfoTitle extends React.Component {
   }
 
   render() {
-    const { title, border } = this.props;
+    const { title, border, hover } = this.props;
     return (
       <h2 className="info-title">
         <span className={border}>{title}</span>
         <span className="info-buttons">
-          <FontAwesomeIcon icon={faPlus} className="fa-fw" />
-          <FontAwesomeIcon icon={faPen} className="fa-fw" />
+          <FontAwesomeIcon icon={faPlus} className={`${hover} fa-fw`} />
+          <FontAwesomeIcon icon={faPen} className={`${hover} fa-fw`} />
         </span>
       </h2>
     );
   }
 }
 
-// Validating prop types
+// Validating Prop Types
 InfoTitle.propTypes = {
   title: PropTypes.string,
   border: PropTypes.string,
+  hover: PropTypes.string,
 };
 
-// Creating default props
+// Creating Default Props
 InfoTitle.defaultProps = {
   title: '❗Error in the title text.',
   border: 'green-border',
+  hover: 'green-hover',
 };
 
 export default InfoTitle;

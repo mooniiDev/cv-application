@@ -89,19 +89,23 @@
   transition: all .1s;
 }
 
-.general:hover {
+.green-hover:hover {
+  background-color: var(--green);
+}
+
+.red-hover:hover {
   background-color: var(--red);
 }
 
-.practical:hover {
+.blue-hover:hover {
   background-color: var(--light-blue);
 }
 
-.educational:hover {
+.orange-hover:hover {
   background-color: var(--orange);
 }
 
-.skills:hover {
+.purple-hover:hover {
   background-color: var(--purple);
 }
 
