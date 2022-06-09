@@ -1,5 +1,6 @@
 // Packages Imports
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Font Awesome Imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -13,9 +14,10 @@ class InfoTitle extends React.Component {
   }
 
   render() {
+    const { title } = this.props;
     return (
       <h2 className="info-title">
-        <span />
+        <span>{title}</span>
         <span className="info-buttons">
           <FontAwesomeIcon icon={faPlus} className="fa-fw" />
           <FontAwesomeIcon icon={faPen} className="fa-fw" />
@@ -24,5 +26,13 @@ class InfoTitle extends React.Component {
     );
   }
 }
+
+InfoTitle.propTypes = {
+  title: PropTypes.string,
+};
+
+InfoTitle.defaultProps = {
+  title: '',
+};
 
 export default InfoTitle;
