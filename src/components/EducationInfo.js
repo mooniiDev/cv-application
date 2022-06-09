@@ -15,7 +15,7 @@ class GeneralInfo extends React.Component {
   render() {
     return (
       <div>
-        <InfoTitle title="EDUCATIONAL EXPERIENCE" />
+        <InfoTitle title="EDUCATIONAL EXPERIENCE" border="orange-border" />
         <EducationForm />
       </div>
     );

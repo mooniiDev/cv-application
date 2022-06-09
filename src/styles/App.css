@@ -49,22 +49,28 @@
   line-height: 3px;
 }
 
-.title-general {
+/* Info Titles Borders Styling */
+.green-border {
+  border-bottom: 16px solid var(--green);
+}
+
+.red-border {
   border-bottom: 16px solid var(--red);
 }
 
-.title-practice {
+.blue-border {
   border-bottom: 16px solid var(--light-blue);
 }
 
-.title-education {
+.orange-border{
   border-bottom: 16px solid var(--orange);
 }
 
-.title-skills {
+.purple-border {
   border-bottom: 16px solid var(--purple);
 }
 
+/* Icons Styling */
 .fa-plus,
 .fa-pen {
   height: 20px;
@@ -76,6 +82,7 @@
   transition: all .1s;
 }
 
+/* Icons Hovers Styling */
 .fa-plus:hover,
 .fa-pen:hover {
   cursor: pointer;
@@ -85,12 +92,15 @@
 .general:hover {
   background-color: var(--red);
 }
+
 .practical:hover {
   background-color: var(--light-blue);
 }
+
 .educational:hover {
   background-color: var(--orange);
 }
+
 .skills:hover {
   background-color: var(--purple);
 }
