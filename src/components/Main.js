@@ -2,6 +2,7 @@
 import React from 'react';
 
 // Components Imports
+import Button from './Button';
 import GeneralInfo from './GeneralInfo';
 import PracticeInfo from './PracticeInfo';
 import EducationInfo from './EducationInfo';
@@ -17,7 +18,7 @@ class Main extends React.Component {
   render() {
     return (
       <main id="Main">
-        <input type="button" className="preview-button" value="PREVIEW" />
+        <Button text="PREVIEW" />
         <GeneralInfo />
         <PracticeInfo />
         <EducationInfo />
