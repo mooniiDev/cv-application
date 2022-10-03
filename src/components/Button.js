@@ -2,6 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Styling Imports
+import '../styles/Button.css';
+
 class Button extends React.Component {
   constructor(props) {
     super(props);

@@ -1,0 +1,71 @@
+.info-title {
+  display: flex;
+  justify-content: space-between;
+  min-width: 500px;
+}
+
+.info-title span:first-child {
+  align-self: center;
+  padding: 0 10px;
+  line-height: 3px;
+}
+
+/* Info Titles Borders Styling */
+.green-border {
+  border-bottom: 16px solid var(--green);
+}
+
+.red-border {
+  border-bottom: 16px solid var(--red);
+}
+
+.blue-border {
+  border-bottom: 16px solid var(--light-blue);
+}
+
+.orange-border{
+  border-bottom: 16px solid var(--orange);
+}
+
+.purple-border {
+  border-bottom: 16px solid var(--purple);
+}
+
+/* Icons Styling */
+.fa-plus,
+.fa-pen {
+  height: 20px;
+  margin: 0 5px;
+  padding: 10px;
+  background-color: var(--grey);
+  font-size: 1rem;
+  border-radius: 50%;
+  transition: all .1s;
+}
+
+/* Icons Hovers Styling */
+.fa-plus:hover,
+.fa-pen:hover {
+  cursor: pointer;
+  transition: all .1s;
+}
+
+.green-hover:hover {
+  background-color: var(--green);
+}
+
+.red-hover:hover {
+  background-color: var(--red);
+}
+
+.blue-hover:hover {
+  background-color: var(--light-blue);
+}
+
+.orange-hover:hover {
+  background-color: var(--orange);
+}
+
+.purple-hover:hover {
+  background-color: var(--purple);
+}

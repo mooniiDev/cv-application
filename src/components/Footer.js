@@ -1,4 +1,8 @@
+// Packages Imports
 import React from 'react';
+
+// Styling Imports
+import '../styles/Footer.css';
 
 class Footer extends React.Component {
   constructor(props) {

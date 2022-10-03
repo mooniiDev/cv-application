@@ -1,0 +1,16 @@
+.preview-button {
+  margin-bottom: 30px;
+  padding: 10px 20px;
+  background-color: var(--grey);
+  color: var(--blue);
+  font-family: 'Raleway-SemiBold';
+  font-size: 1.3rem;
+  border: none;
+  transition: all .1s;
+}
+
+.preview-button:hover {
+  background-color: var(--green);
+  cursor: pointer;
+  transition: all .1s;
+}

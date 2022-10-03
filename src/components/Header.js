@@ -1,6 +1,9 @@
 // Packages Imports
 import React from 'react';
 
+// Styling Imports
+import '../styles/Header.css';
+
 class Header extends React.Component {
   constructor(props) {
     super(props);

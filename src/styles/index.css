@@ -1,22 +1,22 @@
 /* Fonts */
 @font-face {
-	font-family: 'Raleway-Regular';
-	font-weight: 400;
-	src: local('Raleway'),
+  font-family: 'Raleway-Regular';
+  font-weight: 400;
+  src: local('Raleway'),
     url(../assets/fonts/Raleway-Regular.ttf) format('truetype');
 }
 
 @font-face {
-	font-family: 'Raleway-SemiBold';
-	font-weight: 600;
-	src: local('Raleway'),
+  font-family: 'Raleway-SemiBold';
+  font-weight: 600;
+  src: local('Raleway'),
     url(../assets/fonts/Raleway-SemiBold.ttf) format('truetype');
 }
 
 @font-face {
-	font-family: 'Raleway-ExtraBold';
-	font-weight: 900;
-	src: local('Raleway'),
+  font-family: 'Raleway-ExtraBold';
+  font-weight: 900;
+  src: local('Raleway'),
     url(../assets/fonts/Raleway-ExtraBold.ttf) format('truetype');
 }
 

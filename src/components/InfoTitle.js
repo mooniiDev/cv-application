@@ -6,6 +6,9 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faPen } from '@fortawesome/free-solid-svg-icons';
 
+// Styling Imports
+import '../styles/InfoTitle.css';
+
 class InfoTitle extends React.Component {
   constructor(props) {
     super(props);

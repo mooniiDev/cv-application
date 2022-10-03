@@ -1,4 +1,4 @@
-// React Component Import
+// Packages Imports
 import { Component } from 'react';
 
 // Components Imports
@@ -18,7 +18,7 @@ class App extends Component {
 
   render() {
     return (
-      <div id="App">
+      <div>
         <Header />
         <Main />
         <Footer />

@@ -8,6 +8,9 @@ import PracticeInfo from './PracticeInfo';
 import EducationInfo from './EducationInfo';
 import SkillsInfo from './SkillsInfo';
 
+// Styling Imports
+import '../styles/Main.css';
+
 class Main extends React.Component {
   constructor(props) {
     super(props);
