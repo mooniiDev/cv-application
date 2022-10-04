@@ -19,37 +19,49 @@ class GeneralForm extends React.Component {
           <div>
             {/* First name */}
             <div>
-              <label htmlFor="first-name">First name*</label>
-              <input id="first-name" type="text" name="first_name" required />
+              <label htmlFor="first-name">
+                First name*
+                <input id="first-name" type="text" name="first_name" required />
+              </label>
             </div>
             {/* Last name */}
             <div>
-              <label htmlFor="last-name">Last name*</label>
-              <input id="last-name" type="text" name="last_name" required />
+              <label htmlFor="last-name">
+                Last name*
+                <input id="last-name" type="text" name="last_name" required />
+              </label>
             </div>
           </div>
           <div className="contacts">
             {/* Phone */}
             <div>
-              <label htmlFor="phone">Phone*</label>
-              <input id="phone" type="tel" name="phone" required />
+              <label htmlFor="phone">
+                Phone*
+                <input id="phone" type="tel" name="phone" required />
+              </label>
             </div>
             {/* Email */}
             <div>
-              <label htmlFor="email">Email*</label>
-              <input id="email" type="email" name="email" required />
+              <label htmlFor="email">
+                Email*
+                <input id="email" type="email" name="email" required />
+              </label>
             </div>
           </div>
           <div className="socials">
             {/* LinkedIn */}
             <div>
-              <label htmlFor="linkedin">LinkedIn</label>
-              <input id="linkedin" type="text" name="linkedin" />
+              <label htmlFor="linkedin">
+                linkedin
+                <input id="linkedin" type="text" name="linkedin" />
+              </label>
             </div>
             {/* GitHub */}
             <div>
-              <label htmlFor="github">GitHub</label>
-              <input id="github" type="text" name="github" />
+              <label htmlFor="github">
+                GitHub
+                <input id="github" type="text" name="github" />
+              </label>
             </div>
           </div>
           <div>

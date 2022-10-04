@@ -18,94 +18,110 @@ class PracticeForm extends React.Component {
           <div>
             {/* Title */}
             <div>
-              <label htmlFor="position-title">Title*</label>
-              <input
-                id="position-title"
-                type="text"
-                name="position_title"
-                placeholder="Ex: Front-End Web Developer"
-                required
-              />
+              <label htmlFor="position-title">
+                Title*
+                <input
+                  id="position-title"
+                  type="text"
+                  name="position_title"
+                  placeholder="Ex: Front-End Web Developer"
+                  required
+                />
+              </label>
             </div>
             {/* Name */}
             <div>
-              <label htmlFor="company-name">Company name*</label>
-              <input
-                id="company-name"
-                type="text"
-                name="company_name"
-                placeholder="Ex: Tesonet"
-                required
-              />
+              <label htmlFor="company-name">
+                Company name*
+                <input
+                  id="company-name"
+                  type="text"
+                  name="company_name"
+                  placeholder="Ex: Tesonet"
+                  required
+                />
+              </label>
             </div>
           </div>
           <div>
             {/* Tasks */}
             <div>
-              <label htmlFor="main-tasks">Main tasks*</label>
-              <input
-                id="main-tasks"
-                type="text"
-                name="main_asks"
-                placeholder="Ex: Maintaining user interface"
-                required
-              />
+              <label htmlFor="main-tasks">
+                Main tasks*
+                <input
+                  id="main-tasks"
+                  type="text"
+                  name="main_asks"
+                  placeholder="Ex: Maintaining user interface"
+                  required
+                />
+              </label>
             </div>
             {/* Type */}
             <div>
-              <label htmlFor="employment-type">Employment type</label>
-              <select id="employment-type" type="text" name="employment_type">
-                <option value="">Please select</option>
-                <option value="full-time">Full-time</option>
-              </select>
+              <label htmlFor="employment-type">
+                Employment type
+                <select id="employment-type" type="text" name="employment_type">
+                  <option value="">Please select</option>
+                  <option value="full-time">Full-time</option>
+                </select>
+              </label>
             </div>
           </div>
           {/* Checkbox for current role */}
           <div>
-            <input type="checkbox" id="current-checkbox" name="checkbox" />
             <label htmlFor="current-checkbox">
-              I am currently working in this role
+              <input type="checkbox" id="current-checkbox" name="checkbox" />I
+              am currently working in this role
             </label>
           </div>
           <div>
             {/* Start date */}
             <fieldset>
               <legend>Start date*</legend>
-              <label htmlFor="practical-start-year">Year</label>
-              <input
-                id="practical-start-year"
-                type="number"
-                name="practical_start_year"
-                required
-              />
-              <label htmlFor="practical-start-month">Month</label>
-              <select
-                id="practical-start-month"
-                type="text"
-                name="practical_start_month"
-              >
-                <option value="month">Month</option>
-                <option value="january">January</option>
-              </select>
+              <label htmlFor="practical-start-year">
+                Year
+                <input
+                  id="practical-start-year"
+                  type="number"
+                  name="practical_start_year"
+                  required
+                />
+              </label>
+              <label htmlFor="practical-start-month">
+                Month
+                <select
+                  id="practical-start-month"
+                  type="text"
+                  name="practical_start_month"
+                >
+                  <option value="month">Month</option>
+                  <option value="january">January</option>
+                </select>
+              </label>
             </fieldset>
             {/* End date */}
             <fieldset>
               <legend>End date (or expected)</legend>
-              <label htmlFor="practical-end-year">Year</label>
-              <input
-                id="practical-end-year"
-                type="number"
-                name="practical_end_year"
-              />
-              <label htmlFor="practical-end-month">Month</label>
-              <select
-                id="practical-end-month"
-                type="text"
-                name="practical_end_month"
-              >
-                <option value="month">Month</option>
-                <option value="january">January</option>
-              </select>
+              <label htmlFor="practical-end-year">
+                Year
+                <input
+                  id="practical-end-year"
+                  type="number"
+                  name="practical_end_year"
+                />
+              </label>
+              <label htmlFor="practical-end-month">
+                Month
+                <select
+                  id="practical-end-month"
+                  type="text"
+                  name="practical_end_month"
+                >
+                  <option value="month">Month</option>
+                  <option value="january">January</option>
+                </select>
+              </label>
             </fieldset>
           </div>
           <div>

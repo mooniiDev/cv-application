@@ -17,13 +17,15 @@ class SkillsForm extends React.Component {
         <form>
           <div>
             {/* Skill */}
-            <label htmlFor="skill">Skill</label>
-            <input
-              id="skill"
-              type="text"
-              name="skill"
-              placeholder="Ex: React.js"
-            />
+            <label htmlFor="skill">
+              Skill
+              <input
+                id="skill"
+                type="text"
+                name="skill"
+                placeholder="Ex: React.js"
+              />
+            </label>
           </div>
           <div>
             <input type="submit" value="Save" />
