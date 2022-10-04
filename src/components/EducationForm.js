@@ -5,104 +5,110 @@ class EducationForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      isActive: false,
+    };
   }
 
   render() {
-    return (
-      <form className="hidden">
-        <div>
-          {/* Name */}
+    const { isActive } = this.state;
+    if (isActive === true) {
+      return (
+        <form>
           <div>
-            <label htmlFor="school-name">School*</label>
-            <input
-              id="school-name"
-              type="text"
-              name="school_name"
-              placeholder="Ex: Harvard University"
-              required
-            />
+            {/* Name */}
+            <div>
+              <label htmlFor="school-name">School*</label>
+              <input
+                id="school-name"
+                type="text"
+                name="school_name"
+                placeholder="Ex: Harvard University"
+                required
+              />
+            </div>
+            {/* Title */}
+            <div>
+              <label htmlFor="study-title">Field of study*</label>
+              <input
+                id="study-title"
+                type="text"
+                name="study_title"
+                placeholder="Ex: Software Engineering"
+                required
+              />
+            </div>
           </div>
-          {/* Title */}
           <div>
-            <label htmlFor="study-title">Field of study*</label>
-            <input
-              id="study-title"
-              type="text"
-              name="study_title"
-              placeholder="Ex: Software Engineering"
-              required
-            />
+            {/* Degree */}
+            <div>
+              <label htmlFor="educational-degree">Degree</label>
+              <input
+                id="educational-degree"
+                type="text"
+                name="educational_degree"
+                placeholder="Ex: Bachelor’s"
+              />
+            </div>
+            {/* Grade */}
+            <div>
+              <label htmlFor="educational-grade">Grade</label>
+              <input
+                id="educational-grade"
+                type="text"
+                name="educational_grade"
+              />
+            </div>
           </div>
-        </div>
-        <div>
-          {/* Degree */}
           <div>
-            <label htmlFor="educational-degree">Degree</label>
-            <input
-              id="educational-degree"
-              type="text"
-              name="educational_degree"
-              placeholder="Ex: Bachelor’s"
-            />
+            {/* Start date */}
+            <fieldset>
+              <legend>Start date*</legend>
+              <label htmlFor="educational-start-year">Year</label>
+              <input
+                id="educational-start-year"
+                type="number"
+                name="educational_start_year"
+                required
+              />
+              <label htmlFor="educational-start-month">Month</label>
+              <select
+                id="educational-start-month"
+                type="text"
+                name="educational_start_month"
+              >
+                <option value="month">Month</option>
+                <option value="january">January</option>
+              </select>
+            </fieldset>
+            {/* End date */}
+            <fieldset>
+              <legend>End date (or expected)</legend>
+              <label htmlFor="educational-end-year">Year</label>
+              <input
+                id="educational-end-year"
+                type="number"
+                name="educational_end_year"
+              />
+              <label htmlFor="educational-end-month">Month</label>
+              <select
+                id="educational-end-month"
+                type="text"
+                name="educational_end_month"
+              >
+                <option value="month">Month</option>
+                <option value="january">January</option>
+              </select>
+            </fieldset>
           </div>
-          {/* Grade */}
           <div>
-            <label htmlFor="educational-grade">Grade</label>
-            <input
-              id="educational-grade"
-              type="text"
-              name="educational_grade"
-            />
+            <input type="submit" value="Save" />
+            <input type="button" value="Cancel" />
           </div>
-        </div>
-        <div>
-          {/* Start date */}
-          <fieldset>
-            <legend>Start date*</legend>
-            <label htmlFor="educational-start-year">Year</label>
-            <input
-              id="educational-start-year"
-              type="number"
-              name="educational_start_year"
-              required
-            />
-            <label htmlFor="educational-start-month">Month</label>
-            <select
-              id="educational-start-month"
-              type="text"
-              name="educational_start_month"
-            >
-              <option value="month">Month</option>
-              <option value="january">January</option>
-            </select>
-          </fieldset>
-          {/* End date */}
-          <fieldset>
-            <legend>End date (or expected)</legend>
-            <label htmlFor="educational-end-year">Year</label>
-            <input
-              id="educational-end-year"
-              type="number"
-              name="educational_end_year"
-            />
-            <label htmlFor="educational-end-month">Month</label>
-            <select
-              id="educational-end-month"
-              type="text"
-              name="educational_end_month"
-            >
-              <option value="month">Month</option>
-              <option value="january">January</option>
-            </select>
-          </fieldset>
-        </div>
-        <div>
-          <input type="submit" value="Save" />
-          <input type="button" value="Cancel" />
-        </div>
-      </form>
-    );
+        </form>
+      );
+    }
+    return null;
   }
 }
 
