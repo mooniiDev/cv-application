@@ -13,19 +13,22 @@ class Button extends React.Component {
   }
 
   render() {
-    const { text } = this.props;
-    return <input value={text} type="button" className="preview-button" />;
+    const { buttonValue } = this.props;
+
+    return (
+      <input value={buttonValue} type="button" className="preview-button" />
+    );
   }
 }
 
 // Validating Prop Types
 Button.propTypes = {
-  text: PropTypes.string,
+  buttonValue: PropTypes.string,
 };
 
 // Creating Default Props
 Button.defaultProps = {
-  text: '❗Text Error',
+  buttonValue: '❗Text Error',
 };
 
 export default Button;

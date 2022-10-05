@@ -21,7 +21,7 @@ class Main extends React.Component {
   render() {
     return (
       <main id="Main">
-        <Button text="PREVIEW" />
+        <Button buttonValue="PREVIEW" />
         <GeneralInfo />
         <PracticeInfo />
         <EducationInfo />
