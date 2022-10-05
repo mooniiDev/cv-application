@@ -28,7 +28,7 @@ Button.propTypes = {
 
 // Creating Default Props
 Button.defaultProps = {
-  buttonValue: '❗Text Error',
+  buttonValue: '❗TEXT ERROR',
 };
 
 export default Button;

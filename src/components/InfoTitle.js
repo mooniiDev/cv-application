@@ -45,7 +45,7 @@ InfoTitle.propTypes = {
 
 // Creating Default Props
 InfoTitle.defaultProps = {
-  title: '❗Error in the title text.',
+  title: '❗TEXT ERROR',
   border: 'green-border',
   hover: 'green-hover',
   formShow: () => {},
