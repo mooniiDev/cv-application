@@ -1,18 +1,18 @@
 // Packages Imports
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class SkillsForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      isActive: false,
-    };
+    this.state = {};
   }
 
   render() {
-    const { isActive } = this.state;
-    if (isActive === true) {
+    const { formVisibility } = this.props;
+
+    if (formVisibility === true) {
       return (
         <form>
           <div>
@@ -37,5 +37,15 @@ class SkillsForm extends React.Component {
     return null;
   }
 }
+
+// Validating Prop Types
+SkillsForm.propTypes = {
+  formVisibility: PropTypes.bool,
+};
+
+// Creating Default Props
+SkillsForm.defaultProps = {
+  formVisibility: false,
+};
 
 export default SkillsForm;

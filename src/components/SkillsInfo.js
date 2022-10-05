@@ -9,14 +9,18 @@ class GeneralInfo extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      isActive: false,
+    };
   }
 
   render() {
+    const { isActive } = this.state;
+
     return (
       <div>
         <InfoTitle title="SKILLS" border="purple-border" hover="purple-hover" />
-        <SkillsForm />
+        <SkillsForm formVisibility={isActive} />
       </div>
     );
   }

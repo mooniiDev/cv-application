@@ -1,18 +1,18 @@
 // Packages Imports
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class EducationForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      isActive: false,
-    };
+    this.state = {};
   }
 
   render() {
-    const { isActive } = this.state;
-    if (isActive === true) {
+    const { formVisibility } = this.props;
+
+    if (formVisibility === true) {
       return (
         <form>
           <div>
@@ -127,5 +127,15 @@ class EducationForm extends React.Component {
     return null;
   }
 }
+
+// Validating Prop Types
+EducationForm.propTypes = {
+  formVisibility: PropTypes.bool,
+};
+
+// Creating Default Props
+EducationForm.defaultProps = {
+  formVisibility: false,
+};
 
 export default EducationForm;

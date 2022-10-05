@@ -1,19 +1,18 @@
 // Packages Imports
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class GeneralForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      isActive: false,
-    };
+    this.state = {};
   }
 
   render() {
-    const { isActive } = this.state;
+    const { formVisibility } = this.props;
 
-    if (isActive === true) {
+    if (formVisibility === true) {
       return (
         <form>
           <div>
@@ -74,5 +73,15 @@ class GeneralForm extends React.Component {
     return null;
   }
 }
+
+// Validating Prop Types
+GeneralForm.propTypes = {
+  formVisibility: PropTypes.bool,
+};
+
+// Creating Default Props
+GeneralForm.defaultProps = {
+  formVisibility: false,
+};
 
 export default GeneralForm;

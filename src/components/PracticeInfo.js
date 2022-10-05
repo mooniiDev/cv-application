@@ -9,10 +9,14 @@ class GeneralInfo extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      isActive: false,
+    };
   }
 
   render() {
+    const { isActive } = this.state;
+
     return (
       <div>
         <InfoTitle
@@ -20,7 +24,7 @@ class GeneralInfo extends React.Component {
           border="blue-border"
           hover="blue-hover"
         />
-        <PracticeForm />
+        <PracticeForm formVisibility={isActive} />
       </div>
     );
   }
