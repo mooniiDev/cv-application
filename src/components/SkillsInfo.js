@@ -14,12 +14,24 @@ class GeneralInfo extends React.Component {
     };
   }
 
+  handleFormShow = () => {
+    this.setState({
+      isActive: true,
+    });
+  };
+
   render() {
     const { isActive } = this.state;
+    const { handleFormShow } = this;
 
     return (
       <div>
-        <InfoTitle title="SKILLS" border="purple-border" hover="purple-hover" />
+        <InfoTitle
+          title="SKILLS"
+          border="purple-border"
+          hover="purple-hover"
+          formShow={handleFormShow}
+        />
         <SkillsForm formVisibility={isActive} />
       </div>
     );

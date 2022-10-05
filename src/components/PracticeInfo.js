@@ -14,8 +14,15 @@ class GeneralInfo extends React.Component {
     };
   }
 
+  handleFormShow = () => {
+    this.setState({
+      isActive: true,
+    });
+  };
+
   render() {
     const { isActive } = this.state;
+    const { handleFormShow } = this;
 
     return (
       <div>
@@ -23,6 +30,7 @@ class GeneralInfo extends React.Component {
           title="PRACTICAL EXPERIENCE"
           border="blue-border"
           hover="blue-hover"
+          formShow={handleFormShow}
         />
         <PracticeForm formVisibility={isActive} />
       </div>
