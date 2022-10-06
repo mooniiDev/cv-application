@@ -31,7 +31,7 @@ class Footer extends React.Component {
             className="footer-link"
             rel="noreferrer"
           >
-            Source code
+            Source
           </a>
           &nbsp;☾
         </p>
