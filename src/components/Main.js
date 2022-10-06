@@ -23,6 +23,30 @@ class Main extends React.Component {
     };
   }
 
+  // function that shows a certain form when it's "+" button is clicked
+  handleFormDisplay = (e) => {
+    const formType =
+      e.target.parentElement.parentElement.getAttribute('data-form');
+
+    if (formType === 'general') {
+      this.setState({
+        isGeneralFormDisplayed: true,
+      });
+    } else if (formType === 'practice') {
+      this.setState({
+        isPracticeFormDisplayed: true,
+      });
+    } else if (formType === 'education') {
+      this.setState({
+        isEducationFormDisplayed: true,
+      });
+    } else if (formType === 'skills') {
+      this.setState({
+        isSkillsFormDisplayed: true,
+      });
+    }
+  };
+
   render() {
     const {
       isGeneralFormDisplayed,
