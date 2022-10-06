@@ -17,15 +17,14 @@ class InfoTitle extends React.Component {
   }
 
   render() {
-    const { title, border, hover, formShow } = this.props;
-
+    const { title, border, hover, formType, formDisplay } = this.props;
     return (
-      <h2 className="info-title">
+      <h2 className="info-title" data-form={formType}>
         <span className={border}>{title}</span>
         <span className="info-buttons">
           <FontAwesomeIcon
             icon={faPlus}
-            onClick={formShow}
+            onClick={formDisplay}
             className={`${hover} fa-fw`}
           />
           <FontAwesomeIcon icon={faPen} className={`${hover} fa-fw`} />
@@ -40,7 +39,8 @@ InfoTitle.propTypes = {
   title: PropTypes.string,
   border: PropTypes.string,
   hover: PropTypes.string,
-  formShow: PropTypes.func,
+  formType: PropTypes.string,
+  formDisplay: PropTypes.func,
 };
 
 // Creating Default Props
@@ -48,7 +48,8 @@ InfoTitle.defaultProps = {
   title: '❗TEXT ERROR',
   border: 'green-border',
   hover: 'green-hover',
-  formShow: () => {},
+  formType: '',
+  formDisplay: () => {},
 };
 
 export default InfoTitle;

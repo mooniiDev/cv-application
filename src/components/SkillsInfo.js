@@ -1,41 +1,65 @@
 // Packages Imports
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Components Imports
 import InfoTitle from './InfoTitle';
 import SkillsForm from './SkillsForm';
 
-class GeneralInfo extends React.Component {
+class SkillsInfo extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      isActive: false,
-    };
+    this.state = {};
   }
 
-  handleFormShow = () => {
-    this.setState({
-      isActive: true,
-    });
-  };
-
   render() {
-    const { isActive } = this.state;
-    const { handleFormShow } = this;
+    const {
+      formType,
+      title,
+      border,
+      hover,
+      formVisibility,
+      handleSkillsFormDisplay,
+    } = this.props;
 
     return (
       <div>
         <InfoTitle
-          title="SKILLS"
-          border="purple-border"
-          hover="purple-hover"
-          formShow={handleFormShow}
+          formType={formType}
+          title={title}
+          border={border}
+          hover={hover}
+          formDisplay={handleSkillsFormDisplay}
         />
-        <SkillsForm formVisibility={isActive} />
+        <SkillsForm formVisibility={formVisibility} />
       </div>
     );
   }
 }
 
-export default GeneralInfo;
+// Validating Prop Types
+SkillsInfo.propTypes = {
+  formType: PropTypes.string,
+  title: PropTypes.string,
+  border: PropTypes.string,
+  hover: PropTypes.string,
+  formVisibility: PropTypes.bool,
+  handleSkillsFormDisplay: PropTypes.func,
+};
+
+// Creating Default Props
+SkillsInfo.defaultProps = {
+  formType: 'skills',
+  title: 'SKILLS',
+  border: 'purple-border',
+  hover: 'purple-hover',
+  formVisibility: false,
+  handleSkillsFormDisplay: () => {
+    this.setState({
+      isSkillsFormDisplayed: true,
+    });
+  },
+};
+
+export default SkillsInfo;

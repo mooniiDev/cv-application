@@ -1,41 +1,65 @@
 // Packages Imports
 import React from 'react';
+import PropTypes from 'prop-types';
 
 // Components Imports
 import InfoTitle from './InfoTitle';
 import PracticeForm from './PracticeForm';
 
-class GeneralInfo extends React.Component {
+class PracticeInfo extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      isActive: false,
-    };
+    this.state = {};
   }
 
-  handleFormShow = () => {
-    this.setState({
-      isActive: true,
-    });
-  };
-
   render() {
-    const { isActive } = this.state;
-    const { handleFormShow } = this;
+    const {
+      formType,
+      title,
+      border,
+      hover,
+      formVisibility,
+      handlePracticeFormDisplay,
+    } = this.props;
 
     return (
       <div>
         <InfoTitle
-          title="PRACTICAL EXPERIENCE"
-          border="blue-border"
-          hover="blue-hover"
-          formShow={handleFormShow}
+          formType={formType}
+          title={title}
+          border={border}
+          hover={hover}
+          formDisplay={handlePracticeFormDisplay}
         />
-        <PracticeForm formVisibility={isActive} />
+        <PracticeForm formVisibility={formVisibility} />
       </div>
     );
   }
 }
 
-export default GeneralInfo;
+// Validating Prop Types
+PracticeInfo.propTypes = {
+  formType: PropTypes.string,
+  title: PropTypes.string,
+  border: PropTypes.string,
+  hover: PropTypes.string,
+  formVisibility: PropTypes.bool,
+  handlePracticeFormDisplay: PropTypes.func,
+};
+
+// Creating Default Props
+PracticeInfo.defaultProps = {
+  formType: 'practice',
+  title: 'PRACTICAL EXPERIENCE',
+  formVisibility: false,
+  border: 'blue-border',
+  hover: 'blue-hover',
+  handlePracticeFormDisplay: () => {
+    this.setState({
+      isPracticeFormDisplayed: true,
+    });
+  },
+};
+
+export default PracticeInfo;
