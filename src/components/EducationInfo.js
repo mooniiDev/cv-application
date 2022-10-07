@@ -45,7 +45,7 @@ EducationlInfo.propTypes = {
   border: PropTypes.string,
   hover: PropTypes.string,
   formVisibility: PropTypes.bool,
-  handleEducationFormDisplay: PropTypes.func,
+  handleEducationFormDisplay: PropTypes.func.isRequired,
 };
 
 // Creating Default Props
@@ -55,11 +55,6 @@ EducationlInfo.defaultProps = {
   border: 'orange-border',
   hover: 'orange-hover',
   formVisibility: false,
-  handleEducationFormDisplay: () => {
-    this.setState({
-      isEducationFormDisplayed: true,
-    });
-  },
 };
 
 export default EducationlInfo;

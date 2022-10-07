@@ -45,7 +45,7 @@ PracticeInfo.propTypes = {
   border: PropTypes.string,
   hover: PropTypes.string,
   formVisibility: PropTypes.bool,
-  handlePracticeFormDisplay: PropTypes.func,
+  handlePracticeFormDisplay: PropTypes.func.isRequired,
 };
 
 // Creating Default Props
@@ -55,11 +55,6 @@ PracticeInfo.defaultProps = {
   formVisibility: false,
   border: 'blue-border',
   hover: 'blue-hover',
-  handlePracticeFormDisplay: () => {
-    this.setState({
-      isPracticeFormDisplayed: true,
-    });
-  },
 };
 
 export default PracticeInfo;

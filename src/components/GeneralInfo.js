@@ -45,7 +45,7 @@ GeneralInfo.propTypes = {
   border: PropTypes.string,
   hover: PropTypes.string,
   formVisibility: PropTypes.bool,
-  handleGeneralFormDisplay: PropTypes.func,
+  handleGeneralFormDisplay: PropTypes.func.isRequired,
 };
 
 // Creating Default Props
@@ -55,11 +55,6 @@ GeneralInfo.defaultProps = {
   border: 'red-border',
   hover: 'red-hover',
   formVisibility: false,
-  handleGeneralFormDisplay: () => {
-    this.setState({
-      isGeneralFormDisplayed: true,
-    });
-  },
 };
 
 export default GeneralInfo;

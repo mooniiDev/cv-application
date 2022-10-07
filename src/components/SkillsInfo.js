@@ -45,7 +45,7 @@ SkillsInfo.propTypes = {
   border: PropTypes.string,
   hover: PropTypes.string,
   formVisibility: PropTypes.bool,
-  handleSkillsFormDisplay: PropTypes.func,
+  handleSkillsFormDisplay: PropTypes.func.isRequired,
 };
 
 // Creating Default Props
@@ -55,11 +55,6 @@ SkillsInfo.defaultProps = {
   border: 'purple-border',
   hover: 'purple-hover',
   formVisibility: false,
-  handleSkillsFormDisplay: () => {
-    this.setState({
-      isSkillsFormDisplayed: true,
-    });
-  },
 };
 
 export default SkillsInfo;
