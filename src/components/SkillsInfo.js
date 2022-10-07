@@ -30,7 +30,7 @@ class SkillsInfo extends React.Component {
           title={title}
           border={border}
           hover={hover}
-          formDisplay={handleSkillsFormDisplay}
+          displayForm={handleSkillsFormDisplay}
         />
         <SkillsForm formVisibility={formVisibility} />
       </div>

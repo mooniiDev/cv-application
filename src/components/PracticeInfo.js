@@ -30,7 +30,7 @@ class PracticeInfo extends React.Component {
           title={title}
           border={border}
           hover={hover}
-          formDisplay={handlePracticeFormDisplay}
+          displayForm={handlePracticeFormDisplay}
         />
         <PracticeForm formVisibility={formVisibility} />
       </div>
