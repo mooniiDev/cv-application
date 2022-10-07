@@ -29,7 +29,6 @@ class Main extends React.Component {
       e.target.parentElement.parentElement.getAttribute('data-form');
 
     if (formType === 'general') {
-      console.log(e.target.children);
       this.setState({
         isGeneralFormDisplayed: true,
       });

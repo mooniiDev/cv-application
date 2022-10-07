@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+
 // Packages Imports
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -20,14 +23,20 @@ class InfoTitle extends React.Component {
     const { title, border, hover, formType, displayForm } = this.props;
     return (
       <h2 className="info-title" data-form={formType}>
-        <span className={border}>{title}</span>
-        <span className="info-buttons">
-          <FontAwesomeIcon
-            icon={faPlus}
-            onClick={displayForm}
-            className={`${hover} fa-fw`}
-          />
-          <FontAwesomeIcon icon={faPen} className={`${hover} fa-fw`} />
+        <span className={`${border} info-border`}>{title}</span>
+        <span>
+          {/* Button for adding information in the form */}
+          <span onClick={displayForm} className={`${hover} icon-plus`}>
+            <FontAwesomeIcon
+              icon={faPlus}
+              className="fa-fw"
+              pointerEvents="none"
+            />
+          </span>
+          {/* Button for editing information from the form */}
+          <span className={`${hover} icon-edit`}>
+            <FontAwesomeIcon icon={faPen} className="fa-fw" />
+          </span>
         </span>
       </h2>
     );

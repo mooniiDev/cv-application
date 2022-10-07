@@ -4,7 +4,7 @@
   min-width: 500px;
 }
 
-.info-title span:first-child {
+.info-border {
   align-self: center;
   padding: 0 10px;
   line-height: 3px;
@@ -32,8 +32,8 @@
 }
 
 /* Icons Styling */
-.fa-plus,
-.fa-pen {
+.icon-plus,
+.icon-edit {
   height: 20px;
   margin: 0 5px;
   padding: 10px;
@@ -44,8 +44,8 @@
 }
 
 /* Icons Hovers Styling */
-.fa-plus:hover,
-.fa-pen:hover {
+.icon-plus:hover,
+.icon-edit:hover {
   cursor: pointer;
   transition: all .1s;
 }
