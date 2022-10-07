@@ -51,7 +51,7 @@ class GeneralForm extends React.Component {
             {/* LinkedIn */}
             <div>
               <label htmlFor="linkedin">
-                linkedin
+                LinkedIn
                 <input id="linkedin" type="text" name="linkedin" />
               </label>
             </div>
