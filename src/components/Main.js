@@ -58,7 +58,7 @@ class Main extends React.Component {
 
     return (
       <main id="Main">
-        <Button buttonValue="PREVIEW" />
+        <Button buttonValue="PREVIEW" buttonClass="preview-button" />
         <GeneralInfo
           formType="general"
           title="GENERAL INFORMATION"

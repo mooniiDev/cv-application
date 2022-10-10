@@ -2,6 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Components Imports
+import Button from './Button';
+
 class SkillsForm extends React.Component {
   constructor(props) {
     super(props);
@@ -28,8 +31,16 @@ class SkillsForm extends React.Component {
             </label>
           </div>
           <div>
-            <input type="submit" value="Save" />
-            <input type="button" value="Cancel" />
+            <Button
+              type="submit"
+              buttonValue="Save"
+              buttonClass="save-button"
+            />
+            <Button
+              type="button"
+              buttonValue="Cancel"
+              buttonClass="cancel-button"
+            />
           </div>
         </form>
       );

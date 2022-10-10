@@ -1,4 +1,6 @@
-.preview-button {
+.preview-button,
+.save-button,
+.cancel-button {
   margin-bottom: 30px;
   padding: 10px 20px;
   background-color: var(--grey);
@@ -9,8 +11,15 @@
   transition: all .1s;
 }
 
-.preview-button:hover {
+.preview-button:hover,
+.save-button:hover {
   background-color: var(--green);
+  cursor: pointer;
+  transition: all .1s;
+}
+
+.cancel-button:hover {
+  background-color: var(--red);
   cursor: pointer;
   transition: all .1s;
 }

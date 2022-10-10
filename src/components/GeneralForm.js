@@ -2,6 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Components Imports
+import Button from './Button';
+
 class GeneralForm extends React.Component {
   constructor(props) {
     super(props);
@@ -14,7 +17,7 @@ class GeneralForm extends React.Component {
 
     if (formVisibility === true) {
       return (
-        <form>
+        <form className="general-form">
           <div>
             {/* First name */}
             <div>
@@ -63,9 +66,17 @@ class GeneralForm extends React.Component {
               </label>
             </div>
           </div>
-          <div>
-            <input type="submit" value="Save" />
-            <input type="button" value="Cancel" />
+          <div className="form-buttons">
+            <Button
+              type="submit"
+              buttonValue="Save"
+              buttonClass="save-button"
+            />
+            <Button
+              type="button"
+              buttonValue="Cancel"
+              buttonClass="cancel-button"
+            />
           </div>
         </form>
       );
