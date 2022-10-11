@@ -1,8 +1,12 @@
-// Packages Imports
+// Packages imports
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Styling Imports
+// Font Awesome imports
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faPen } from '@fortawesome/free-solid-svg-icons';
+
+// Styling imports
 import '../styles/Button.css';
 
 class Button extends React.Component {
@@ -13,22 +17,39 @@ class Button extends React.Component {
   }
 
   render() {
-    const { buttonValue, buttonClass } = this.props;
+    const { buttonEvent, buttonText, buttonClass } = this.props;
+    let buttonValue = buttonText;
 
-    return <input type="button" value={buttonValue} className={buttonClass} />;
+    if (buttonValue === 'add') {
+      buttonValue = (
+        <FontAwesomeIcon icon={faPlus} className="fa-fw" pointerEvents="none" />
+      );
+    } else if (buttonValue === 'edit') {
+      buttonValue = (
+        <FontAwesomeIcon icon={faPen} className="fa-fw" pointerEvents="none" />
+      );
+    }
+
+    return (
+      <button type="submit" onClick={buttonEvent} className={buttonClass}>
+        {buttonValue}
+      </button>
+    );
   }
 }
 
-// Validating Prop Types
+// Validating prop types
 Button.propTypes = {
-  buttonValue: PropTypes.string,
+  buttonEvent: PropTypes.func,
+  buttonText: PropTypes.string,
   buttonClass: PropTypes.string,
 };
 
-// Creating Default Props
+// Creating default props
 Button.defaultProps = {
-  buttonValue: '❗TEXT ERROR',
-  buttonClass: 'preview-button',
+  buttonEvent: () => {},
+  buttonText: '',
+  buttonClass: '',
 };
 
 export default Button;

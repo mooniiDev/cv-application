@@ -1,25 +1,52 @@
-.preview-button,
-.save-button,
-.cancel-button {
+/* Preview button (with string as value) */
+.preview-button {
   margin-bottom: 30px;
   padding: 10px 20px;
   background-color: var(--grey);
-  color: var(--blue);
+  color: var(--dark-blue);
   font-family: 'Raleway-SemiBold';
   font-size: 1.3rem;
   border: none;
   transition: all .1s;
 }
 
-.preview-button:hover,
-.save-button:hover {
+.preview-button:hover {
   background-color: var(--green);
   cursor: pointer;
   transition: all .1s;
 }
 
-.cancel-button:hover {
-  background-color: var(--red);
+/* Font Awesome button (with icon as value) */
+.fontAwesome-button {
+  height: 40px;
+  margin: 0 5px;
+  padding: 10px;
+  background-color: var(--grey);
+  color: var(--dark-blue);
+  font-size: 1rem;
+  border: none;
+  border-radius: 50%;
+  transition: all .1s;
+}
+
+.fontAwesome-button:hover {
   cursor: pointer;
   transition: all .1s;
+}
+
+/* Font Awesome buttons hovers colors */
+.red-hover:hover {
+  background-color: var(--red);
+}
+
+.blue-hover:hover {
+  background-color: var(--light-blue);
+}
+
+.orange-hover:hover {
+  background-color: var(--orange);
+}
+
+.purple-hover:hover {
+  background-color: var(--purple);
 }
