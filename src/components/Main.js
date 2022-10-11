@@ -58,14 +58,14 @@ class Main extends React.Component {
 
     return (
       <main id="Main">
-        <Button buttonValue="PREVIEW" buttonClass="preview-button" />
+        <Button buttonText="PREVIEW" buttonClass="preview-button" />
         <GeneralInfo
           formType="general"
           title="GENERAL INFORMATION"
           border="red-border"
           hover="red-hover"
           formVisibility={isGeneralFormDisplayed}
-          handleGeneralFormDisplay={handleFormDisplay}
+          handleFormDisplay={handleFormDisplay}
         />
         <PracticeInfo
           formType="practice"
@@ -73,7 +73,7 @@ class Main extends React.Component {
           border="blue-border"
           hover="blue-hover"
           formVisibility={isPracticeFormDisplayed}
-          handlePracticeFormDisplay={handleFormDisplay}
+          handleFormDisplay={handleFormDisplay}
         />
         <EducationInfo
           formType="education"
@@ -81,7 +81,7 @@ class Main extends React.Component {
           border="orange-border"
           hover="orange-hover"
           formVisibility={isEducationFormDisplayed}
-          handleEducationFormDisplay={handleFormDisplay}
+          handleFormDisplay={handleFormDisplay}
         />
         <SkillsInfo
           formType="skills"
@@ -89,7 +89,7 @@ class Main extends React.Component {
           border="purple-border"
           hover="purple-hover"
           formVisibility={isSkillsFormDisplayed}
-          handleSkillsFormDisplay={handleFormDisplay}
+          handleFormDisplay={handleFormDisplay}
         />
       </main>
     );
