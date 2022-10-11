@@ -1,9 +1,6 @@
-// Packages Imports
+// Packages imports
 import React from 'react';
 import PropTypes from 'prop-types';
-
-// Components Imports
-import Button from './Button';
 
 class EducationForm extends React.Component {
   constructor(props) {
@@ -26,7 +23,7 @@ class EducationForm extends React.Component {
                 <input
                   id="school-name"
                   type="text"
-                  name="school_name"
+                  name="school-name"
                   placeholder="Ex: Harvard University"
                   required
                 />
@@ -39,7 +36,7 @@ class EducationForm extends React.Component {
                 <input
                   id="study-title"
                   type="text"
-                  name="study_title"
+                  name="study-title"
                   placeholder="Ex: Software Engineering"
                   required
                 />
@@ -54,7 +51,7 @@ class EducationForm extends React.Component {
                 <input
                   id="educational-degree"
                   type="text"
-                  name="educational_degree"
+                  name="educational-degree"
                   placeholder="Ex: Bachelor’s"
                 />
               </label>
@@ -66,7 +63,7 @@ class EducationForm extends React.Component {
                 <input
                   id="educational-grade"
                   type="text"
-                  name="educational_grade"
+                  name="educational-grade"
                 />
               </label>
             </div>
@@ -80,7 +77,7 @@ class EducationForm extends React.Component {
                 <input
                   id="educational-start-year"
                   type="number"
-                  name="educational_start_year"
+                  name="educational-start-year"
                   required
                 />
               </label>
@@ -89,7 +86,7 @@ class EducationForm extends React.Component {
                 <select
                   id="educational-start-month"
                   type="text"
-                  name="educational_start_month"
+                  name="educational-start-month"
                 >
                   <option value="month">Month</option>
                   <option value="january">January</option>
@@ -104,7 +101,7 @@ class EducationForm extends React.Component {
                 <input
                   id="educational-end-year"
                   type="number"
-                  name="educational_end_year"
+                  name="educational-end-year"
                 />
               </label>
               <label htmlFor="educational-end-month">
@@ -112,25 +109,13 @@ class EducationForm extends React.Component {
                 <select
                   id="educational-end-month"
                   type="text"
-                  name="educational_end_month"
+                  name="educational-end-month"
                 >
                   <option value="month">Month</option>
                   <option value="january">January</option>
                 </select>
               </label>
             </fieldset>
-          </div>
-          <div>
-            <Button
-              type="submit"
-              buttonValue="Save"
-              buttonClass="save-button"
-            />
-            <Button
-              type="button"
-              buttonValue="Cancel"
-              buttonClass="cancel-button"
-            />
           </div>
         </form>
       );
@@ -139,12 +124,12 @@ class EducationForm extends React.Component {
   }
 }
 
-// Validating Prop Types
+// Validating prop types
 EducationForm.propTypes = {
   formVisibility: PropTypes.bool,
 };
 
-// Creating Default Props
+// Creating default props
 EducationForm.defaultProps = {
   formVisibility: false,
 };

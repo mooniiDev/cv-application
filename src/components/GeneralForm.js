@@ -1,9 +1,6 @@
-// Packages Imports
+// Packages imports
 import React from 'react';
 import PropTypes from 'prop-types';
-
-// Components Imports
-import Button from './Button';
 
 class GeneralForm extends React.Component {
   constructor(props) {
@@ -23,14 +20,14 @@ class GeneralForm extends React.Component {
             <div>
               <label htmlFor="first-name">
                 First name*
-                <input id="first-name" type="text" name="first_name" required />
+                <input id="first-name" type="text" name="first-name" required />
               </label>
             </div>
             {/* Last name */}
             <div>
               <label htmlFor="last-name">
                 Last name*
-                <input id="last-name" type="text" name="last_name" required />
+                <input id="last-name" type="text" name="last-name" required />
               </label>
             </div>
           </div>
@@ -65,18 +62,6 @@ class GeneralForm extends React.Component {
                 <input id="github" type="text" name="github" />
               </label>
             </div>
-          </div>
-          <div className="form-buttons">
-            <Button
-              type="submit"
-              buttonValue="Save"
-              buttonClass="save-button"
-            />
-            <Button
-              type="button"
-              buttonValue="Cancel"
-              buttonClass="cancel-button"
-            />
           </div>
         </form>
       );

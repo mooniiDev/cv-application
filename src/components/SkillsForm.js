@@ -1,9 +1,6 @@
-// Packages Imports
+// Packages imports
 import React from 'react';
 import PropTypes from 'prop-types';
-
-// Components Imports
-import Button from './Button';
 
 class SkillsForm extends React.Component {
   constructor(props) {
@@ -30,18 +27,6 @@ class SkillsForm extends React.Component {
               />
             </label>
           </div>
-          <div>
-            <Button
-              type="submit"
-              buttonValue="Save"
-              buttonClass="save-button"
-            />
-            <Button
-              type="button"
-              buttonValue="Cancel"
-              buttonClass="cancel-button"
-            />
-          </div>
         </form>
       );
     }
@@ -49,12 +34,12 @@ class SkillsForm extends React.Component {
   }
 }
 
-// Validating Prop Types
+// Validating prop types
 SkillsForm.propTypes = {
   formVisibility: PropTypes.bool,
 };
 
-// Creating Default Props
+// Creating default props
 SkillsForm.defaultProps = {
   formVisibility: false,
 };

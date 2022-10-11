@@ -1,9 +1,6 @@
-// Packages Imports
+// Packages imports
 import React from 'react';
 import PropTypes from 'prop-types';
-
-// Components Imports
-import Button from './Button';
 
 class PracticeForm extends React.Component {
   constructor(props) {
@@ -26,7 +23,7 @@ class PracticeForm extends React.Component {
                 <input
                   id="position-title"
                   type="text"
-                  name="position_title"
+                  name="position-title"
                   placeholder="Ex: Front-End Web Developer"
                   required
                 />
@@ -39,7 +36,7 @@ class PracticeForm extends React.Component {
                 <input
                   id="company-name"
                   type="text"
-                  name="company_name"
+                  name="company-name"
                   placeholder="Ex: Tesonet"
                   required
                 />
@@ -54,7 +51,7 @@ class PracticeForm extends React.Component {
                 <input
                   id="main-tasks"
                   type="text"
-                  name="main_asks"
+                  name="main-tasks"
                   placeholder="Ex: Maintaining user interface"
                   required
                 />
@@ -64,7 +61,7 @@ class PracticeForm extends React.Component {
             <div>
               <label htmlFor="employment-type">
                 Employment type
-                <select id="employment-type" type="text" name="employment_type">
+                <select id="employment-type" type="text" name="employment-type">
                   <option value="">Please select</option>
                   <option value="full-time">Full-time</option>
                 </select>
@@ -74,8 +71,12 @@ class PracticeForm extends React.Component {
           {/* Checkbox for current role */}
           <div>
             <label htmlFor="current-checkbox">
-              <input type="checkbox" id="current-checkbox" name="checkbox" />I
-              am currently working in this role
+              <input
+                type="checkbox"
+                id="current-checkbox"
+                name="current-checkbox"
+              />
+              I am currently working in this role
             </label>
           </div>
           <div>
@@ -87,7 +88,7 @@ class PracticeForm extends React.Component {
                 <input
                   id="practical-start-year"
                   type="number"
-                  name="practical_start_year"
+                  name="practical-start-year"
                   required
                 />
               </label>
@@ -96,7 +97,7 @@ class PracticeForm extends React.Component {
                 <select
                   id="practical-start-month"
                   type="text"
-                  name="practical_start_month"
+                  name="practical-start-month"
                 >
                   <option value="month">Month</option>
                   <option value="january">January</option>
@@ -111,7 +112,7 @@ class PracticeForm extends React.Component {
                 <input
                   id="practical-end-year"
                   type="number"
-                  name="practical_end_year"
+                  name="practical-end-year"
                 />
               </label>
               <label htmlFor="practical-end-month">
@@ -119,25 +120,13 @@ class PracticeForm extends React.Component {
                 <select
                   id="practical-end-month"
                   type="text"
-                  name="practical_end_month"
+                  name="practical-end-month"
                 >
                   <option value="month">Month</option>
                   <option value="january">January</option>
                 </select>
               </label>
             </fieldset>
-          </div>
-          <div>
-            <Button
-              type="submit"
-              buttonValue="Save"
-              buttonClass="save-button"
-            />
-            <Button
-              type="button"
-              buttonValue="Cancel"
-              buttonClass="cancel-button"
-            />
           </div>
         </form>
       );
@@ -146,12 +135,12 @@ class PracticeForm extends React.Component {
   }
 }
 
-// Validating Prop Types
+// Validating prop types
 PracticeForm.propTypes = {
   formVisibility: PropTypes.bool,
 };
 
-// Creating Default Props
+// Creating default props
 PracticeForm.defaultProps = {
   formVisibility: false,
 };
