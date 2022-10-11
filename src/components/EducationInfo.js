@@ -20,7 +20,7 @@ class EducationlInfo extends React.Component {
       border,
       hover,
       formVisibility,
-      handleEducationFormDisplay,
+      handleFormDisplay,
     } = this.props;
 
     return (
@@ -30,7 +30,7 @@ class EducationlInfo extends React.Component {
           title={title}
           border={border}
           hover={hover}
-          displayForm={handleEducationFormDisplay}
+          handleFormDisplay={handleFormDisplay}
         />
         <EducationForm formVisibility={formVisibility} />
       </div>
@@ -45,7 +45,7 @@ EducationlInfo.propTypes = {
   border: PropTypes.string,
   hover: PropTypes.string,
   formVisibility: PropTypes.bool,
-  handleEducationFormDisplay: PropTypes.func.isRequired,
+  handleFormDisplay: PropTypes.func.isRequired,
 };
 
 // Creating Default Props

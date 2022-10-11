@@ -20,7 +20,7 @@ class PracticeInfo extends React.Component {
       border,
       hover,
       formVisibility,
-      handlePracticeFormDisplay,
+      handleFormDisplay,
     } = this.props;
 
     return (
@@ -30,7 +30,7 @@ class PracticeInfo extends React.Component {
           title={title}
           border={border}
           hover={hover}
-          displayForm={handlePracticeFormDisplay}
+          handleFormDisplay={handleFormDisplay}
         />
         <PracticeForm formVisibility={formVisibility} />
       </div>
@@ -45,7 +45,7 @@ PracticeInfo.propTypes = {
   border: PropTypes.string,
   hover: PropTypes.string,
   formVisibility: PropTypes.bool,
-  handlePracticeFormDisplay: PropTypes.func.isRequired,
+  handleFormDisplay: PropTypes.func.isRequired,
 };
 
 // Creating Default Props

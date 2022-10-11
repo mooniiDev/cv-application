@@ -20,7 +20,7 @@ class GeneralInfo extends React.Component {
       border,
       hover,
       formVisibility,
-      handleGeneralFormDisplay,
+      handleFormDisplay,
     } = this.props;
 
     return (
@@ -30,7 +30,7 @@ class GeneralInfo extends React.Component {
           title={title}
           border={border}
           hover={hover}
-          displayForm={handleGeneralFormDisplay}
+          handleFormDisplay={handleFormDisplay}
         />
         <GeneralForm formVisibility={formVisibility} />
       </div>
@@ -45,7 +45,7 @@ GeneralInfo.propTypes = {
   border: PropTypes.string,
   hover: PropTypes.string,
   formVisibility: PropTypes.bool,
-  handleGeneralFormDisplay: PropTypes.func.isRequired,
+  handleFormDisplay: PropTypes.func.isRequired,
 };
 
 // Creating Default Props
