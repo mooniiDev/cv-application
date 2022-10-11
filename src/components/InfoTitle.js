@@ -1,15 +1,11 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-
-// Packages Imports
+// Packages imports
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Font Awesome Imports
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faPen } from '@fortawesome/free-solid-svg-icons';
+// Components imports
+import Button from './Button';
 
-// Styling Imports
+// Styling imports
 import '../styles/InfoTitle.css';
 
 class InfoTitle extends React.Component {
@@ -20,45 +16,44 @@ class InfoTitle extends React.Component {
   }
 
   render() {
-    const { title, border, hover, formType, displayForm } = this.props;
+    const { title, border, hover, formType, handleFormDisplay } = this.props;
     return (
       <h2 className="info-title" data-form={formType}>
         <span className={`${border} info-border`}>{title}</span>
         <span>
-          {/* Button for adding information in the form */}
-          <span onClick={displayForm} className={`${hover} icon-plus`}>
-            <FontAwesomeIcon
-              icon={faPlus}
-              className="fa-fw"
-              pointerEvents="none"
-            />
-          </span>
-          {/* Button for editing information from the form */}
-          <span className={`${hover} icon-edit`}>
-            <FontAwesomeIcon icon={faPen} className="fa-fw" />
-          </span>
+          {/* Button of displaying the form for adding information */}
+          <Button
+            buttonEvent={handleFormDisplay}
+            buttonText="add"
+            buttonClass={`${hover} fontAwesome-button`}
+          />
+          {/* Button for editing information added to the form */}
+          <Button
+            buttonText="edit"
+            buttonClass={`${hover} fontAwesome-button`}
+          />
         </span>
       </h2>
     );
   }
 }
 
-// Validating Prop Types
+// Validating prop types
 InfoTitle.propTypes = {
   title: PropTypes.string,
   border: PropTypes.string,
   hover: PropTypes.string,
   formType: PropTypes.string,
-  displayForm: PropTypes.func,
+  handleFormDisplay: PropTypes.func,
 };
 
-// Creating Default Props
+// Creating default props
 InfoTitle.defaultProps = {
   title: '❗TEXT ERROR',
   border: 'green-border',
   hover: 'green-hover',
   formType: '',
-  displayForm: () => {},
+  handleFormDisplay: () => {},
 };
 
 export default InfoTitle;

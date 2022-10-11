@@ -10,7 +10,7 @@
   line-height: 3px;
 }
 
-/* Info Titles Borders Styling */
+/* Info titles borders styling */
 .green-border {
   border-bottom: 16px solid var(--green);
 }
@@ -29,43 +29,4 @@
 
 .purple-border {
   border-bottom: 16px solid var(--purple);
-}
-
-/* Icons Styling */
-.icon-plus,
-.icon-edit {
-  height: 20px;
-  margin: 0 5px;
-  padding: 10px;
-  background-color: var(--grey);
-  font-size: 1rem;
-  border-radius: 50%;
-  transition: all .1s;
-}
-
-/* Icons Hovers Styling */
-.icon-plus:hover,
-.icon-edit:hover {
-  cursor: pointer;
-  transition: all .1s;
-}
-
-.green-hover:hover {
-  background-color: var(--green);
-}
-
-.red-hover:hover {
-  background-color: var(--red);
-}
-
-.blue-hover:hover {
-  background-color: var(--light-blue);
-}
-
-.orange-hover:hover {
-  background-color: var(--orange);
-}
-
-.purple-hover:hover {
-  background-color: var(--purple);
 }
