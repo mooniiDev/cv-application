@@ -1,14 +1,14 @@
-// Packages Imports
+// Packages imports
 import React from 'react';
 
-// Components Imports
+// Components imports
 import Button from './Button';
 import GeneralInfo from './GeneralInfo';
 import PracticeInfo from './PracticeInfo';
 import EducationInfo from './EducationInfo';
 import SkillsInfo from './SkillsInfo';
 
-// Styling Imports
+// Styling imports
 import '../styles/Main.css';
 
 class Main extends React.Component {
@@ -23,7 +23,7 @@ class Main extends React.Component {
     };
   }
 
-  // function that shows a certain form when it's "+" button is clicked
+  // Function that shows a certain form when it's "+" button is clicked
   handleFormDisplay = (e) => {
     const formType =
       e.target.parentElement.parentElement.getAttribute('data-form');
