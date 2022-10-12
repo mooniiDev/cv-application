@@ -1,0 +1,28 @@
+.personal-form {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  border-top: 3px solid var(--red);
+  border-bottom: 3px solid var(--red);
+  padding: 30px;
+  -webkit-animation: slideDown .3s;
+  animation: slideDown .3s;
+}
+
+.personal-form div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.personal-form input {
+  display: flex;
+  margin: 2px 0 10px 0;
+  height: 25px;
+  border: 1px solid var(--dark-blue);
+  transition: .3s;
+}
+
+.personal-form input:focus {
+  outline: none;
+  border: 1px solid var(--red);
+  transition: .3s;
+}
