@@ -18,7 +18,7 @@ class GeneralForm extends React.Component {
     if (formVisibility === true) {
       return (
         <form className="general-form">
-          {/* General info */}
+          {/* General information */}
           <div>
             {/* First name */}
             <label htmlFor="first-name">
@@ -32,7 +32,7 @@ class GeneralForm extends React.Component {
             </label>
           </div>
 
-          {/* Contacts info */}
+          {/* Contacts information */}
           <div>
             {/* Phone */}
             <label htmlFor="phone">
@@ -46,7 +46,7 @@ class GeneralForm extends React.Component {
             </label>
           </div>
 
-          {/* Socials info */}
+          {/* Socials information */}
           <div>
             {/* LinkedIn */}
             <label htmlFor="linkedin">
