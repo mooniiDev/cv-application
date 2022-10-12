@@ -2,6 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Styling imports
+import '../styles/GeneralForm.css';
+
 class GeneralForm extends React.Component {
   constructor(props) {
     super(props);
@@ -15,53 +18,46 @@ class GeneralForm extends React.Component {
     if (formVisibility === true) {
       return (
         <form className="general-form">
+          {/* General info */}
           <div>
             {/* First name */}
-            <div>
-              <label htmlFor="first-name">
-                First name*
-                <input id="first-name" type="text" name="first-name" required />
-              </label>
-            </div>
+            <label htmlFor="first-name">
+              First name*
+              <input type="text" id="first-name" name="first-name" required />
+            </label>
             {/* Last name */}
-            <div>
-              <label htmlFor="last-name">
-                Last name*
-                <input id="last-name" type="text" name="last-name" required />
-              </label>
-            </div>
+            <label htmlFor="last-name" className="last-name">
+              Last name*
+              <input type="text" id="last-name" name="last-name" required />
+            </label>
           </div>
-          <div className="contacts">
+
+          {/* Contacts info */}
+          <div>
             {/* Phone */}
-            <div>
-              <label htmlFor="phone">
-                Phone*
-                <input id="phone" type="tel" name="phone" required />
-              </label>
-            </div>
+            <label htmlFor="phone">
+              Phone*
+              <input type="tel" id="phone" name="phone" required />
+            </label>
             {/* Email */}
-            <div>
-              <label htmlFor="email">
-                Email*
-                <input id="email" type="email" name="email" required />
-              </label>
-            </div>
+            <label htmlFor="email">
+              Email*
+              <input type="email" id="email" name="email" required />
+            </label>
           </div>
-          <div className="socials">
+
+          {/* Socials info */}
+          <div>
             {/* LinkedIn */}
-            <div>
-              <label htmlFor="linkedin">
-                LinkedIn
-                <input id="linkedin" type="text" name="linkedin" />
-              </label>
-            </div>
+            <label htmlFor="linkedin">
+              LinkedIn
+              <input type="text" id="linkedin" name="linkedin" />
+            </label>
             {/* GitHub */}
-            <div>
-              <label htmlFor="github">
-                GitHub
-                <input id="github" type="text" name="github" />
-              </label>
-            </div>
+            <label htmlFor="github">
+              GitHub
+              <input type="text" id="github" name="github" />
+            </label>
           </div>
         </form>
       );

@@ -1,0 +1,36 @@
+@keyframes slideDown {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.general-form {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  border-top: 3px solid var(--red);
+  border-bottom: 3px solid var(--red);
+  padding: 30px;
+  -webkit-animation: slideDown .3s;
+  animation: slideDown .3s;
+}
+
+.general-form div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.general-form input {
+  display: flex;
+  margin: 2px 0 10px 0;
+  border: 1px solid var(--dark-blue);
+  transition: .3s;
+}
+
+.general-form input:focus {
+  outline: none;
+  border: 1px solid var(--red);
+  transition: .3s;
+}
