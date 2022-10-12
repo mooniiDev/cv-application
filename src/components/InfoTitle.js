@@ -16,23 +16,47 @@ class InfoTitle extends React.Component {
   }
 
   render() {
-    const { title, border, hover, formType, handleFormDisplay } = this.props;
+    const {
+      title,
+      border,
+      hover,
+      formType,
+      handleFormDisplay,
+      formVisibility,
+    } = this.props;
+
     return (
       <h2 className="info-title" data-form={formType}>
         <span className={`${border} info-border`}>{title}</span>
-        <span>
-          {/* Button of displaying the form for adding information */}
-          <Button
-            buttonEvent={handleFormDisplay}
-            buttonText="add"
-            buttonClass={`${hover} fontAwesome-button`}
-          />
-          {/* Button for editing information added to the form */}
-          <Button
-            buttonText="edit"
-            buttonClass={`${hover} fontAwesome-button`}
-          />
-        </span>
+        {formVisibility === false ? (
+          <span>
+            {/* Button for displaying the form and adding information to that form */}
+            <Button
+              buttonEvent={handleFormDisplay}
+              buttonText="add"
+              buttonClass={`${hover} fontAwesome-button`}
+            />
+            {/* Button for editing information added to the form */}
+            <Button
+              buttonText="edit"
+              buttonClass={`${hover} fontAwesome-button`}
+            />
+          </span>
+        ) : (
+          <span>
+            {/* Button for saving the information added to the form */}
+            <Button
+              buttonEvent={handleFormDisplay}
+              buttonText="save"
+              buttonClass="green-hover fontAwesome-button"
+            />
+            {/* Button for canceling the action */}
+            <Button
+              buttonText="cancel"
+              buttonClass="red-hover fontAwesome-button"
+            />
+          </span>
+        )}
       </h2>
     );
   }
@@ -45,6 +69,7 @@ InfoTitle.propTypes = {
   hover: PropTypes.string,
   formType: PropTypes.string,
   handleFormDisplay: PropTypes.func,
+  formVisibility: PropTypes.bool,
 };
 
 // Creating default props
@@ -54,6 +79,7 @@ InfoTitle.defaultProps = {
   hover: 'green-hover',
   formType: '',
   handleFormDisplay: () => {},
+  formVisibility: false,
 };
 
 export default InfoTitle;
