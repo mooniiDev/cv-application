@@ -31,6 +31,7 @@ class GeneralInfo extends React.Component {
           border={border}
           hover={hover}
           handleFormDisplay={handleFormDisplay}
+          formVisibility={formVisibility}
         />
         <GeneralForm formVisibility={formVisibility} />
       </div>

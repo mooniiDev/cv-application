@@ -30,6 +30,7 @@ class EducationlInfo extends React.Component {
           title={title}
           border={border}
           hover={hover}
+          formVisibility={formVisibility}
           handleFormDisplay={handleFormDisplay}
         />
         <EducationForm formVisibility={formVisibility} />

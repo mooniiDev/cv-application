@@ -30,6 +30,7 @@ class PracticeInfo extends React.Component {
           title={title}
           border={border}
           hover={hover}
+          formVisibility={formVisibility}
           handleFormDisplay={handleFormDisplay}
         />
         <PracticeForm formVisibility={formVisibility} />
@@ -52,9 +53,9 @@ PracticeInfo.propTypes = {
 PracticeInfo.defaultProps = {
   formType: 'practice',
   title: 'PRACTICAL EXPERIENCE',
-  formVisibility: false,
   border: 'blue-border',
   hover: 'blue-hover',
+  formVisibility: false,
 };
 
 export default PracticeInfo;
