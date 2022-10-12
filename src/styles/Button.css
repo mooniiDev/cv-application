@@ -7,13 +7,13 @@
   font-family: 'Raleway-SemiBold';
   font-size: 1.3rem;
   border: none;
-  transition: all .1s;
+  transition: all .3s;
 }
 
 .preview-button:hover {
   background-color: var(--green);
   cursor: pointer;
-  transition: all .1s;
+  transition: all .3s;
 }
 
 /* Font Awesome button (with icon as value) */
@@ -26,12 +26,12 @@
   font-size: 1rem;
   border: none;
   border-radius: 50%;
-  transition: all .1s;
+  transition: all .3s;
 }
 
 .fontAwesome-button:hover {
   cursor: pointer;
-  transition: all .1s;
+  transition: all .3s;
 }
 
 /* Font Awesome buttons hovers colors */
