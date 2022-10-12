@@ -3,7 +3,7 @@ import React from 'react';
 
 // Components imports
 import Button from './Button';
-import GeneralInfo from './GeneralInfo';
+import PersonalInfo from './PersonalInfo';
 import PracticeInfo from './PracticeInfo';
 import EducationInfo from './EducationInfo';
 import SkillsInfo from './SkillsInfo';
@@ -16,7 +16,7 @@ class Main extends React.Component {
     super(props);
 
     this.state = {
-      isGeneralFormDisplayed: false,
+      isPersonalFormDisplayed: false,
       isPracticeFormDisplayed: false,
       isEducationFormDisplayed: false,
       isSkillsFormDisplayed: false,
@@ -28,9 +28,9 @@ class Main extends React.Component {
     const formType =
       e.target.parentElement.parentElement.getAttribute('data-form');
 
-    if (formType === 'general') {
+    if (formType === 'personal') {
       this.setState({
-        isGeneralFormDisplayed: true,
+        isPersonalFormDisplayed: true,
       });
     } else if (formType === 'practice') {
       this.setState({
@@ -49,7 +49,7 @@ class Main extends React.Component {
 
   render() {
     const {
-      isGeneralFormDisplayed,
+      isPersonalFormDisplayed,
       isPracticeFormDisplayed,
       isEducationFormDisplayed,
       isSkillsFormDisplayed,
@@ -59,12 +59,12 @@ class Main extends React.Component {
     return (
       <main id="Main">
         <Button buttonText="PREVIEW" buttonClass="preview-button" />
-        <GeneralInfo
-          formType="general"
-          title="GENERAL INFORMATION"
+        <PersonalInfo
+          formType="personal"
+          title="PERSONAL INFORMATION"
           border="red-border"
           hover="red-hover"
-          formVisibility={isGeneralFormDisplayed}
+          formVisibility={isPersonalFormDisplayed}
           handleFormDisplay={handleFormDisplay}
         />
         <PracticeInfo
