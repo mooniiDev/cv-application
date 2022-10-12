@@ -35,6 +35,10 @@
 }
 
 /* Font Awesome buttons hovers colors */
+.green-hover:hover {
+  background-color: var(--green);
+}
+
 .red-hover:hover {
   background-color: var(--red);
 }

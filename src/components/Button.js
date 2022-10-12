@@ -4,7 +4,12 @@ import PropTypes from 'prop-types';
 
 // Font Awesome imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faPen } from '@fortawesome/free-solid-svg-icons';
+import {
+  faPlus,
+  faPencil,
+  faCheck,
+  faTimes,
+} from '@fortawesome/free-solid-svg-icons';
 
 // Styling imports
 import '../styles/Button.css';
@@ -26,7 +31,27 @@ class Button extends React.Component {
       );
     } else if (buttonValue === 'edit') {
       buttonValue = (
-        <FontAwesomeIcon icon={faPen} className="fa-fw" pointerEvents="none" />
+        <FontAwesomeIcon
+          icon={faPencil}
+          className="fa-fw"
+          pointerEvents="none"
+        />
+      );
+    } else if (buttonValue === 'save') {
+      buttonValue = (
+        <FontAwesomeIcon
+          icon={faCheck}
+          className="fa-fw"
+          pointerEvents="none"
+        />
+      );
+    } else if (buttonValue === 'cancel') {
+      buttonValue = (
+        <FontAwesomeIcon
+          icon={faTimes}
+          className="fa-fw"
+          pointerEvents="none"
+        />
       );
     }
 
