@@ -2,6 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Styling imports
+import '../styles/EducationForm.css';
+
 class EducationForm extends React.Component {
   constructor(props) {
     super(props);
@@ -14,109 +17,122 @@ class EducationForm extends React.Component {
 
     if (formVisibility === true) {
       return (
-        <form>
+        <form className="education-form">
+          {/* School and study information */}
           <div>
-            {/* Name */}
-            <div>
-              <label htmlFor="school-name">
-                School*
-                <input
-                  id="school-name"
-                  type="text"
-                  name="school-name"
-                  placeholder="Ex: Harvard University"
-                  required
-                />
-              </label>
-            </div>
-            {/* Title */}
-            <div>
-              <label htmlFor="study-title">
-                Field of study*
-                <input
-                  id="study-title"
-                  type="text"
-                  name="study-title"
-                  placeholder="Ex: Software Engineering"
-                  required
-                />
-              </label>
-            </div>
+            {/* School name */}
+            <label htmlFor="school-name">
+              School*
+              <input
+                type="text"
+                id="school-name"
+                name="school-name"
+                placeholder="Ex: Harvard University"
+                required
+              />
+            </label>
+            {/* Field of study */}
+            <label htmlFor="study-title">
+              Field of study*
+              <input
+                type="text"
+                id="study-title"
+                name="study-title"
+                placeholder="Ex: Software Engineering"
+                required
+              />
+            </label>
           </div>
+
+          {/* Degree and grade information */}
           <div>
             {/* Degree */}
-            <div>
-              <label htmlFor="educational-degree">
-                Degree
-                <input
-                  id="educational-degree"
-                  type="text"
-                  name="educational-degree"
-                  placeholder="Ex: Bachelor’s"
-                />
-              </label>
-            </div>
+            <label htmlFor="education-degree">
+              Degree
+              <input
+                type="text"
+                id="education-degree"
+                name="education-degree"
+                placeholder="Ex: Bachelor’s"
+              />
+            </label>
             {/* Grade */}
-            <div>
-              <label htmlFor="educational-grade">
-                Grade
-                <input
-                  id="educational-grade"
-                  type="text"
-                  name="educational-grade"
-                />
-              </label>
-            </div>
+            <label htmlFor="education-grade">
+              Grade
+              <input type="text" id="education-grade" name="education-grade" />
+            </label>
           </div>
-          <div>
-            {/* Start date */}
-            <fieldset>
-              <legend>Start date*</legend>
-              <label htmlFor="educational-start-year">
-                Year
-                <input
-                  id="educational-start-year"
-                  type="number"
-                  name="educational-start-year"
-                  required
-                />
-              </label>
-              <label htmlFor="educational-start-month">
-                Month
-                <select
-                  id="educational-start-month"
-                  type="text"
-                  name="educational-start-month"
-                >
-                  <option value="month">Month</option>
-                  <option value="january">January</option>
-                </select>
-              </label>
-            </fieldset>
-            {/* End date */}
-            <fieldset>
-              <legend>End date (or expected)</legend>
-              <label htmlFor="educational-end-year">
-                Year
-                <input
-                  id="educational-end-year"
-                  type="number"
-                  name="educational-end-year"
-                />
-              </label>
-              <label htmlFor="educational-end-month">
-                Month
-                <select
-                  id="educational-end-month"
-                  type="text"
-                  name="educational-end-month"
-                >
-                  <option value="month">Month</option>
-                  <option value="january">January</option>
-                </select>
-              </label>
-            </fieldset>
-          </div>
+
+          {/* Education start date */}
+          <fieldset>
+            <legend>Start date*</legend>
+            <label htmlFor="education-start-year">
+              Year
+              <input
+                type="text"
+                id="education-start-year"
+                name="education-start-year"
+                required
+              />
+            </label>
+            <label htmlFor="education-start-month">
+              Month
+              <select
+                type="text"
+                id="education-start-month"
+                name="education-start-month"
+              >
+                <option value="month">Month</option>
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+              </select>
+            </label>
+          </fieldset>
+
+          {/* Education end date */}
+          <fieldset>
+            <legend>End date (or expected)</legend>
+            <label htmlFor="education-end-year">
+              Year
+              <input
+                type="text"
+                id="education-end-year"
+                name="education-end-year"
+              />
+            </label>
+            <label htmlFor="education-end-month">
+              Month
+              <select
+                type="text"
+                id="education-end-month"
+                name="education-end-month"
+              >
+                <option value="month">Month</option>
+                <option value="january">January</option>
+                <option value="february">February</option>
+                <option value="march">March</option>
+                <option value="april">April</option>
+                <option value="may">May</option>
+                <option value="june">June</option>
+                <option value="july">July</option>
+                <option value="august">August</option>
+                <option value="september">September</option>
+                <option value="october">October</option>
+                <option value="november">November</option>
+                <option value="december">December</option>
+              </select>
+            </label>
+          </fieldset>
         </form>
       );
     }
