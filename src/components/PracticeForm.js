@@ -86,14 +86,17 @@ class PracticeForm extends React.Component {
                 required
               />
             </label>
-            <label htmlFor="practice-start-month">
+            <label
+              htmlFor="practice-start-month"
+              className="practice-start-month"
+            >
               Month
               <select
                 type="text"
                 id="practice-start-month"
                 name="practice-start-month"
               >
-                <option value="month">Month</option>
+                <option value="month">Please select</option>
                 <option value="january">January</option>
                 <option value="february">February</option>
                 <option value="march">March</option>
@@ -121,14 +124,14 @@ class PracticeForm extends React.Component {
                 name="practice-end-year"
               />
             </label>
-            <label htmlFor="practice-end-month">
+            <label htmlFor="practice-end-month" className="practice-end-month">
               Month
               <select
                 type="text"
                 id="practice-end-month"
                 name="practice-end-month"
               >
-                <option value="month">Month</option>
+                <option value="month">Please select</option>
                 <option value="january">January</option>
                 <option value="february">February</option>
                 <option value="march">March</option>

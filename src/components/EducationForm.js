@@ -75,14 +75,17 @@ class EducationForm extends React.Component {
                 required
               />
             </label>
-            <label htmlFor="education-start-month">
+            <label
+              htmlFor="education-start-month"
+              className="education-start-month"
+            >
               Month
               <select
                 type="text"
                 id="education-start-month"
                 name="education-start-month"
               >
-                <option value="month">Month</option>
+                <option value="month">Please select</option>
                 <option value="january">January</option>
                 <option value="february">February</option>
                 <option value="march">March</option>
@@ -110,14 +113,17 @@ class EducationForm extends React.Component {
                 name="education-end-year"
               />
             </label>
-            <label htmlFor="education-end-month">
+            <label
+              htmlFor="education-end-month"
+              className="education-end-month"
+            >
               Month
               <select
                 type="text"
                 id="education-end-month"
                 name="education-end-month"
               >
-                <option value="month">Month</option>
+                <option value="month">Please select</option>
                 <option value="january">January</option>
                 <option value="february">February</option>
                 <option value="march">March</option>

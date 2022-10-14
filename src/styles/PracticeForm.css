@@ -36,7 +36,7 @@
 
 #employment-type {
   margin-top: 2px;
-  width: 223px;
+  width: 222px;
   height: 31px;
   border: 1px solid var(--dark-blue);
   background-color: var(--white);
@@ -51,9 +51,7 @@
 
 #practice-start-month,
 #practice-end-month {
-  margin-left: 10px;
-  width: 155px;
-  height: 25px;
+  height: 31px;
   border: 1px solid var(--dark-blue);
   background-color: var(--white);
   transition: .3s;
@@ -64,4 +62,12 @@
   outline: none;
   border: 1px solid var(--light-blue);
   transition: .3s;
+}
+
+.practice-start-month,
+.practice-end-month {
+  display: flex;
+  flex-direction: column;
+  margin: 2px 0 0 28px;
+  width: 222px;
 }

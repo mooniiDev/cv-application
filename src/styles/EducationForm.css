@@ -31,9 +31,7 @@
 
 #education-start-month,
 #education-end-month {
-  margin-left: 10px;
-  width: 155px;
-  height: 25px;
+  height: 31px;
   border: 1px solid var(--dark-blue);
   background-color: var(--white);
   transition: .3s;
@@ -44,4 +42,12 @@
   outline: none;
   border: 1px solid var(--orange);
   transition: .3s;
+}
+
+.education-start-month,
+.education-end-month {
+  display: flex;
+  flex-direction: column;
+  margin: 2px 0 0 28px;
+  width: 222px;
 }
