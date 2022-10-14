@@ -55,6 +55,11 @@ code {
     monospace;
 }
 
+input,
+select {
+  border-radius: 2px;
+}
+
 fieldset {
   display: flex;
   margin: 10px 0;
