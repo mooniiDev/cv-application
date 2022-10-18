@@ -1,0 +1,10 @@
+.skills-form {
+  display: flex;
+  justify-content: center;
+  border-top: 3px solid var(--purple);
+  border-bottom: 3px solid var(--purple);
+}
+
+.skills-form input:focus {
+  border: 1px solid var(--purple);
+}

@@ -3,10 +3,11 @@
   margin-bottom: 30px;
   padding: 10px 20px;
   background-color: var(--grey);
-  color: var(--dark-blue);
   font-family: 'Raleway-SemiBold';
   font-size: 1.3rem;
+  color: var(--dark-blue);
   border: none;
+  border-radius: 2px;
   transition: all 0.3s;
 }
 

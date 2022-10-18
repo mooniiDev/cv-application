@@ -85,7 +85,7 @@ class Main extends React.Component {
         />
         <SkillsInfo
           formType="skills"
-          title="SKILLS"
+          title="ADDITIONAL SKILLS"
           border="purple-border"
           hover="purple-hover"
           formVisibility={isSkillsFormDisplayed}
