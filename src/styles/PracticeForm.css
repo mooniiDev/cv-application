@@ -1,32 +1,10 @@
 .practice-form {
-  margin-bottom: 30px;
-  padding: 30px 0;
-  font-size: 1.2rem;
   border-top: 3px solid var(--light-blue);
   border-bottom: 3px solid var(--light-blue);
-  -webkit-animation: slideDown .3s;
-  animation: slideDown .3s;
-}
-
-.practice-form div {
-  display: flex;
-  justify-content: space-around;
-}
-
-.practice-form input {
-  display: flex;
-  margin: 2px 0 10px 0;
-  padding: 2px 10px;
-  width: 200px;
-  height: 25px;
-  border: 1px solid var(--dark-blue);
-  transition: .3s;
 }
 
 .practice-form input:focus {
-  outline: none;
   border: 1px solid var(--light-blue);
-  transition: .3s;
 }
 
 .employment-label {
@@ -37,37 +15,13 @@
 #employment-type {
   margin-top: 2px;
   width: 222px;
-  height: 31px;
-  border: 1px solid var(--dark-blue);
-  background-color: var(--white);
-  transition: .3s;
 }
 
 #employment-type:focus {
-  outline: none;
   border: 1px solid var(--light-blue);
-  transition: .3s;
-}
-
-#practice-start-month,
-#practice-end-month {
-  height: 31px;
-  border: 1px solid var(--dark-blue);
-  background-color: var(--white);
-  transition: .3s;
 }
 
 #practice-start-month:focus,
-#practice-end-month:focus  {
-  outline: none;
+#practice-end-month:focus {
   border: 1px solid var(--light-blue);
-  transition: .3s;
-}
-
-.practice-start-month,
-.practice-end-month {
-  display: flex;
-  flex-direction: column;
-  margin: 2px 0 0 28px;
-  width: 222px;
 }
