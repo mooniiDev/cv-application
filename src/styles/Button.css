@@ -17,7 +17,7 @@
   transition: all 0.3s;
 }
 
-/* Font Awesome button (with icon as value) */
+/* Font Awesome buttons (with icons as values) */
 .fontAwesome-button {
   height: 40px;
   margin: 0 5px;
@@ -31,6 +31,23 @@
 }
 
 .fontAwesome-button:hover {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.delete-button,
+.add-more-button {
+  margin: 20px 0 0 13px;
+}
+
+.delete-button:hover {
+  background-color: var(--red);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.add-more-button:hover {
+  background-color: var(--green);
   cursor: pointer;
   transition: all 0.3s;
 }

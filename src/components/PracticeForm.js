@@ -2,6 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Components imports
+import Button from './Button';
+
 // Styling imports
 import '../styles/PracticeForm.css';
 
@@ -147,6 +150,20 @@ class PracticeForm extends React.Component {
               </select>
             </label>
           </fieldset>
+
+          {/* Button for deleting info */}
+          <Button
+            type="button"
+            buttonText="delete"
+            buttonClass="delete-button fontAwesome-button"
+          />
+
+          {/* Button for adding more info */}
+          <Button
+            type="button"
+            buttonText="add"
+            buttonClass="add-more-button fontAwesome-button"
+          />
         </form>
       );
     }

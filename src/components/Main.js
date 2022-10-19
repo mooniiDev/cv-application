@@ -28,21 +28,50 @@ class Main extends React.Component {
     const formType =
       e.target.parentElement.parentElement.getAttribute('data-form');
 
-    if (formType === 'personal') {
+    // Displaying and hiding personal form
+    if (formType === 'personal' && e.target.classList.contains('show')) {
       this.setState({
         isPersonalFormDisplayed: true,
       });
-    } else if (formType === 'practice') {
+    } else if (formType === 'personal' && e.target.classList.contains('hide')) {
+      this.setState({
+        isPersonalFormDisplayed: false,
+      });
+
+      // Displaying and hiding practice form
+    } else if (formType === 'practice' && e.target.classList.contains('show')) {
       this.setState({
         isPracticeFormDisplayed: true,
       });
-    } else if (formType === 'education') {
+    } else if (formType === 'practice' && e.target.classList.contains('hide')) {
+      this.setState({
+        isPracticeFormDisplayed: false,
+      });
+
+      // Displaying and hiding education form
+    } else if (
+      formType === 'education' &&
+      e.target.classList.contains('show')
+    ) {
       this.setState({
         isEducationFormDisplayed: true,
       });
-    } else if (formType === 'skills') {
+    } else if (
+      formType === 'education' &&
+      e.target.classList.contains('hide')
+    ) {
+      this.setState({
+        isEducationFormDisplayed: false,
+      });
+
+      // Displaying and hiding skills form
+    } else if (formType === 'skills' && e.target.classList.contains('show')) {
       this.setState({
         isSkillsFormDisplayed: true,
+      });
+    } else if (formType === 'skills' && e.target.classList.contains('hide')) {
+      this.setState({
+        isSkillsFormDisplayed: false,
       });
     }
   };

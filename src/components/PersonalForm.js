@@ -2,8 +2,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Components imports
+import Button from './Button';
+
 // Styling imports
 import '../styles/PersonalForm.css';
+import '../styles/Button.css';
 
 class PersonalForm extends React.Component {
   constructor(props) {
@@ -59,6 +63,13 @@ class PersonalForm extends React.Component {
               <input type="text" id="github" name="github" />
             </label>
           </div>
+
+          {/* Button for deleting form's info */}
+          <Button
+            type="button"
+            buttonText="delete"
+            buttonClass="delete-button fontAwesome-button"
+          />
         </form>
       );
     }

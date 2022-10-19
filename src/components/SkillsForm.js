@@ -2,6 +2,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Components imports
+import Button from './Button';
+
 // Styling imports
 import '../styles/SkillsForm.css';
 
@@ -28,6 +31,13 @@ class SkillsForm extends React.Component {
               placeholder="Ex: React.js"
             />
           </label>
+
+          {/* Button for adding a skill */}
+          <Button
+            type="button"
+            buttonText="add"
+            buttonClass="add-more-button fontAwesome-button"
+          />
         </form>
       );
     }

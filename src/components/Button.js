@@ -5,10 +5,10 @@ import PropTypes from 'prop-types';
 // Font Awesome imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+  faEye,
+  faEyeSlash,
+  faTrashAlt,
   faPlus,
-  faPencil,
-  faCheck,
-  faTimes,
 } from '@fortawesome/free-solid-svg-icons';
 
 // Styling imports
@@ -25,33 +25,29 @@ class Button extends React.Component {
     const { buttonEvent, buttonText, buttonClass } = this.props;
     let buttonValue = buttonText;
 
-    if (buttonValue === 'add') {
+    if (buttonValue === 'show') {
+      buttonValue = (
+        <FontAwesomeIcon icon={faEye} className="fa-fw" pointerEvents="none" />
+      );
+    } else if (buttonValue === 'hide') {
+      buttonValue = (
+        <FontAwesomeIcon
+          icon={faEyeSlash}
+          className="fa-fw"
+          pointerEvents="none"
+        />
+      );
+    } else if (buttonValue === 'delete') {
+      buttonValue = (
+        <FontAwesomeIcon
+          icon={faTrashAlt}
+          className="fa-fw"
+          pointerEvents="none"
+        />
+      );
+    } else if (buttonValue === 'add') {
       buttonValue = (
         <FontAwesomeIcon icon={faPlus} className="fa-fw" pointerEvents="none" />
-      );
-    } else if (buttonValue === 'edit') {
-      buttonValue = (
-        <FontAwesomeIcon
-          icon={faPencil}
-          className="fa-fw"
-          pointerEvents="none"
-        />
-      );
-    } else if (buttonValue === 'save') {
-      buttonValue = (
-        <FontAwesomeIcon
-          icon={faCheck}
-          className="fa-fw"
-          pointerEvents="none"
-        />
-      );
-    } else if (buttonValue === 'cancel') {
-      buttonValue = (
-        <FontAwesomeIcon
-          icon={faTimes}
-          className="fa-fw"
-          pointerEvents="none"
-        />
       );
     }
 

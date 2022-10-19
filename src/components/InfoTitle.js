@@ -30,30 +30,20 @@ class InfoTitle extends React.Component {
         <span className={`${border} info-border`}>{title}</span>
         {formVisibility === false ? (
           <span>
-            {/* Button for displaying the form and adding information to that form */}
+            {/* Button for displaying the form */}
             <Button
               buttonEvent={handleFormDisplay}
-              buttonText="add"
-              buttonClass={`${hover} fontAwesome-button`}
-            />
-            {/* Button for editing information added to the form */}
-            <Button
-              buttonText="edit"
-              buttonClass={`${hover} fontAwesome-button`}
+              buttonText="show"
+              buttonClass={`${hover} show fontAwesome-button`}
             />
           </span>
         ) : (
           <span>
-            {/* Button for saving the information added to the form */}
+            {/* Button for hiding the form */}
             <Button
               buttonEvent={handleFormDisplay}
-              buttonText="save"
-              buttonClass="green-hover fontAwesome-button"
-            />
-            {/* Button for canceling the action */}
-            <Button
-              buttonText="cancel"
-              buttonClass="red-hover fontAwesome-button"
+              buttonText="hide"
+              buttonClass={`${hover} hide fontAwesome-button`}
             />
           </span>
         )}
