@@ -1,7 +1,7 @@
-// Packages Imports
+// Packages imports
 import React from 'react';
 
-// Styling Imports
+// Styling imports
 import '../styles/Footer.css';
 
 class Footer extends React.Component {

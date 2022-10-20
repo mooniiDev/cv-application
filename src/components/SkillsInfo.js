@@ -1,8 +1,8 @@
-// Packages Imports
+// Packages imports
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// Components Imports
+// Components imports
 import InfoTitle from './InfoTitle';
 import SkillsForm from './SkillsForm';
 
@@ -39,7 +39,7 @@ class SkillsInfo extends React.Component {
   }
 }
 
-// Validating Prop Types
+// Validating prop types
 SkillsInfo.propTypes = {
   formType: PropTypes.string,
   title: PropTypes.string,
@@ -49,7 +49,7 @@ SkillsInfo.propTypes = {
   handleFormDisplay: PropTypes.func.isRequired,
 };
 
-// Creating Default Props
+// Creating default props
 SkillsInfo.defaultProps = {
   formType: 'skills',
   title: 'SKILLS',
