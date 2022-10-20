@@ -1,4 +1,5 @@
 .practice-form {
+  padding-bottom: 60px;
   border-top: 3px solid var(--light-blue);
   border-bottom: 3px solid var(--light-blue);
 }

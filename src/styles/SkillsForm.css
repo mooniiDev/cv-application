@@ -1,8 +1,12 @@
 .skills-form {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   border-top: 3px solid var(--purple);
   border-bottom: 3px solid var(--purple);
+}
+
+.skills-form label {
+  margin-left: 13px;
 }
 
 .skills-form input:focus {
