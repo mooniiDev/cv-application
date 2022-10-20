@@ -1,5 +1,5 @@
-/* Preview button (with string as value) */
-.preview-button {
+/* Preview and Edit buttons (with strings as values) */
+.main-button {
   margin-bottom: 30px;
   padding: 10px 20px;
   background-color: var(--grey);
@@ -11,7 +11,7 @@
   transition: all 0.3s;
 }
 
-.preview-button:hover {
+.main-button:hover {
   background-color: var(--green);
   cursor: pointer;
   transition: all 0.3s;
