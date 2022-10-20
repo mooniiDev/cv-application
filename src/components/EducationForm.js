@@ -154,7 +154,7 @@ class EducationForm extends React.Component {
           <Button
             type="button"
             buttonText="add"
-            buttonClass="add-more-button fontAwesome-button"
+            buttonClass="add-button fontAwesome-button"
           />
         </form>
       );

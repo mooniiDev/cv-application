@@ -35,9 +35,16 @@
   transition: all 0.3s;
 }
 
+/* Deleting and adding info */
 .delete-button,
-.add-more-button {
-  margin: 20px 0 0 13px;
+.add-button {
+  margin-top: 5px;
+  float: right;
+}
+
+/* Adding skill */
+.add-skill-button {
+  margin-top: 20px;
 }
 
 .delete-button:hover {
@@ -46,7 +53,8 @@
   transition: all 0.3s;
 }
 
-.add-more-button:hover {
+.add-button:hover,
+.add-skill-button:hover {
   background-color: var(--green);
   cursor: pointer;
   transition: all 0.3s;

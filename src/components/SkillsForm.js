@@ -7,6 +7,7 @@ import Button from './Button';
 
 // Styling imports
 import '../styles/SkillsForm.css';
+import '../styles/Button.css';
 
 class SkillsForm extends React.Component {
   constructor(props) {
@@ -36,7 +37,7 @@ class SkillsForm extends React.Component {
           <Button
             type="button"
             buttonText="add"
-            buttonClass="add-more-button fontAwesome-button"
+            buttonClass="add-skill-button fontAwesome-button"
           />
         </form>
       );
