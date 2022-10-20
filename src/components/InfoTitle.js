@@ -35,7 +35,7 @@ class InfoTitle extends React.Component {
               type="button"
               buttonEvent={handleFormDisplay}
               buttonText="show"
-              buttonClass={`${hover} show fontAwesome-button`}
+              buttonClass={`${hover} fontAwesome-button`}
             />
           </span>
         ) : (
@@ -45,7 +45,7 @@ class InfoTitle extends React.Component {
               type="button"
               buttonEvent={handleFormDisplay}
               buttonText="hide"
-              buttonClass={`${hover} hide fontAwesome-button`}
+              buttonClass={`${hover} fontAwesome-button`}
             />
           </span>
         )}

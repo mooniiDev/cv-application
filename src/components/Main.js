@@ -24,56 +24,49 @@ class Main extends React.Component {
     };
   }
 
-  // Function that shows a certain form when it's "+" button is clicked
+  // Function that shows a certain form when it's "eye" button is clicked
   handleFormDisplay = (e) => {
     const formType =
       e.target.parentElement.parentElement.getAttribute('data-form');
 
     // Displaying and hiding personal form
-    if (formType === 'personal' && e.target.classList.contains('show')) {
-      this.setState({
-        formDisplay: { isPersonalFormDisplayed: true },
-      });
-    } else if (formType === 'personal' && e.target.classList.contains('hide')) {
-      this.setState({
-        formDisplay: { isPersonalFormDisplayed: false },
-      });
+    if (formType === 'personal') {
+      this.setState((prevState) => ({
+        formDisplay: {
+          ...prevState.formDisplay,
+          isPersonalFormDisplayed:
+            !prevState.formDisplay.isPersonalFormDisplayed,
+        },
+      }));
 
       // Displaying and hiding practice form
-    } else if (formType === 'practice' && e.target.classList.contains('show')) {
-      this.setState({
-        formDisplay: { isPracticeFormDisplayed: true },
-      });
-    } else if (formType === 'practice' && e.target.classList.contains('hide')) {
-      this.setState({
-        formDisplay: { isPracticeFormDisplayed: false },
-      });
+    } else if (formType === 'practice') {
+      this.setState((prevState) => ({
+        formDisplay: {
+          ...prevState.formDisplay,
+          isPracticeFormDisplayed:
+            !prevState.formDisplay.isPracticeFormDisplayed,
+        },
+      }));
 
       // Displaying and hiding education form
-    } else if (
-      formType === 'education' &&
-      e.target.classList.contains('show')
-    ) {
-      this.setState({
-        formDisplay: { isEducationFormDisplayed: true },
-      });
-    } else if (
-      formType === 'education' &&
-      e.target.classList.contains('hide')
-    ) {
-      this.setState({
-        formDisplay: { isEducationFormDisplayed: false },
-      });
+    } else if (formType === 'education') {
+      this.setState((prevState) => ({
+        formDisplay: {
+          ...prevState.formDisplay,
+          isEducationFormDisplayed:
+            !prevState.formDisplay.isEducationFormDisplayed,
+        },
+      }));
 
       // Displaying and hiding skills form
-    } else if (formType === 'skills' && e.target.classList.contains('show')) {
-      this.setState({
-        formDisplay: { isSkillsFormDisplayed: true },
-      });
-    } else if (formType === 'skills' && e.target.classList.contains('hide')) {
-      this.setState({
-        formDisplay: { isSkillsFormDisplayed: false },
-      });
+    } else if (formType === 'skills') {
+      this.setState((prevState) => ({
+        formDisplay: {
+          ...prevState.formDisplay,
+          isSkillsFormDisplayed: !prevState.formDisplay.isSkillsFormDisplayed,
+        },
+      }));
     }
   };
 
