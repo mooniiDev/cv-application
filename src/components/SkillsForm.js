@@ -35,7 +35,6 @@ class SkillsForm extends React.Component {
 
           {/* Button for adding a skill */}
           <Button
-            type="button"
             buttonText="add"
             buttonClass="add-skill-button fontAwesome-button"
           />

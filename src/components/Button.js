@@ -52,7 +52,7 @@ class Button extends React.Component {
     }
 
     return (
-      <button type="submit" onClick={buttonEvent} className={buttonClass}>
+      <button type="button" onClick={buttonEvent} className={buttonClass}>
         {buttonValue}
       </button>
     );
