@@ -60,6 +60,18 @@ class PersonalForm extends React.Component {
               <input type="text" id="github" name="github" />
             </label>
           </div>
+
+          {/* About text */}
+          <div>
+            <label htmlFor="about">
+              About
+              <textarea
+                id="about"
+                name="about"
+                placeholder="Ex: I create magic through my mind, my heart and my keyboard. ✨"
+              />
+            </label>
+          </div>
         </form>
       );
     }

@@ -4,7 +4,10 @@
   border-bottom: 3px solid var(--light-blue);
 }
 
-.practice-form input:focus {
+.practice-form input:focus,
+#employment-type:focus,
+#practice-start-month:focus,
+#practice-end-month:focus {
   border: 1px solid var(--light-blue);
 }
 
@@ -16,13 +19,4 @@
 #employment-type {
   margin-top: 2px;
   width: 222px;
-}
-
-#employment-type:focus {
-  border: 1px solid var(--light-blue);
-}
-
-#practice-start-month:focus,
-#practice-end-month:focus {
-  border: 1px solid var(--light-blue);
 }
