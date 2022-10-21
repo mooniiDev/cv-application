@@ -1,5 +1,9 @@
 // Packages imports
 import React from 'react';
+import PropTypes from 'prop-types';
+
+// Components imports
+import PersonalPreview from './PersonalPreview';
 
 class PreviewCV extends React.Component {
   constructor(props) {
@@ -9,8 +13,19 @@ class PreviewCV extends React.Component {
   }
 
   render() {
-    return <div />;
+    const { cvInfo } = this.props;
+    return <PersonalPreview cvInfo={cvInfo} />;
   }
 }
+
+// Validating prop types
+PreviewCV.propTypes = {
+  cvInfo: PropTypes.shape({}),
+};
+
+// Creating default props
+PreviewCV.defaultProps = {
+  cvInfo: {},
+};
 
 export default PreviewCV;

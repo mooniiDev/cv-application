@@ -21,6 +21,16 @@ class Main extends React.Component {
         isSkillsFormDisplayed: false,
       },
       editMode: true,
+      cvInfo: {
+        personal: {
+          firstName: '',
+          lastName: '',
+          phone: '',
+          email: '',
+          linkedin: '',
+          github: '',
+        },
+      },
     };
   }
 
@@ -78,7 +88,7 @@ class Main extends React.Component {
   };
 
   render() {
-    const { formDisplay, editMode } = this.state;
+    const { formDisplay, editMode, cvInfo } = this.state;
     const { handleFormDisplay, handleMode } = this;
 
     if (editMode === true) {
@@ -106,7 +116,7 @@ class Main extends React.Component {
           buttonText="EDIT"
           buttonClass="main-button"
         />
-        <PreviewCV />
+        <PreviewCV cvInfo={cvInfo} />
       </main>
     );
   }
