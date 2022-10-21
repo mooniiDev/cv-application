@@ -70,14 +70,25 @@ class Main extends React.Component {
     }
   };
 
+  // Function that changes content mode when main button is clicked
+  handleMode = () => {
+    this.setState((prevState) => ({
+      editMode: !prevState.editMode,
+    }));
+  };
+
   render() {
     const { formDisplay, editMode } = this.state;
-    const { handleFormDisplay } = this;
+    const { handleFormDisplay, handleMode } = this;
 
     if (editMode === true) {
       return (
         <main id="Main">
-          <Button buttonText="PREVIEW" buttonClass="main-button" />
+          <Button
+            buttonEvent={handleMode}
+            buttonText="PREVIEW"
+            buttonClass="main-button"
+          />
           <EditCV
             handleFormDisplay={handleFormDisplay}
             personalDisplay={formDisplay.isPersonalFormDisplayed}
@@ -90,7 +101,11 @@ class Main extends React.Component {
     }
     return (
       <main id="Main">
-        <Button buttonText="EDIT" buttonClass="main-button" />
+        <Button
+          buttonEvent={handleMode}
+          buttonText="EDIT"
+          buttonClass="main-button"
+        />
         <PreviewCV />
       </main>
     );
