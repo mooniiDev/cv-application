@@ -12,4 +12,6 @@
   font-family: 'Raleway-SemiBold';
   color: var(--white);
   text-align: center;
+  border-top: 3px solid var(--dark-blue);
+  border-radius: 2px 2px 0 0;
 }

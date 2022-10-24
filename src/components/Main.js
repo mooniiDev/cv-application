@@ -87,13 +87,26 @@ class Main extends React.Component {
     }));
   };
 
+  // Function that handles changes in personal form's inputs fields
+  handlePersonalChange = (e) => {
+    this.setState((prevState) => ({
+      cvInfo: {
+        ...prevState.cvInfo,
+        personal: {
+          ...prevState.cvInfo.personal,
+          [e.target.getAttribute('data-info')]: e.target.value,
+        },
+      },
+    }));
+  };
+
   render() {
     const { formDisplay, editMode, cvInfo } = this.state;
-    const { handleFormDisplay, handleMode } = this;
+    const { handleFormDisplay, handleMode, handlePersonalChange } = this;
 
     if (editMode === true) {
       return (
-        <main id="Main">
+        <main id="main">
           <Button
             buttonEvent={handleMode}
             buttonText="PREVIEW"
@@ -105,12 +118,14 @@ class Main extends React.Component {
             practiceDisplay={formDisplay.isPracticeFormDisplayed}
             educationDisplay={formDisplay.isEducationFormDisplayed}
             skillsDisplay={formDisplay.isSkillsFormDisplayed}
+            handlePersonalChange={handlePersonalChange}
+            cvInfo={cvInfo}
           />
         </main>
       );
     }
     return (
-      <main id="Main">
+      <main id="main">
         <Button
           buttonEvent={handleMode}
           buttonText="EDIT"

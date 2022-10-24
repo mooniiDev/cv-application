@@ -14,7 +14,7 @@ class PersonalForm extends React.Component {
   }
 
   render() {
-    const { formVisibility } = this.props;
+    const { formVisibility, handlePersonalChange, cvInfo } = this.props;
 
     if (formVisibility === true) {
       return (
@@ -24,12 +24,28 @@ class PersonalForm extends React.Component {
             {/* First name */}
             <label htmlFor="first-name">
               First name*
-              <input type="text" id="first-name" name="first-name" required />
+              <input
+                type="text"
+                id="first-name"
+                name="first-name"
+                data-info="firstName"
+                value={cvInfo.personal.firstName}
+                onChange={handlePersonalChange}
+                required
+              />
             </label>
             {/* Last name */}
             <label htmlFor="last-name" className="last-name">
               Last name*
-              <input type="text" id="last-name" name="last-name" required />
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                data-info="lastName"
+                value={cvInfo.personal.lastName}
+                onChange={handlePersonalChange}
+                required
+              />
             </label>
           </div>
 
@@ -82,11 +98,19 @@ class PersonalForm extends React.Component {
 // Validating Prop Types
 PersonalForm.propTypes = {
   formVisibility: PropTypes.bool,
+  handlePersonalChange: PropTypes.func.isRequired,
+  cvInfo: PropTypes.shape({
+    personal: PropTypes.shape({
+      firstName: PropTypes.string,
+      lastName: PropTypes.string,
+    }),
+  }),
 };
 
 // Creating Default Props
 PersonalForm.defaultProps = {
   formVisibility: false,
+  cvInfo: {},
 };
 
 export default PersonalForm;

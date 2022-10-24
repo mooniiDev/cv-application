@@ -21,6 +21,8 @@ class PersonalInfo extends React.Component {
       hover,
       formVisibility,
       handleFormDisplay,
+      handlePersonalChange,
+      cvInfo,
     } = this.props;
 
     return (
@@ -33,7 +35,11 @@ class PersonalInfo extends React.Component {
           handleFormDisplay={handleFormDisplay}
           formVisibility={formVisibility}
         />
-        <PersonalForm formVisibility={formVisibility} />
+        <PersonalForm
+          formVisibility={formVisibility}
+          handlePersonalChange={handlePersonalChange}
+          cvInfo={cvInfo}
+        />
       </div>
     );
   }
@@ -47,6 +53,8 @@ PersonalInfo.propTypes = {
   hover: PropTypes.string,
   formVisibility: PropTypes.bool,
   handleFormDisplay: PropTypes.func.isRequired,
+  handlePersonalChange: PropTypes.func.isRequired,
+  cvInfo: PropTypes.shape({}).isRequired,
 };
 
 // Creating default props
