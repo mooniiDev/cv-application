@@ -60,7 +60,7 @@ InfoTitle.propTypes = {
   border: PropTypes.string,
   hover: PropTypes.string,
   formType: PropTypes.string,
-  handleFormDisplay: PropTypes.func,
+  handleFormDisplay: PropTypes.func.isRequired,
   formVisibility: PropTypes.bool,
 };
 
@@ -70,7 +70,6 @@ InfoTitle.defaultProps = {
   border: 'green-border',
   hover: 'green-hover',
   formType: '',
-  handleFormDisplay: () => {},
   formVisibility: false,
 };
 

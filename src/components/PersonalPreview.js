@@ -32,12 +32,7 @@ PersonalPreview.propTypes = {
       firstName: PropTypes.string,
       lastName: PropTypes.string,
     }),
-  }),
-};
-
-// Creating default props
-PersonalPreview.defaultProps = {
-  cvInfo: {},
+  }).isRequired,
 };
 
 export default PersonalPreview;

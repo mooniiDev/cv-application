@@ -20,12 +20,7 @@ class PreviewCV extends React.Component {
 
 // Validating prop types
 PreviewCV.propTypes = {
-  cvInfo: PropTypes.shape({}),
-};
-
-// Creating default props
-PreviewCV.defaultProps = {
-  cvInfo: {},
+  cvInfo: PropTypes.shape({}).isRequired,
 };
 
 export default PreviewCV;

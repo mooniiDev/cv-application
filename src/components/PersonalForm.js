@@ -104,13 +104,12 @@ PersonalForm.propTypes = {
       firstName: PropTypes.string,
       lastName: PropTypes.string,
     }),
-  }),
+  }).isRequired,
 };
 
 // Creating Default Props
 PersonalForm.defaultProps = {
   formVisibility: false,
-  cvInfo: {},
 };
 
 export default PersonalForm;
