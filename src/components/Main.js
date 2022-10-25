@@ -29,6 +29,7 @@ class Main extends React.Component {
           email: '',
           linkedin: '',
           github: '',
+          about: '',
         },
       },
     };

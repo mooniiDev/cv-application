@@ -54,12 +54,28 @@ class PersonalForm extends React.Component {
             {/* Phone */}
             <label htmlFor="phone">
               Phone*
-              <input type="tel" id="phone" name="phone" required />
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                data-info="phone"
+                value={cvInfo.personal.phone}
+                onChange={handlePersonalChange}
+                required
+              />
             </label>
             {/* Email */}
             <label htmlFor="email">
               Email*
-              <input type="email" id="email" name="email" required />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                data-info="email"
+                value={cvInfo.personal.mail}
+                onChange={handlePersonalChange}
+                required
+              />
             </label>
           </div>
 
@@ -68,12 +84,26 @@ class PersonalForm extends React.Component {
             {/* LinkedIn */}
             <label htmlFor="linkedin">
               LinkedIn
-              <input type="text" id="linkedin" name="linkedin" />
+              <input
+                type="text"
+                id="linkedin"
+                name="linkedin"
+                data-info="linkedin"
+                value={cvInfo.personal.linkedin}
+                onChange={handlePersonalChange}
+              />
             </label>
             {/* GitHub */}
             <label htmlFor="github">
               GitHub
-              <input type="text" id="github" name="github" />
+              <input
+                type="text"
+                id="github"
+                name="github"
+                data-info="github"
+                value={cvInfo.personal.github}
+                onChange={handlePersonalChange}
+              />
             </label>
           </div>
 
@@ -84,6 +114,9 @@ class PersonalForm extends React.Component {
               <textarea
                 id="about"
                 name="about"
+                data-info="about"
+                value={cvInfo.personal.about}
+                onChange={handlePersonalChange}
                 placeholder="Ex: I create magic through my mind, my heart and my keyboard. ✨"
               />
             </label>
@@ -103,6 +136,11 @@ PersonalForm.propTypes = {
     personal: PropTypes.shape({
       firstName: PropTypes.string,
       lastName: PropTypes.string,
+      phone: PropTypes.string,
+      mail: PropTypes.string,
+      linkedin: PropTypes.string,
+      github: PropTypes.string,
+      about: PropTypes.string,
     }),
   }).isRequired,
 };
