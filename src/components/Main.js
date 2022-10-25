@@ -31,6 +31,16 @@ class Main extends React.Component {
           github: '',
           about: '',
         },
+        practice: {
+          title: '',
+          company: '',
+          task: '',
+          type: '',
+          startYear: '',
+          startMonth: '',
+          endYear: '',
+          endMonth: '',
+        },
       },
     };
   }
@@ -101,9 +111,27 @@ class Main extends React.Component {
     }));
   };
 
+  // Function that handles changes in practice form's inputs fields
+  handlePracticalChange = (e) => {
+    this.setState((prevState) => ({
+      cvInfo: {
+        ...prevState.cvInfo,
+        practice: {
+          ...prevState.cvInfo.practical,
+          [e.target.getAttribute('data-info')]: e.target.value,
+        },
+      },
+    }));
+  };
+
   render() {
     const { formDisplay, editMode, cvInfo } = this.state;
-    const { handleFormDisplay, handleMode, handlePersonalChange } = this;
+    const {
+      handleFormDisplay,
+      handleMode,
+      handlePersonalChange,
+      handlePracticalChange,
+    } = this;
 
     if (editMode === true) {
       return (
@@ -120,6 +148,7 @@ class Main extends React.Component {
             educationDisplay={formDisplay.isEducationFormDisplayed}
             skillsDisplay={formDisplay.isSkillsFormDisplayed}
             handlePersonalChange={handlePersonalChange}
+            handlePracticalChange={handlePracticalChange}
             cvInfo={cvInfo}
           />
         </main>
