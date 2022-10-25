@@ -59,7 +59,7 @@ InfoTitle.propTypes = {
   title: PropTypes.string,
   border: PropTypes.string,
   hover: PropTypes.string,
-  formType: PropTypes.string,
+  formType: PropTypes.string.isRequired,
   handleFormDisplay: PropTypes.func.isRequired,
   formVisibility: PropTypes.bool,
 };
@@ -69,7 +69,6 @@ InfoTitle.defaultProps = {
   title: '❗TEXT ERROR',
   border: 'green-border',
   hover: 'green-hover',
-  formType: '',
   formVisibility: false,
 };
 
