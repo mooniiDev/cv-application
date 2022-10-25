@@ -23,6 +23,7 @@ class EditCV extends React.Component {
       educationDisplay,
       skillsDisplay,
       handlePersonalChange,
+      handlePracticalChange,
       cvInfo,
     } = this.props;
 
@@ -45,6 +46,8 @@ class EditCV extends React.Component {
           hover="blue-hover"
           formVisibility={practiceDisplay}
           handleFormDisplay={handleFormDisplay}
+          handlePracticalChange={handlePracticalChange}
+          cvInfo={cvInfo}
         />
         <EducationInfo
           formType="education"
@@ -75,6 +78,7 @@ EditCV.propTypes = {
   skillsDisplay: PropTypes.bool,
   handleFormDisplay: PropTypes.func.isRequired,
   handlePersonalChange: PropTypes.func.isRequired,
+  handlePracticalChange: PropTypes.func.isRequired,
   cvInfo: PropTypes.shape({}).isRequired,
 };
 

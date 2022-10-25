@@ -32,8 +32,8 @@ class PersonalInfo extends React.Component {
           title={title}
           border={border}
           hover={hover}
-          handleFormDisplay={handleFormDisplay}
           formVisibility={formVisibility}
+          handleFormDisplay={handleFormDisplay}
         />
         <PersonalForm
           formVisibility={formVisibility}

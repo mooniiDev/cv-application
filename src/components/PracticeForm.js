@@ -16,7 +16,7 @@ class PracticeForm extends React.Component {
   }
 
   render() {
-    const { formVisibility } = this.props;
+    const { formVisibility, handlePracticalChange, cvInfo } = this.props;
 
     if (formVisibility === true) {
       return (
@@ -30,6 +30,9 @@ class PracticeForm extends React.Component {
                 type="text"
                 id="position-title"
                 name="position-title"
+                data-info="title"
+                value={cvInfo.practice.title}
+                onChange={handlePracticalChange}
                 placeholder="Ex: Frontend Web Developer"
                 required
               />
@@ -41,6 +44,9 @@ class PracticeForm extends React.Component {
                 type="text"
                 id="company-name"
                 name="company-name"
+                data-info="company"
+                value={cvInfo.practice.company}
+                onChange={handlePracticalChange}
                 placeholder="Ex: Tesonet"
                 required
               />
@@ -56,6 +62,9 @@ class PracticeForm extends React.Component {
                 type="text"
                 id="main-task"
                 name="main-task"
+                data-info="task"
+                value={cvInfo.practice.task}
+                onChange={handlePracticalChange}
                 placeholder="Ex: Maintaining user interface"
                 required
               />
@@ -63,7 +72,14 @@ class PracticeForm extends React.Component {
             {/* Employment type */}
             <label htmlFor="employment-type" className="employment-label">
               Employment type
-              <select type="text" id="employment-type" name="employment-type">
+              <select
+                type="text"
+                id="employment-type"
+                name="employment-type"
+                data-info="type"
+                value={cvInfo.practice.type}
+                onChange={handlePracticalChange}
+              >
                 <option value="" className="option">
                   Please select
                 </option>
@@ -86,6 +102,9 @@ class PracticeForm extends React.Component {
                 type="text"
                 id="practice-start-year"
                 name="practice-start-year"
+                data-info="startYear"
+                value={cvInfo.practice.startYear}
+                onChange={handlePracticalChange}
                 required
               />
             </label>
@@ -98,6 +117,9 @@ class PracticeForm extends React.Component {
                 type="text"
                 id="practice-start-month"
                 name="practice-start-month"
+                data-info="startMonth"
+                value={cvInfo.practice.startMonth}
+                onChange={handlePracticalChange}
               >
                 <option value="month">Please select</option>
                 <option value="january">January</option>
@@ -125,6 +147,9 @@ class PracticeForm extends React.Component {
                 type="text"
                 id="practice-end-year"
                 name="practice-end-year"
+                data-info="endYear"
+                value={cvInfo.practice.endYear}
+                onChange={handlePracticalChange}
               />
             </label>
             <label htmlFor="practice-end-month" className="practice-end-month">
@@ -133,6 +158,9 @@ class PracticeForm extends React.Component {
                 type="text"
                 id="practice-end-month"
                 name="practice-end-month"
+                data-info="endMonth"
+                value={cvInfo.practice.endMonth}
+                onChange={handlePracticalChange}
               >
                 <option value="month">Please select</option>
                 <option value="january">January</option>
@@ -172,6 +200,19 @@ class PracticeForm extends React.Component {
 // Validating prop types
 PracticeForm.propTypes = {
   formVisibility: PropTypes.bool,
+  handlePracticalChange: PropTypes.func.isRequired,
+  cvInfo: PropTypes.shape({
+    practice: PropTypes.shape({
+      title: PropTypes.string,
+      company: PropTypes.string,
+      task: PropTypes.string,
+      type: PropTypes.string,
+      startYear: PropTypes.string,
+      startMonth: PropTypes.string,
+      endYear: PropTypes.string,
+      endMonth: PropTypes.string,
+    }),
+  }).isRequired,
 };
 
 // Creating default props
