@@ -72,7 +72,7 @@ class PersonalForm extends React.Component {
                 id="email"
                 name="email"
                 data-info="email"
-                value={cvInfo.personal.mail}
+                value={cvInfo.personal.email}
                 onChange={handlePersonalChange}
                 required
               />
@@ -137,7 +137,7 @@ PersonalForm.propTypes = {
       firstName: PropTypes.string,
       lastName: PropTypes.string,
       phone: PropTypes.string,
-      mail: PropTypes.string,
+      email: PropTypes.string,
       linkedin: PropTypes.string,
       github: PropTypes.string,
       about: PropTypes.string,
