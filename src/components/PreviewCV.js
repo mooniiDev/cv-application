@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 // Components imports
 import PersonalPreview from './PersonalPreview';
-import PracticalPreview from './PracticalPreview';
+import PracticePreview from './PracticePreview';
 
 // Styling imports
 import '../styles/PreviewCV.css';
@@ -19,12 +19,12 @@ class PreviewCV extends React.Component {
   render() {
     const { cvInfo } = this.props;
     const personalInfo = cvInfo.personal;
-    const practicalInfo = cvInfo.practical;
+    const practiceInfo = cvInfo.practice;
 
     return (
       <div className="preview-box">
         <PersonalPreview personalInfo={personalInfo} />
-        <PracticalPreview practicalInfo={practicalInfo} />
+        <PracticePreview practiceInfo={practiceInfo} />
       </div>
     );
   }
@@ -34,7 +34,7 @@ class PreviewCV extends React.Component {
 PreviewCV.propTypes = {
   cvInfo: PropTypes.shape({
     personal: PropTypes.shape({}),
-    practical: PropTypes.shape({}),
+    practice: PropTypes.shape({}),
   }).isRequired,
 };
 
