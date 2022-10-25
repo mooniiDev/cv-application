@@ -1,0 +1,5 @@
+.preview-box {
+  width: 30%;
+  -webkit-animation: slideDown 0.3s;
+  animation: slideDown 0.3s;
+}
