@@ -47,7 +47,7 @@ class EditCV extends React.Component {
           formVisibility={practiceDisplay}
           handleFormDisplay={handleFormDisplay}
           handlePracticalChange={handlePracticalChange}
-          practiceCVInfo={cvInfo.practice}
+          cvInfoPractice={cvInfo.practice}
         />
         <EducationInfo
           formType="education"
@@ -80,25 +80,8 @@ EditCV.propTypes = {
   handlePersonalChange: PropTypes.func,
   handlePracticalChange: PropTypes.func,
   cvInfo: PropTypes.shape({
-    personal: PropTypes.shape({
-      firstName: PropTypes.string,
-      lastName: PropTypes.string,
-      phone: PropTypes.string,
-      email: PropTypes.string,
-      linkedin: PropTypes.string,
-      github: PropTypes.string,
-      about: PropTypes.string,
-    }),
-    practice: PropTypes.shape({
-      title: PropTypes.string,
-      company: PropTypes.string,
-      task: PropTypes.string,
-      type: PropTypes.string,
-      startYear: PropTypes.string,
-      startMonth: PropTypes.string,
-      endYear: PropTypes.string,
-      endMonth: PropTypes.string,
-    }),
+    personal: PropTypes.shape({}),
+    practice: PropTypes.arrayOf(PropTypes.shape({})),
   }),
 };
 
@@ -111,7 +94,7 @@ EditCV.defaultProps = {
   handleFormDisplay: () => {},
   handlePersonalChange: () => {},
   handlePracticalChange: () => {},
-  cvInfo: { personal: {}, practice: {} },
+  cvInfo: { personal: {}, practice: [] },
 };
 
 export default EditCV;
