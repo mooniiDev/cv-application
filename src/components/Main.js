@@ -31,16 +31,18 @@ class Main extends React.Component {
           github: '',
           about: '',
         },
-        practice: {
-          title: '',
-          company: '',
-          task: '',
-          type: '',
-          startYear: '',
-          startMonth: '',
-          endYear: '',
-          endMonth: '',
-        },
+        practice: [
+          {
+            title: '',
+            company: '',
+            task: '',
+            type: '',
+            startYear: '',
+            startMonth: '',
+            endYear: '',
+            endMonth: '',
+          },
+        ],
       },
     };
   }
@@ -116,10 +118,12 @@ class Main extends React.Component {
     this.setState((prevState) => ({
       cvInfo: {
         ...prevState.cvInfo,
-        practice: {
-          ...prevState.cvInfo.practical,
-          [e.target.getAttribute('data-info')]: e.target.value,
-        },
+        practice: [
+          {
+            ...prevState.cvInfo.practice,
+            [e.target.getAttribute('data-info')]: e.target.value,
+          },
+        ],
       },
     }));
   };
