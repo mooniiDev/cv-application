@@ -37,7 +37,7 @@ class EditCV extends React.Component {
           formVisibility={personalDisplay}
           handleFormDisplay={handleFormDisplay}
           handlePersonalChange={handlePersonalChange}
-          cvInfo={cvInfo}
+          personalCVInfo={cvInfo.personal}
         />
         <PracticeInfo
           formType="practice"
@@ -47,7 +47,7 @@ class EditCV extends React.Component {
           formVisibility={practiceDisplay}
           handleFormDisplay={handleFormDisplay}
           handlePracticalChange={handlePracticalChange}
-          cvInfo={cvInfo}
+          practiceCVInfo={cvInfo.practice}
         />
         <EducationInfo
           formType="education"
@@ -76,10 +76,30 @@ EditCV.propTypes = {
   practiceDisplay: PropTypes.bool,
   educationDisplay: PropTypes.bool,
   skillsDisplay: PropTypes.bool,
-  handleFormDisplay: PropTypes.func.isRequired,
-  handlePersonalChange: PropTypes.func.isRequired,
-  handlePracticalChange: PropTypes.func.isRequired,
-  cvInfo: PropTypes.shape({}).isRequired,
+  handleFormDisplay: PropTypes.func,
+  handlePersonalChange: PropTypes.func,
+  handlePracticalChange: PropTypes.func,
+  cvInfo: PropTypes.shape({
+    personal: PropTypes.shape({
+      firstName: PropTypes.string,
+      lastName: PropTypes.string,
+      phone: PropTypes.string,
+      email: PropTypes.string,
+      linkedin: PropTypes.string,
+      github: PropTypes.string,
+      about: PropTypes.string,
+    }),
+    practice: PropTypes.shape({
+      title: PropTypes.string,
+      company: PropTypes.string,
+      task: PropTypes.string,
+      type: PropTypes.string,
+      startYear: PropTypes.string,
+      startMonth: PropTypes.string,
+      endYear: PropTypes.string,
+      endMonth: PropTypes.string,
+    }),
+  }),
 };
 
 // Creating default props
@@ -88,6 +108,10 @@ EditCV.defaultProps = {
   practiceDisplay: false,
   educationDisplay: false,
   skillsDisplay: false,
+  handleFormDisplay: () => {},
+  handlePersonalChange: () => {},
+  handlePracticalChange: () => {},
+  cvInfo: { personal: {}, practice: {} },
 };
 
 export default EditCV;

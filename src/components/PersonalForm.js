@@ -14,7 +14,7 @@ class PersonalForm extends React.Component {
   }
 
   render() {
-    const { formVisibility, handlePersonalChange, cvInfo } = this.props;
+    const { formVisibility, handlePersonalChange, personalInfo } = this.props;
 
     if (formVisibility === true) {
       return (
@@ -29,7 +29,7 @@ class PersonalForm extends React.Component {
                 id="first-name"
                 name="first-name"
                 data-info="firstName"
-                value={cvInfo.personal.firstName}
+                value={personalInfo.firstName}
                 onChange={handlePersonalChange}
                 required
               />
@@ -42,7 +42,7 @@ class PersonalForm extends React.Component {
                 id="last-name"
                 name="last-name"
                 data-info="lastName"
-                value={cvInfo.personal.lastName}
+                value={personalInfo.lastName}
                 onChange={handlePersonalChange}
                 required
               />
@@ -59,7 +59,7 @@ class PersonalForm extends React.Component {
                 id="phone"
                 name="phone"
                 data-info="phone"
-                value={cvInfo.personal.phone}
+                value={personalInfo.phone}
                 onChange={handlePersonalChange}
                 required
               />
@@ -72,7 +72,7 @@ class PersonalForm extends React.Component {
                 id="email"
                 name="email"
                 data-info="email"
-                value={cvInfo.personal.email}
+                value={personalInfo.email}
                 onChange={handlePersonalChange}
                 required
               />
@@ -89,7 +89,7 @@ class PersonalForm extends React.Component {
                 id="linkedin"
                 name="linkedin"
                 data-info="linkedin"
-                value={cvInfo.personal.linkedin}
+                value={personalInfo.linkedin}
                 onChange={handlePersonalChange}
               />
             </label>
@@ -101,7 +101,7 @@ class PersonalForm extends React.Component {
                 id="github"
                 name="github"
                 data-info="github"
-                value={cvInfo.personal.github}
+                value={personalInfo.github}
                 onChange={handlePersonalChange}
               />
             </label>
@@ -115,7 +115,7 @@ class PersonalForm extends React.Component {
                 id="about"
                 name="about"
                 data-info="about"
-                value={cvInfo.personal.about}
+                value={personalInfo.about}
                 onChange={handlePersonalChange}
                 placeholder="Ex: I create magic through my mind, my heart and my keyboard. ✨"
               />
@@ -131,23 +131,23 @@ class PersonalForm extends React.Component {
 // Validating Prop Types
 PersonalForm.propTypes = {
   formVisibility: PropTypes.bool,
-  handlePersonalChange: PropTypes.func.isRequired,
-  cvInfo: PropTypes.shape({
-    personal: PropTypes.shape({
-      firstName: PropTypes.string,
-      lastName: PropTypes.string,
-      phone: PropTypes.string,
-      email: PropTypes.string,
-      linkedin: PropTypes.string,
-      github: PropTypes.string,
-      about: PropTypes.string,
-    }),
-  }).isRequired,
+  handlePersonalChange: PropTypes.func,
+  personalInfo: PropTypes.shape({
+    firstName: PropTypes.string,
+    lastName: PropTypes.string,
+    phone: PropTypes.string,
+    email: PropTypes.string,
+    linkedin: PropTypes.string,
+    github: PropTypes.string,
+    about: PropTypes.string,
+  }),
 };
 
-// Creating Default Props
+// Creating default props
 PersonalForm.defaultProps = {
   formVisibility: false,
+  handlePersonalChange: () => {},
+  personalInfo: {},
 };
 
 export default PersonalForm;
