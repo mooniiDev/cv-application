@@ -28,27 +28,16 @@ class InfoTitle extends React.Component {
     return (
       <h2 className="info-title" data-form={formType}>
         <span className={`${border} info-border`}>{title}</span>
-        {formVisibility === false ? (
-          <span>
-            {/* Button for displaying the form */}
-            <Button
-              type="button"
-              buttonEvent={handleFormDisplay}
-              buttonText="show"
-              buttonClass={`${hover} fontAwesome-button`}
-            />
-          </span>
-        ) : (
-          <span>
-            {/* Button for hiding the form */}
-            <Button
-              type="button"
-              buttonEvent={handleFormDisplay}
-              buttonText="hide"
-              buttonClass={`${hover} fontAwesome-button`}
-            />
-          </span>
-        )}
+
+        {/* Button for displaying and hiding the form */}
+        <span>
+          <Button
+            type="button"
+            buttonEvent={handleFormDisplay}
+            buttonText={formVisibility ? 'hide' : 'show'}
+            buttonClass={`${hover} fontAwesome-button`}
+          />
+        </span>
       </h2>
     );
   }
@@ -59,8 +48,8 @@ InfoTitle.propTypes = {
   title: PropTypes.string,
   border: PropTypes.string,
   hover: PropTypes.string,
-  formType: PropTypes.string.isRequired,
-  handleFormDisplay: PropTypes.func.isRequired,
+  formType: PropTypes.string,
+  handleFormDisplay: PropTypes.func,
   formVisibility: PropTypes.bool,
 };
 
@@ -69,6 +58,8 @@ InfoTitle.defaultProps = {
   title: '❗TEXT ERROR',
   border: 'green-border',
   hover: 'green-hover',
+  formType: '',
+  handleFormDisplay: () => {},
   formVisibility: false,
 };
 
