@@ -61,9 +61,16 @@ class Button extends React.Component {
 
 // Validating prop types
 Button.propTypes = {
-  buttonEvent: PropTypes.func.isRequired,
-  buttonText: PropTypes.string.isRequired,
-  buttonClass: PropTypes.string.isRequired,
+  buttonEvent: PropTypes.func,
+  buttonText: PropTypes.string,
+  buttonClass: PropTypes.string,
+};
+
+// Creating default props
+Button.defaultProps = {
+  buttonEvent: () => {},
+  buttonText: '❗TEXT ERROR',
+  buttonClass: '',
 };
 
 export default Button;

@@ -35,7 +35,15 @@ PreviewCV.propTypes = {
   cvInfo: PropTypes.shape({
     personal: PropTypes.shape({}),
     practice: PropTypes.shape({}),
-  }).isRequired,
+  }),
+};
+
+// Creating default props
+PreviewCV.defaultProps = {
+  cvInfo: {
+    personal: {},
+    practice: {},
+  },
 };
 
 export default PreviewCV;

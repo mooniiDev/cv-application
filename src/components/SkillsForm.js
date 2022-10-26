@@ -47,12 +47,7 @@ class SkillsForm extends React.Component {
 
 // Validating prop types
 SkillsForm.propTypes = {
-  formVisibility: PropTypes.bool,
-};
-
-// Creating default props
-SkillsForm.defaultProps = {
-  formVisibility: false,
+  formVisibility: PropTypes.bool.isRequired,
 };
 
 export default SkillsForm;

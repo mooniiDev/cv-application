@@ -63,7 +63,20 @@ PersonalPreview.propTypes = {
     linkedin: PropTypes.string,
     github: PropTypes.string,
     about: PropTypes.string,
-  }).isRequired,
+  }),
+};
+
+// Creating default props
+PersonalPreview.defaultProps = {
+  personalInfo: {
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    linkedin: '',
+    github: '',
+    about: '',
+  },
 };
 
 export default PersonalPreview;

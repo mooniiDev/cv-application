@@ -45,7 +45,7 @@ SkillsInfo.propTypes = {
   title: PropTypes.string,
   border: PropTypes.string,
   hover: PropTypes.string,
-  formVisibility: PropTypes.bool,
+  formVisibility: PropTypes.bool.isRequired,
   handleFormDisplay: PropTypes.func.isRequired,
 };
 
@@ -55,7 +55,6 @@ SkillsInfo.defaultProps = {
   title: 'SKILLS',
   border: 'purple-border',
   hover: 'purple-hover',
-  formVisibility: false,
 };
 
 export default SkillsInfo;
