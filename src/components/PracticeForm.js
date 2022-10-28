@@ -16,8 +16,12 @@ class PracticeForm extends React.Component {
   }
 
   render() {
-    const { formVisibility, handlePracticalChange, cvInfoPractice } =
-      this.props; // cvInfo
+    const {
+      formVisibility,
+      handlePracticalChange,
+      handlePracticalAdd,
+      cvInfoPractice,
+    } = this.props;
 
     if (formVisibility === true) {
       return (
@@ -186,6 +190,7 @@ class PracticeForm extends React.Component {
 
           {/* Button for adding more info */}
           <Button
+            buttonEvent={handlePracticalAdd}
             buttonText="add"
             buttonClass="add-button fontAwesome-button"
           />
@@ -200,6 +205,7 @@ class PracticeForm extends React.Component {
 PracticeForm.propTypes = {
   formVisibility: PropTypes.bool,
   handlePracticalChange: PropTypes.func,
+  handlePracticalAdd: PropTypes.func,
   cvInfoPractice: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
@@ -210,6 +216,7 @@ PracticeForm.propTypes = {
       startMonth: PropTypes.string,
       endYear: PropTypes.string,
       endMonth: PropTypes.string,
+      id: PropTypes.string,
     })
   ),
 };
@@ -218,6 +225,7 @@ PracticeForm.propTypes = {
 PracticeForm.defaultProps = {
   formVisibility: false,
   handlePracticalChange: () => {},
+  handlePracticalAdd: () => {},
   cvInfoPractice: {},
 };
 

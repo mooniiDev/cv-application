@@ -1,5 +1,6 @@
 // Packages imports
 import React from 'react';
+import uniqid from 'uniqid';
 
 // Components imports
 import Button from './Button';
@@ -41,6 +42,7 @@ class Main extends React.Component {
             startMonth: '',
             endYear: '',
             endMonth: '',
+            id: uniqid(),
           },
         ],
       },
@@ -128,6 +130,28 @@ class Main extends React.Component {
     }));
   };
 
+  handlePracticalAdd = () => {
+    this.setState((prevState) => ({
+      cvInfo: {
+        ...prevState.cvInfo,
+        practice: [
+          ...prevState.cvInfo.practice,
+          {
+            title: '',
+            company: '',
+            task: '',
+            type: '',
+            startYear: '',
+            startMonth: '',
+            endYear: '',
+            endMonth: '',
+            id: uniqid(),
+          },
+        ],
+      },
+    }));
+  };
+
   render() {
     const { formDisplay, editMode, cvInfo } = this.state;
     const {
@@ -135,6 +159,7 @@ class Main extends React.Component {
       handleMode,
       handlePersonalChange,
       handlePracticalChange,
+      handlePracticalAdd,
     } = this;
 
     if (editMode === true) {
@@ -153,6 +178,7 @@ class Main extends React.Component {
             skillsDisplay={formDisplay.isSkillsFormDisplayed}
             handlePersonalChange={handlePersonalChange}
             handlePracticalChange={handlePracticalChange}
+            handlePracticalAdd={handlePracticalAdd}
             cvInfo={cvInfo}
           />
         </main>
