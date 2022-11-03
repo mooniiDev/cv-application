@@ -29,7 +29,7 @@ class PersonalForm extends React.Component {
                 id="first-name"
                 name="first-name"
                 data-info="firstName"
-                value={personalInfo.firstName}
+                defaultValue={personalInfo.firstName}
                 onChange={handlePersonalChange}
                 required
               />
@@ -42,7 +42,7 @@ class PersonalForm extends React.Component {
                 id="last-name"
                 name="last-name"
                 data-info="lastName"
-                value={personalInfo.lastName}
+                defaultValue={personalInfo.lastName}
                 onChange={handlePersonalChange}
                 required
               />
@@ -59,7 +59,7 @@ class PersonalForm extends React.Component {
                 id="phone"
                 name="phone"
                 data-info="phone"
-                value={personalInfo.phone}
+                defaultValue={personalInfo.phone}
                 onChange={handlePersonalChange}
                 required
               />
@@ -72,7 +72,7 @@ class PersonalForm extends React.Component {
                 id="email"
                 name="email"
                 data-info="email"
-                value={personalInfo.email}
+                defaultValue={personalInfo.email}
                 onChange={handlePersonalChange}
                 required
               />
@@ -89,7 +89,7 @@ class PersonalForm extends React.Component {
                 id="linkedin"
                 name="linkedin"
                 data-info="linkedin"
-                value={personalInfo.linkedin}
+                defaultValue={personalInfo.linkedin}
                 onChange={handlePersonalChange}
               />
             </label>
@@ -101,7 +101,7 @@ class PersonalForm extends React.Component {
                 id="github"
                 name="github"
                 data-info="github"
-                value={personalInfo.github}
+                defaultValue={personalInfo.github}
                 onChange={handlePersonalChange}
               />
             </label>
@@ -115,7 +115,7 @@ class PersonalForm extends React.Component {
                 id="about"
                 name="about"
                 data-info="about"
-                value={personalInfo.about}
+                defaultValue={personalInfo.about}
                 onChange={handlePersonalChange}
                 placeholder="Ex: I create magic through my mind, my heart and my keyboard. ✨"
               />

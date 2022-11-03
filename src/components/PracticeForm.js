@@ -20,12 +20,12 @@ class PracticeForm extends React.Component {
       formVisibility,
       handlePracticalChange,
       handlePracticalAdd,
-      cvInfoPractice,
+      practiceInfo,
     } = this.props;
 
     return (
-      <div>
-        {cvInfoPractice.map((practice) => {
+      <>
+        {practiceInfo.map((practice) => {
           if (formVisibility === true) {
             return (
               <form key={practice.id} className="practice-form">
@@ -39,7 +39,7 @@ class PracticeForm extends React.Component {
                       id="position-title"
                       name="position-title"
                       data-info="title"
-                      value={practice.title}
+                      defaultValue={practice.title}
                       onChange={handlePracticalChange}
                       placeholder="Ex: Front-End Web Developer"
                       required
@@ -53,7 +53,7 @@ class PracticeForm extends React.Component {
                       id="company-name"
                       name="company-name"
                       data-info="company"
-                      value={practice.company}
+                      defaultValue={practice.company}
                       onChange={handlePracticalChange}
                       placeholder="Ex: Tesonet"
                       required
@@ -70,7 +70,7 @@ class PracticeForm extends React.Component {
                       id="main-task"
                       name="main-task"
                       data-info="task"
-                      value={practice.task}
+                      defaultValue={practice.task}
                       onChange={handlePracticalChange}
                       placeholder="Ex: Maintaining user interface"
                       required
@@ -84,7 +84,7 @@ class PracticeForm extends React.Component {
                       id="employment-type"
                       name="employment-type"
                       data-info="type"
-                      value={practice.type}
+                      defaultValue={practice.type}
                       onChange={handlePracticalChange}
                     >
                       <option value="type">Please select</option>
@@ -107,7 +107,7 @@ class PracticeForm extends React.Component {
                       id="practice-start-year"
                       name="practice-start-year"
                       data-info="startYear"
-                      value={practice.startYear}
+                      defaultValue={practice.startYear}
                       onChange={handlePracticalChange}
                       required
                     />
@@ -122,7 +122,7 @@ class PracticeForm extends React.Component {
                       id="practice-start-month"
                       name="practice-start-month"
                       data-info="startMonth"
-                      value={practice.startMonth}
+                      defaultValue={practice.startMonth}
                       onChange={handlePracticalChange}
                     >
                       <option value="month">Please select</option>
@@ -151,7 +151,7 @@ class PracticeForm extends React.Component {
                       id="practice-end-year"
                       name="practice-end-year"
                       data-info="endYear"
-                      value={practice.endYear}
+                      defaultValue={practice.endYear}
                       onChange={handlePracticalChange}
                     />
                   </label>
@@ -165,7 +165,7 @@ class PracticeForm extends React.Component {
                       id="practice-end-month"
                       name="practice-end-month"
                       data-info="endMonth"
-                      value={practice.endMonth}
+                      defaultValue={practice.endMonth}
                       onChange={handlePracticalChange}
                     >
                       <option value="month">Please select</option>
@@ -200,7 +200,7 @@ class PracticeForm extends React.Component {
           }
           return null;
         })}
-      </div>
+      </>
     );
   }
 }
@@ -210,7 +210,7 @@ PracticeForm.propTypes = {
   formVisibility: PropTypes.bool,
   handlePracticalChange: PropTypes.func,
   handlePracticalAdd: PropTypes.func,
-  cvInfoPractice: PropTypes.arrayOf(
+  practiceInfo: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
       company: PropTypes.string,
@@ -230,7 +230,7 @@ PracticeForm.defaultProps = {
   formVisibility: false,
   handlePracticalChange: () => {},
   handlePracticalAdd: () => {},
-  cvInfoPractice: {},
+  practiceInfo: {},
 };
 
 export default PracticeForm;
