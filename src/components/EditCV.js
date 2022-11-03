@@ -38,7 +38,7 @@ class EditCV extends React.Component {
           formVisibility={personalDisplay}
           handleFormDisplay={handleFormDisplay}
           handlePersonalChange={handlePersonalChange}
-          personalCVInfo={cvInfo.personal}
+          personalInfo={cvInfo.personal}
         />
         <PracticeInfo
           formType="practice"
@@ -49,7 +49,7 @@ class EditCV extends React.Component {
           handleFormDisplay={handleFormDisplay}
           handlePracticalChange={handlePracticalChange}
           handlePracticalAdd={handlePracticalAdd}
-          cvInfoPractice={cvInfo.practice}
+          practiceInfo={cvInfo.practice}
         />
         <EducationInfo
           formType="education"

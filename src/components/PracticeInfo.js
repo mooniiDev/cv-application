@@ -23,7 +23,7 @@ class PracticeInfo extends React.Component {
       handleFormDisplay,
       handlePracticalChange,
       handlePracticalAdd,
-      cvInfoPractice,
+      practiceInfo,
     } = this.props;
 
     return (
@@ -40,7 +40,7 @@ class PracticeInfo extends React.Component {
           formVisibility={formVisibility}
           handlePracticalChange={handlePracticalChange}
           handlePracticalAdd={handlePracticalAdd}
-          cvInfoPractice={cvInfoPractice}
+          practiceInfo={practiceInfo}
         />
       </div>
     );
@@ -57,7 +57,7 @@ PracticeInfo.propTypes = {
   handleFormDisplay: PropTypes.func,
   handlePracticalChange: PropTypes.func,
   handlePracticalAdd: PropTypes.func,
-  cvInfoPractice: PropTypes.arrayOf(PropTypes.shape({})),
+  practiceInfo: PropTypes.arrayOf(PropTypes.shape({})),
 };
 
 // Creating default props
@@ -70,7 +70,7 @@ PracticeInfo.defaultProps = {
   handleFormDisplay: () => {},
   handlePracticalChange: () => {},
   handlePracticalAdd: () => {},
-  cvInfoPractice: [],
+  practiceInfo: [],
 };
 
 export default PracticeInfo;
