@@ -16,7 +16,7 @@ class PersonalForm extends React.Component {
   render() {
     const { formVisibility, handlePersonalChange, personalInfo } = this.props;
 
-    if (formVisibility === true) {
+    if (formVisibility) {
       return (
         <form className="personal-form">
           {/* Personal information */}

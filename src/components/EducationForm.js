@@ -18,7 +18,7 @@ class EducationForm extends React.Component {
   render() {
     const { formVisibility } = this.props;
 
-    if (formVisibility === true) {
+    if (formVisibility) {
       return (
         <form className="education-form">
           {/* School and study information */}

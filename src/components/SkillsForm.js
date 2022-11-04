@@ -19,7 +19,7 @@ class SkillsForm extends React.Component {
   render() {
     const { formVisibility } = this.props;
 
-    if (formVisibility === true) {
+    if (formVisibility) {
       return (
         <form className="skills-form">
           {/* Skill */}

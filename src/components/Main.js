@@ -165,7 +165,7 @@ class Main extends React.Component {
       handlePracticalAdd,
     } = this;
 
-    if (editMode === true) {
+    if (editMode) {
       return (
         <main id="main">
           <Button

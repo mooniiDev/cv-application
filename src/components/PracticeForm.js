@@ -26,7 +26,7 @@ class PracticeForm extends React.Component {
     return (
       <>
         {practiceInfo.map((practice) => {
-          if (formVisibility === true) {
+          if (formVisibility) {
             return (
               <form key={practice.id} className="practice-form">
                 {/* Company information */}
