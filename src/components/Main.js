@@ -133,6 +133,18 @@ class Main extends React.Component {
     }));
   };
 
+  handlePracticalDelete = (e) => {
+    this.setState((prevState) => ({
+      cvInfo: {
+        ...prevState.cvInfo,
+        practice: prevState.cvInfo.practice.filter(
+          (workplace) =>
+            workplace.id !== e.target.parentElement.getAttribute('data-id')
+        ),
+      },
+    }));
+  };
+
   handlePracticalAdd = () => {
     this.setState((prevState) => ({
       cvInfo: {
@@ -162,6 +174,7 @@ class Main extends React.Component {
       handleMode,
       handlePersonalChange,
       handlePracticalChange,
+      handlePracticalDelete,
       handlePracticalAdd,
     } = this;
 
@@ -181,6 +194,7 @@ class Main extends React.Component {
             skillsDisplay={formDisplay.isSkillsFormDisplayed}
             handlePersonalChange={handlePersonalChange}
             handlePracticalChange={handlePracticalChange}
+            handlePracticalDelete={handlePracticalDelete}
             handlePracticalAdd={handlePracticalAdd}
             cvInfo={cvInfo}
           />

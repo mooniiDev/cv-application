@@ -19,6 +19,7 @@ class PracticeForm extends React.Component {
     const {
       formVisibility,
       handlePracticalChange,
+      handlePracticalDelete,
       handlePracticalAdd,
       practiceInfo,
     } = this.props;
@@ -26,7 +27,11 @@ class PracticeForm extends React.Component {
     if (formVisibility) {
       return practiceInfo.map((practice, index) => {
         return (
-          <form key={practice.id} className="practice-form">
+          <form
+            key={practice.id}
+            data-id={practice.id}
+            className="practice-form"
+          >
             {/* Company information */}
             <div>
               {/* Position title */}
@@ -194,6 +199,7 @@ class PracticeForm extends React.Component {
 
             {/* Button for deleting info */}
             <Button
+              buttonEvent={handlePracticalDelete}
               buttonText="delete"
               buttonClass="delete-button fontAwesome-button"
             />
@@ -218,6 +224,7 @@ class PracticeForm extends React.Component {
 PracticeForm.propTypes = {
   formVisibility: PropTypes.bool,
   handlePracticalChange: PropTypes.func,
+  handlePracticalDelete: PropTypes.func,
   handlePracticalAdd: PropTypes.func,
   practiceInfo: PropTypes.arrayOf(
     PropTypes.shape({
@@ -238,6 +245,7 @@ PracticeForm.propTypes = {
 PracticeForm.defaultProps = {
   formVisibility: false,
   handlePracticalChange: () => {},
+  handlePracticalDelete: () => {},
   handlePracticalAdd: () => {},
   practiceInfo: {},
 };
