@@ -58,11 +58,12 @@ class Main extends React.Component {
             id: uniqid(),
           },
         ],
+        skills: [],
       },
     };
   }
 
-  // GENERAL HANDLING OF A FORM
+  // GENERAL HANDLING OF FORMS
   // A function to show a certain form when it's 'eye' button is clicked
   handleFormDisplay = (e) => {
     const formType =
@@ -131,7 +132,7 @@ class Main extends React.Component {
     }));
   };
 
-  // PRACTICAL INFORMATION AND FORMS HANDLING
+  // PRACTICAL INFORMATION HANDLING
   // A function that handles changes in practice form's inputs fields
   handlePracticalChange = (e) => {
     this.setState((prevState) => ({
@@ -186,7 +187,7 @@ class Main extends React.Component {
     }));
   };
 
-  // EDUCATIONAL INFORMATION AND FORMS HANDLING
+  // EDUCATIONAL INFORMATION HANDLING
   // A function that handles changes in education form's inputs fields
   handleEducationalChange = (e) => {
     this.setState((prevState) => ({
@@ -241,6 +242,17 @@ class Main extends React.Component {
     }));
   };
 
+  // SKILLS HANDLING
+  // A function that handles changes in skills form's input field
+  handleSkillsChange = (e) => {
+    this.setState((prevState) => ({
+      cvInfo: {
+        ...prevState.cvInfo,
+        skills: [e.target.value],
+      },
+    }));
+  };
+
   render() {
     const { formDisplay, editMode, cvInfo } = this.state;
     const {
@@ -253,6 +265,7 @@ class Main extends React.Component {
       handleEducationalChange,
       handleEducationalDelete,
       handleEducationalAdd,
+      handleSkillsChange,
     } = this;
 
     if (editMode) {
@@ -279,6 +292,7 @@ class Main extends React.Component {
             handleEducationalChange={handleEducationalChange}
             handleEducationalDelete={handleEducationalDelete}
             handleEducationalAdd={handleEducationalAdd}
+            handleSkillsChange={handleSkillsChange}
             cvInfo={cvInfo}
           />
         </main>

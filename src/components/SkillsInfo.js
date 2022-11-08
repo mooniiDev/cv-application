@@ -21,6 +21,8 @@ class SkillsInfo extends React.Component {
       hover,
       formVisibility,
       handleFormDisplay,
+      handleSkillsChange,
+      skillsInfo,
     } = this.props;
 
     return (
@@ -34,7 +36,11 @@ class SkillsInfo extends React.Component {
           handleFormDisplay={handleFormDisplay}
         />
 
-        <SkillsForm formVisibility={formVisibility} />
+        <SkillsForm
+          formVisibility={formVisibility}
+          handleSkillsChange={handleSkillsChange}
+          skillsInfo={skillsInfo}
+        />
       </div>
     );
   }
@@ -46,8 +52,10 @@ SkillsInfo.propTypes = {
   title: PropTypes.string,
   border: PropTypes.string,
   hover: PropTypes.string,
-  formVisibility: PropTypes.bool.isRequired,
-  handleFormDisplay: PropTypes.func.isRequired,
+  formVisibility: PropTypes.bool,
+  handleFormDisplay: PropTypes.func,
+  handleSkillsChange: PropTypes.func,
+  skillsInfo: PropTypes.arrayOf(PropTypes.string),
 };
 
 // Creating default props
@@ -56,6 +64,10 @@ SkillsInfo.defaultProps = {
   title: 'SKILLS',
   border: 'purple-border',
   hover: 'purple-hover',
+  formVisibility: false,
+  handleFormDisplay: () => {},
+  handleSkillsChange: () => {},
+  skillsInfo: [],
 };
 
 export default SkillsInfo;

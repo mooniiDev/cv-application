@@ -17,7 +17,7 @@ class SkillsForm extends React.Component {
   }
 
   render() {
-    const { formVisibility } = this.props;
+    const { formVisibility, handleSkillsChange, skillsInfo } = this.props;
 
     // If skills form is clicked to be visible
     if (formVisibility) {
@@ -30,6 +30,8 @@ class SkillsForm extends React.Component {
               id="skill"
               type="text"
               name="skill"
+              defaultValue={skillsInfo[0]}
+              onChange={handleSkillsChange}
               placeholder="Ex: React.js"
             />
           </label>
@@ -48,7 +50,16 @@ class SkillsForm extends React.Component {
 
 // Validating prop types
 SkillsForm.propTypes = {
-  formVisibility: PropTypes.bool.isRequired,
+  formVisibility: PropTypes.bool,
+  handleSkillsChange: PropTypes.func,
+  skillsInfo: PropTypes.arrayOf(PropTypes.string),
+};
+
+// Creating default props
+SkillsForm.defaultProps = {
+  formVisibility: false,
+  handleSkillsChange: () => {},
+  skillsInfo: [],
 };
 
 export default SkillsForm;
