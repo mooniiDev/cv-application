@@ -21,6 +21,9 @@ class EducationlInfo extends React.Component {
       hover,
       formVisibility,
       handleFormDisplay,
+      handleEducationalChange,
+      handleEducationalDelete,
+      educationInfo,
     } = this.props;
 
     return (
@@ -33,7 +36,12 @@ class EducationlInfo extends React.Component {
           formVisibility={formVisibility}
           handleFormDisplay={handleFormDisplay}
         />
-        <EducationForm formVisibility={formVisibility} />
+        <EducationForm
+          formVisibility={formVisibility}
+          handleEducationalChange={handleEducationalChange}
+          handleEducationalDelete={handleEducationalDelete}
+          educationInfo={educationInfo}
+        />
       </div>
     );
   }
@@ -47,6 +55,9 @@ EducationlInfo.propTypes = {
   hover: PropTypes.string,
   formVisibility: PropTypes.bool,
   handleFormDisplay: PropTypes.func,
+  handleEducationalChange: PropTypes.func,
+  handleEducationalDelete: PropTypes.func,
+  educationInfo: PropTypes.arrayOf(PropTypes.shape({})),
 };
 
 // Creating default props
@@ -57,6 +68,9 @@ EducationlInfo.defaultProps = {
   hover: 'orange-hover',
   formVisibility: () => {},
   handleFormDisplay: () => {},
+  handleEducationalChange: () => {},
+  handleEducationalDelete: () => {},
+  educationInfo: [],
 };
 
 export default EducationlInfo;

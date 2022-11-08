@@ -45,6 +45,19 @@ class Main extends React.Component {
             id: uniqid(),
           },
         ],
+        education: [
+          {
+            school: '',
+            field: '',
+            degree: '',
+            grade: '',
+            startYear: '',
+            startMonth: '',
+            endYear: '',
+            endMonth: '',
+            id: uniqid(),
+          },
+        ],
       },
     };
   }
@@ -133,6 +146,7 @@ class Main extends React.Component {
     }));
   };
 
+  // Function that handles deletion of a practice form
   handlePracticalDelete = (e) => {
     this.setState((prevState) => ({
       cvInfo: {
@@ -145,6 +159,7 @@ class Main extends React.Component {
     }));
   };
 
+  // Function that handles addition of a practice form
   handlePracticalAdd = () => {
     this.setState((prevState) => ({
       cvInfo: {
@@ -167,6 +182,37 @@ class Main extends React.Component {
     }));
   };
 
+  // Function that handles changes in education form's inputs fields
+  handleEducationalChange = (e) => {
+    this.setState((prevState) => ({
+      cvInfo: {
+        ...prevState.cvInfo,
+        education: prevState.cvInfo.education.map((school) => {
+          if (school.id === e.target.getAttribute('data-key')) {
+            return {
+              ...school,
+              [e.target.getAttribute('data-info')]: e.target.value,
+            };
+          }
+          return school;
+        }),
+      },
+    }));
+  };
+
+  // Function that handles deletion of an education form
+  handleEducationalDelete = (e) => {
+    this.setState((prevState) => ({
+      cvInfo: {
+        ...prevState.cvInfo,
+        education: prevState.cvInfo.education.filter(
+          (school) =>
+            school.id !== e.target.parentElement.getAttribute('data-id')
+        ),
+      },
+    }));
+  };
+
   render() {
     const { formDisplay, editMode, cvInfo } = this.state;
     const {
@@ -176,6 +222,8 @@ class Main extends React.Component {
       handlePracticalChange,
       handlePracticalDelete,
       handlePracticalAdd,
+      handleEducationalChange,
+      handleEducationalDelete,
     } = this;
 
     if (editMode) {
@@ -196,6 +244,8 @@ class Main extends React.Component {
             handlePracticalChange={handlePracticalChange}
             handlePracticalDelete={handlePracticalDelete}
             handlePracticalAdd={handlePracticalAdd}
+            handleEducationalChange={handleEducationalChange}
+            handleEducationalDelete={handleEducationalDelete}
             cvInfo={cvInfo}
           />
         </main>

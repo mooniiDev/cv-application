@@ -26,6 +26,8 @@ class EditCV extends React.Component {
       handlePracticalChange,
       handlePracticalDelete,
       handlePracticalAdd,
+      handleEducationalChange,
+      handleEducationalDelete,
       cvInfo,
     } = this.props;
 
@@ -60,6 +62,9 @@ class EditCV extends React.Component {
           hover="orange-hover"
           formVisibility={educationDisplay}
           handleFormDisplay={handleFormDisplay}
+          handleEducationalChange={handleEducationalChange}
+          handleEducationalDelete={handleEducationalDelete}
+          educationInfo={cvInfo.education}
         />
         <SkillsInfo
           formType="skills"
@@ -85,9 +90,12 @@ EditCV.propTypes = {
   handlePracticalChange: PropTypes.func,
   handlePracticalDelete: PropTypes.func,
   handlePracticalAdd: PropTypes.func,
+  handleEducationalChange: PropTypes.func,
+  handleEducationalDelete: PropTypes.func,
   cvInfo: PropTypes.shape({
     personal: PropTypes.shape({}),
     practice: PropTypes.arrayOf(PropTypes.shape({})),
+    education: PropTypes.arrayOf(PropTypes.shape({})),
   }),
 };
 
@@ -102,7 +110,9 @@ EditCV.defaultProps = {
   handlePracticalChange: () => {},
   handlePracticalDelete: () => {},
   handlePracticalAdd: () => {},
-  cvInfo: { personal: {}, practice: [] },
+  handleEducationalChange: () => {},
+  handleEducationalDelete: () => {},
+  cvInfo: { personal: {}, practice: [], education: [] },
 };
 
 export default EditCV;
