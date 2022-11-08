@@ -11,3 +11,8 @@
 #education-end-month:focus {
   border: 1px solid var(--orange);
 }
+
+.add-education-form {
+  padding-bottom: 48px;
+  border-bottom: 3px solid var(--orange);
+}

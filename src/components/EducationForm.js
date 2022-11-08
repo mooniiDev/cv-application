@@ -25,6 +25,19 @@ class EducationForm extends React.Component {
     } = this.props;
 
     if (formVisibility) {
+      if (educationInfo.length === 0) {
+        return (
+          <form className="add-education-form">
+            {/* Button for adding an education form */}
+            <Button
+              buttonEvent={handleEducationalAdd}
+              buttonText="add"
+              buttonClass="add-button add-first-form-button fontAwesome-button"
+            />
+          </form>
+        );
+      }
+
       return educationInfo.map((education, index) => {
         return (
           <form
