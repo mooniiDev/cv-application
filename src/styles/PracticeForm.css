@@ -19,3 +19,8 @@
   margin-top: 2px;
   width: 222px;
 }
+
+.add-practice-form {
+  padding-bottom: 48px;
+  border-bottom: 3px solid var(--light-blue);
+}

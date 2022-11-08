@@ -42,7 +42,12 @@
   float: right;
 }
 
-/* Adding skill */
+/* Adding a practice form */
+.add-practice-button {
+  margin-top: -6px;
+}
+
+/* Adding a skill */
 .add-skill-button {
   margin-top: 20px;
 }

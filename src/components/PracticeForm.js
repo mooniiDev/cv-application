@@ -25,6 +25,19 @@ class PracticeForm extends React.Component {
     } = this.props;
 
     if (formVisibility) {
+      if (practiceInfo.length === 0) {
+        return (
+          <form className="add-practice-form">
+            {/* Button for adding a practice form */}
+            <Button
+              buttonEvent={handlePracticalAdd}
+              buttonText="add"
+              buttonClass="add-button add-practice-button fontAwesome-button"
+            />
+          </form>
+        );
+      }
+
       return practiceInfo.map((practice, index) => {
         return (
           <form
@@ -197,13 +210,6 @@ class PracticeForm extends React.Component {
               </label>
             </fieldset>
 
-            {/* Button for deleting info */}
-            <Button
-              buttonEvent={handlePracticalDelete}
-              buttonText="delete"
-              buttonClass="delete-button fontAwesome-button"
-            />
-
             {index === practiceInfo.length - 1 ? (
               // Button for adding more info
               <Button
@@ -212,6 +218,13 @@ class PracticeForm extends React.Component {
                 buttonClass="add-button fontAwesome-button"
               />
             ) : null}
+
+            {/* Button for deleting info */}
+            <Button
+              buttonEvent={handlePracticalDelete}
+              buttonText="delete"
+              buttonClass="delete-button fontAwesome-button"
+            />
           </form>
         );
       });
