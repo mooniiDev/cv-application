@@ -37,6 +37,7 @@ class EducationlInfo extends React.Component {
           formVisibility={formVisibility}
           handleFormDisplay={handleFormDisplay}
         />
+
         <EducationForm
           formVisibility={formVisibility}
           handleEducationalChange={handleEducationalChange}

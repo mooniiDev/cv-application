@@ -19,10 +19,11 @@ class SkillsForm extends React.Component {
   render() {
     const { formVisibility } = this.props;
 
+    // If skills form is clicked to be visible
     if (formVisibility) {
       return (
         <form className="skills-form">
-          {/* Skill */}
+          {/* Skill input */}
           <label htmlFor="skill">
             Skill
             <input
@@ -33,7 +34,7 @@ class SkillsForm extends React.Component {
             />
           </label>
 
-          {/* Button for adding a skill */}
+          {/* A button to add another skill */}
           <Button
             buttonText="add"
             buttonClass="add-skill-button fontAwesome-button"

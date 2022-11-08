@@ -33,6 +33,7 @@ class SkillsInfo extends React.Component {
           formVisibility={formVisibility}
           handleFormDisplay={handleFormDisplay}
         />
+
         <SkillsForm formVisibility={formVisibility} />
       </div>
     );

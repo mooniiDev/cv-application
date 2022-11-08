@@ -44,6 +44,7 @@ class EditCV extends React.Component {
           handlePersonalChange={handlePersonalChange}
           personalInfo={cvInfo.personal}
         />
+
         <PracticeInfo
           formType="practice"
           title="PRACTICAL EXPERIENCE"
@@ -56,6 +57,7 @@ class EditCV extends React.Component {
           handlePracticalAdd={handlePracticalAdd}
           practiceInfo={cvInfo.practice}
         />
+
         <EducationInfo
           formType="education"
           title="EDUCATIONAL EXPERIENCE"
@@ -68,6 +70,7 @@ class EditCV extends React.Component {
           handleEducationalAdd={handleEducationalAdd}
           educationInfo={cvInfo.education}
         />
+
         <SkillsInfo
           formType="skills"
           title="ADDITIONAL SKILLS"

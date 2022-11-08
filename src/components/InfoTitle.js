@@ -29,7 +29,7 @@ class InfoTitle extends React.Component {
       <h2 className="info-title" data-form={formType}>
         <span className={`${border} info-border`}>{title}</span>
 
-        {/* Button for displaying and hiding the form */}
+        {/* A button to show or hide a form */}
         <span>
           <Button
             type="button"

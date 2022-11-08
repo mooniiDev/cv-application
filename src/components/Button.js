@@ -25,10 +25,13 @@ class Button extends React.Component {
     const { buttonEvent, buttonText, buttonClass } = this.props;
     let buttonValue = buttonText;
 
+    // Button icon of showing a form
     if (buttonValue === 'show') {
       buttonValue = (
         <FontAwesomeIcon icon={faEye} className="fa-fw" pointerEvents="none" />
       );
+
+      // Button icon of hiding a form
     } else if (buttonValue === 'hide') {
       buttonValue = (
         <FontAwesomeIcon
@@ -37,6 +40,8 @@ class Button extends React.Component {
           pointerEvents="none"
         />
       );
+
+      // Button icon of deleting a form
     } else if (buttonValue === 'delete') {
       buttonValue = (
         <FontAwesomeIcon
@@ -45,6 +50,8 @@ class Button extends React.Component {
           pointerEvents="none"
         />
       );
+
+      // Button icon of adding a form
     } else if (buttonValue === 'add') {
       buttonValue = (
         <FontAwesomeIcon icon={faPlus} className="fa-fw" pointerEvents="none" />

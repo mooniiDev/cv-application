@@ -35,6 +35,7 @@ class PersonalInfo extends React.Component {
           formVisibility={formVisibility}
           handleFormDisplay={handleFormDisplay}
         />
+
         <PersonalForm
           formVisibility={formVisibility}
           handlePersonalChange={handlePersonalChange}

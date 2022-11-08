@@ -16,6 +16,7 @@ class PersonalForm extends React.Component {
   render() {
     const { formVisibility, handlePersonalChange, personalInfo } = this.props;
 
+    // If a personal form is clicked to be visible
     if (formVisibility) {
       return (
         <form className="personal-form">
@@ -107,7 +108,7 @@ class PersonalForm extends React.Component {
             </label>
           </div>
 
-          {/* About text */}
+          {/* About information */}
           <div>
             <label htmlFor="about">
               About

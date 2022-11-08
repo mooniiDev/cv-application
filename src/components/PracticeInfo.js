@@ -37,6 +37,7 @@ class PracticeInfo extends React.Component {
           formVisibility={formVisibility}
           handleFormDisplay={handleFormDisplay}
         />
+
         <PracticeForm
           formVisibility={formVisibility}
           handlePracticalChange={handlePracticalChange}

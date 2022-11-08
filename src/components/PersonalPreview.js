@@ -17,15 +17,15 @@ class PersonalPreview extends React.Component {
 
     return (
       <div className="personal-preview-box">
-        {/* Person name and surname */}
+        {/* Name and surname of the person */}
         <h2 className="person-name">
           {personalInfo.firstName.toUpperCase()}{' '}
           {personalInfo.lastName.toUpperCase()}
         </h2>
 
-        {/* Person contacts */}
+        {/* Contacts of the person */}
         <div className="person-contacts">
-          {/* Person phone and email */}
+          {/* Phone and email of the person */}
           <div>
             <p>
               <span>Phone:</span> &nbsp;{personalInfo.phone}
@@ -35,7 +35,7 @@ class PersonalPreview extends React.Component {
             </p>
           </div>
 
-          {/* Person socials */}
+          {/* Socials of the person */}
           <div>
             <p>
               <span>LinkedIn:</span> &nbsp;{personalInfo.linkedin}
@@ -46,7 +46,7 @@ class PersonalPreview extends React.Component {
           </div>
         </div>
 
-        {/* Person 'about' information */}
+        {/* 'About' information of the person */}
         <p className="person-about">{personalInfo.about}</p>
       </div>
     );
