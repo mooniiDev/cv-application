@@ -20,6 +20,7 @@ class EducationForm extends React.Component {
       formVisibility,
       handleEducationalChange,
       handleEducationalDelete,
+      handleEducationalAdd,
       educationInfo,
     } = this.props;
 
@@ -192,6 +193,7 @@ class EducationForm extends React.Component {
             {index === educationInfo.length - 1 ? (
               // Button for adding more info
               <Button
+                buttonEvent={handleEducationalAdd}
                 buttonText="add"
                 buttonClass="add-button fontAwesome-button"
               />
@@ -216,6 +218,7 @@ EducationForm.propTypes = {
   formVisibility: PropTypes.bool,
   handleEducationalChange: PropTypes.func,
   handleEducationalDelete: PropTypes.func,
+  handleEducationalAdd: PropTypes.func,
   educationInfo: PropTypes.arrayOf(
     PropTypes.shape({
       school: PropTypes.string,
@@ -236,6 +239,7 @@ EducationForm.defaultProps = {
   formVisibility: false,
   handleEducationalChange: () => {},
   handleEducationalDelete: () => {},
+  handleEducationalAdd: () => {},
   educationInfo: {},
 };
 

@@ -213,6 +213,29 @@ class Main extends React.Component {
     }));
   };
 
+  // Function that handles addition of an education form
+  handleEducationalAdd = () => {
+    this.setState((prevState) => ({
+      cvInfo: {
+        ...prevState.cvInfo,
+        education: [
+          ...prevState.cvInfo.education,
+          {
+            school: '',
+            field: '',
+            degree: '',
+            grade: '',
+            startYear: '',
+            startMonth: '',
+            endYear: '',
+            endMonth: '',
+            id: uniqid(),
+          },
+        ],
+      },
+    }));
+  };
+
   render() {
     const { formDisplay, editMode, cvInfo } = this.state;
     const {
@@ -224,6 +247,7 @@ class Main extends React.Component {
       handlePracticalAdd,
       handleEducationalChange,
       handleEducationalDelete,
+      handleEducationalAdd,
     } = this;
 
     if (editMode) {
@@ -246,6 +270,7 @@ class Main extends React.Component {
             handlePracticalAdd={handlePracticalAdd}
             handleEducationalChange={handleEducationalChange}
             handleEducationalDelete={handleEducationalDelete}
+            handleEducationalAdd={handleEducationalAdd}
             cvInfo={cvInfo}
           />
         </main>

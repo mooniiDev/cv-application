@@ -23,6 +23,7 @@ class EducationlInfo extends React.Component {
       handleFormDisplay,
       handleEducationalChange,
       handleEducationalDelete,
+      handleEducationalAdd,
       educationInfo,
     } = this.props;
 
@@ -40,6 +41,7 @@ class EducationlInfo extends React.Component {
           formVisibility={formVisibility}
           handleEducationalChange={handleEducationalChange}
           handleEducationalDelete={handleEducationalDelete}
+          handleEducationalAdd={handleEducationalAdd}
           educationInfo={educationInfo}
         />
       </div>
@@ -57,6 +59,7 @@ EducationlInfo.propTypes = {
   handleFormDisplay: PropTypes.func,
   handleEducationalChange: PropTypes.func,
   handleEducationalDelete: PropTypes.func,
+  handleEducationalAdd: PropTypes.func,
   educationInfo: PropTypes.arrayOf(PropTypes.shape({})),
 };
 
@@ -70,6 +73,7 @@ EducationlInfo.defaultProps = {
   handleFormDisplay: () => {},
   handleEducationalChange: () => {},
   handleEducationalDelete: () => {},
+  handleEducationalAdd: () => {},
   educationInfo: [],
 };
 
