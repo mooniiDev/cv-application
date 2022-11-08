@@ -25,19 +25,21 @@ class PracticeForm extends React.Component {
     } = this.props;
 
     if (formVisibility) {
+      // If there are no forms created yet
       if (practiceInfo.length === 0) {
         return (
           <form className="add-practice-form">
-            {/* Button for adding a practice form */}
+            {/* A button to add the first practice form */}
             <Button
               buttonEvent={handlePracticalAdd}
               buttonText="add"
-              buttonClass="add-button add-practice-button fontAwesome-button"
+              buttonClass="add-first-form-button fontAwesome-button"
             />
           </form>
         );
       }
 
+      // Show existing practice form(s)
       return practiceInfo.map((practice, index) => {
         return (
           <form
@@ -62,7 +64,6 @@ class PracticeForm extends React.Component {
                   required
                 />
               </label>
-
               {/* Company name */}
               <label htmlFor="company-name">
                 Company name*
@@ -79,6 +80,7 @@ class PracticeForm extends React.Component {
                 />
               </label>
             </div>
+
             {/* Main task and employment type */}
             <div className="task-and-type">
               {/* Main task */}
@@ -118,6 +120,7 @@ class PracticeForm extends React.Component {
                 </select>
               </label>
             </div>
+
             {/* Practice start date */}
             <fieldset>
               <legend>Start date*</legend>
@@ -164,6 +167,7 @@ class PracticeForm extends React.Component {
                 </select>
               </label>
             </fieldset>
+
             {/* Practice end date */}
             <fieldset>
               <legend>End date (or expected)</legend>
@@ -210,8 +214,9 @@ class PracticeForm extends React.Component {
               </label>
             </fieldset>
 
+            {/* Make a '+' button to appear just after the last form */}
             {index === practiceInfo.length - 1 ? (
-              // Button for adding more info
+              // A button to add one more form
               <Button
                 buttonEvent={handlePracticalAdd}
                 buttonText="add"
@@ -219,7 +224,7 @@ class PracticeForm extends React.Component {
               />
             ) : null}
 
-            {/* Button for deleting info */}
+            {/* A button to delete a form */}
             <Button
               buttonEvent={handlePracticalDelete}
               buttonText="delete"

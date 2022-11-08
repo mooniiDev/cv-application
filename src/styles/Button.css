@@ -37,13 +37,14 @@
 
 /* Deleting and adding info */
 .delete-button,
-.add-button {
+.add-button,
+.add-first-form-button {
   margin-top: 5px;
   float: right;
 }
 
-/* Adding a practice form */
-.add-practice-button {
+/* Adding a first form */
+.add-first-form-button {
   margin-top: -6px;
 }
 
@@ -59,6 +60,7 @@
 }
 
 .add-button:hover,
+.add-first-form-button:hover,
 .add-skill-button:hover {
   background-color: var(--green);
   cursor: pointer;

@@ -24,20 +24,23 @@ class EducationForm extends React.Component {
       educationInfo,
     } = this.props;
 
+    // If an education form is clicked to be visible
     if (formVisibility) {
+      // If there are no forms created yet
       if (educationInfo.length === 0) {
         return (
           <form className="add-education-form">
-            {/* Button for adding an education form */}
+            {/* A button to add the first education form */}
             <Button
               buttonEvent={handleEducationalAdd}
               buttonText="add"
-              buttonClass="add-button add-first-form-button fontAwesome-button"
+              buttonClass="add-first-form-button fontAwesome-button"
             />
           </form>
         );
       }
 
+      // Show existing education form(s)
       return educationInfo.map((education, index) => {
         return (
           <form
@@ -203,8 +206,9 @@ class EducationForm extends React.Component {
               </label>
             </fieldset>
 
+            {/* Make a '+' button to appear just after the last form */}
             {index === educationInfo.length - 1 ? (
-              // Button for adding more info
+              // A button to add one more form
               <Button
                 buttonEvent={handleEducationalAdd}
                 buttonText="add"
@@ -212,7 +216,7 @@ class EducationForm extends React.Component {
               />
             ) : null}
 
-            {/* Button for deleting info */}
+            {/* A button to delete a form */}
             <Button
               buttonEvent={handleEducationalDelete}
               buttonText="delete"
