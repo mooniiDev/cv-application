@@ -16,7 +16,7 @@ class Main extends React.Component {
 
     this.state = {
       formDisplay: {
-        isPersonalFormDisplayed: false,
+        isPersonalFormDisplayed: true,
         isPracticeFormDisplayed: false,
         isEducationFormDisplayed: false,
         isSkillsFormDisplayed: false,

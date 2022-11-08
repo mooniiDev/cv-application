@@ -146,7 +146,7 @@ PersonalForm.propTypes = {
 
 // Creating default props
 PersonalForm.defaultProps = {
-  formVisibility: false,
+  formVisibility: true,
   handlePersonalChange: () => {},
   personalInfo: {},
 };

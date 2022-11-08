@@ -64,7 +64,7 @@ PersonalInfo.defaultProps = {
   title: 'PERSONAL INFORMATION',
   border: 'red-border',
   hover: 'red-hover',
-  formVisibility: false,
+  formVisibility: true,
   handleFormDisplay: () => {},
   handlePersonalChange: () => {},
   personalInfo: {},
