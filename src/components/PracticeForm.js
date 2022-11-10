@@ -58,7 +58,7 @@ class PracticeForm extends React.Component {
                   name="position-title"
                   data-info="title"
                   data-key={practice.id}
-                  defaultValue={practice.title}
+                  value={practice.title}
                   onChange={handlePracticalChange}
                   placeholder="Ex: Front-End Web Developer"
                   required
@@ -73,7 +73,7 @@ class PracticeForm extends React.Component {
                   name="company-name"
                   data-info="company"
                   data-key={practice.id}
-                  defaultValue={practice.company}
+                  value={practice.company}
                   onChange={handlePracticalChange}
                   placeholder="Ex: Tesonet"
                   required
@@ -92,7 +92,7 @@ class PracticeForm extends React.Component {
                   name="main-task"
                   data-info="task"
                   data-key={practice.id}
-                  defaultValue={practice.task}
+                  value={practice.task}
                   onChange={handlePracticalChange}
                   placeholder="Ex: Maintaining user interface"
                   required
@@ -107,7 +107,7 @@ class PracticeForm extends React.Component {
                   name="employment-type"
                   data-info="type"
                   data-key={practice.id}
-                  defaultValue={practice.type}
+                  value={practice.type}
                   onChange={handlePracticalChange}
                 >
                   <option value="type">Please select</option>
@@ -132,7 +132,7 @@ class PracticeForm extends React.Component {
                   name="practice-start-year"
                   data-info="startYear"
                   data-key={practice.id}
-                  defaultValue={practice.startYear}
+                  value={practice.startYear}
                   onChange={handlePracticalChange}
                   required
                 />
@@ -148,7 +148,7 @@ class PracticeForm extends React.Component {
                   name="practice-start-month"
                   data-info="startMonth"
                   data-key={practice.id}
-                  defaultValue={practice.startMonth}
+                  value={practice.startMonth}
                   onChange={handlePracticalChange}
                 >
                   <option value="month">Please select</option>
@@ -179,7 +179,7 @@ class PracticeForm extends React.Component {
                   name="practice-end-year"
                   data-info="endYear"
                   data-key={practice.id}
-                  defaultValue={practice.endYear}
+                  value={practice.endYear}
                   onChange={handlePracticalChange}
                 />
               </label>
@@ -194,7 +194,7 @@ class PracticeForm extends React.Component {
                   name="practice-end-month"
                   data-info="endMonth"
                   data-key={practice.id}
-                  defaultValue={practice.endMonth}
+                  value={practice.endMonth}
                   onChange={handlePracticalChange}
                 >
                   <option value="month">Please select</option>

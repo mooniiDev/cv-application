@@ -59,7 +59,7 @@ class EducationForm extends React.Component {
                   name="school-name"
                   data-info="school"
                   data-key={education.id}
-                  defaultValue={education.school}
+                  value={education.school}
                   onChange={handleEducationalChange}
                   placeholder="Ex: Harvard University"
                   required
@@ -74,7 +74,7 @@ class EducationForm extends React.Component {
                   name="study-title"
                   data-info="field"
                   data-key={education.id}
-                  defaultValue={education.field}
+                  value={education.field}
                   onChange={handleEducationalChange}
                   placeholder="Ex: Software Engineering"
                   required
@@ -93,7 +93,7 @@ class EducationForm extends React.Component {
                   name="education-degree"
                   data-info="degree"
                   data-key={education.id}
-                  defaultValue={education.degree}
+                  value={education.degree}
                   onChange={handleEducationalChange}
                   placeholder="Ex: Bachelor’s"
                 />
@@ -107,7 +107,7 @@ class EducationForm extends React.Component {
                   name="education-grade"
                   data-info="grade"
                   data-key={education.id}
-                  defaultValue={education.grade}
+                  value={education.grade}
                   onChange={handleEducationalChange}
                 />
               </label>
@@ -124,7 +124,7 @@ class EducationForm extends React.Component {
                   name="education-start-year"
                   data-info="startYear"
                   data-key={education.id}
-                  defaultValue={education.startYear}
+                  value={education.startYear}
                   onChange={handleEducationalChange}
                   required
                 />
@@ -140,7 +140,7 @@ class EducationForm extends React.Component {
                   name="education-start-month"
                   data-info="startMonth"
                   data-key={education.id}
-                  defaultValue={education.startMonth}
+                  value={education.startMonth}
                   onChange={handleEducationalChange}
                 >
                   <option value="month">Please select</option>
@@ -171,7 +171,7 @@ class EducationForm extends React.Component {
                   name="education-end-year"
                   data-info="endYear"
                   data-key={education.id}
-                  defaultValue={education.endYear}
+                  value={education.endYear}
                   onChange={handleEducationalChange}
                 />
               </label>
@@ -186,7 +186,7 @@ class EducationForm extends React.Component {
                   name="education-end-month"
                   data-info="endMonth"
                   data-key={education.id}
-                  defaultValue={education.endMonth}
+                  value={education.endMonth}
                   onChange={handleEducationalChange}
                 >
                   <option value="month">Please select</option>
