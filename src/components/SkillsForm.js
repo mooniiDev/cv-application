@@ -17,7 +17,8 @@ class SkillsForm extends React.Component {
   }
 
   render() {
-    const { formVisibility, handleSkillsChange, skillsInfo } = this.props;
+    const { formVisibility, handleSkillsChange, handleSkillAdd, skill } =
+      this.props;
 
     // If skills form is clicked to be visible
     if (formVisibility) {
@@ -30,7 +31,7 @@ class SkillsForm extends React.Component {
               id="skill"
               type="text"
               name="skill"
-              defaultValue={skillsInfo[0]}
+              value={skill.text}
               onChange={handleSkillsChange}
               placeholder="Ex: React.js"
             />
@@ -38,6 +39,7 @@ class SkillsForm extends React.Component {
 
           {/* A button to add another skill */}
           <Button
+            buttonEvent={handleSkillAdd}
             buttonText="add"
             buttonClass="add-skill-button fontAwesome-button"
           />
@@ -52,14 +54,20 @@ class SkillsForm extends React.Component {
 SkillsForm.propTypes = {
   formVisibility: PropTypes.bool,
   handleSkillsChange: PropTypes.func,
-  skillsInfo: PropTypes.arrayOf(PropTypes.string),
+  handleSkillAdd: PropTypes.func,
+  skill: PropTypes.shape({
+    text: PropTypes.string,
+    id: PropTypes.string,
+    index: PropTypes.number,
+  }),
 };
 
 // Creating default props
 SkillsForm.defaultProps = {
   formVisibility: false,
   handleSkillsChange: () => {},
-  skillsInfo: [],
+  handleSkillAdd: () => {},
+  skill: {},
 };
 
 export default SkillsForm;

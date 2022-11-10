@@ -60,6 +60,11 @@ class Main extends React.Component {
         ],
         skills: [],
       },
+      skill: {
+        text: '',
+        index: 0,
+        id: uniqid(),
+      },
     };
   }
 
@@ -246,15 +251,29 @@ class Main extends React.Component {
   // A function that handles changes in skills form's input field
   handleSkillsChange = (e) => {
     this.setState((prevState) => ({
+      skill: {
+        ...prevState.skill,
+        text: e.target.value,
+      },
+    }));
+  };
+
+  // A function that handles addition of a skill
+  handleSkillAdd = () => {
+    this.setState((prevState) => ({
       cvInfo: {
         ...prevState.cvInfo,
-        skills: [e.target.value],
+        skills: [...prevState.cvInfo.skills].concat(prevState.skill),
+      },
+      skill: {
+        ...prevState.skill,
+        text: '',
       },
     }));
   };
 
   render() {
-    const { formDisplay, editMode, cvInfo } = this.state;
+    const { formDisplay, editMode, cvInfo, skill } = this.state;
     const {
       handleFormDisplay,
       handleMode,
@@ -266,6 +285,7 @@ class Main extends React.Component {
       handleEducationalDelete,
       handleEducationalAdd,
       handleSkillsChange,
+      handleSkillAdd,
     } = this;
 
     if (editMode) {
@@ -293,7 +313,9 @@ class Main extends React.Component {
             handleEducationalDelete={handleEducationalDelete}
             handleEducationalAdd={handleEducationalAdd}
             handleSkillsChange={handleSkillsChange}
+            handleSkillAdd={handleSkillAdd}
             cvInfo={cvInfo}
+            skill={skill}
           />
         </main>
       );
