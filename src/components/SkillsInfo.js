@@ -23,6 +23,7 @@ class SkillsInfo extends React.Component {
       handleFormDisplay,
       handleSkillsChange,
       handleSkillAdd,
+      skillsInfo,
       skill,
     } = this.props;
 
@@ -41,6 +42,7 @@ class SkillsInfo extends React.Component {
           formVisibility={formVisibility}
           handleSkillsChange={handleSkillsChange}
           handleSkillAdd={handleSkillAdd}
+          skillsInfo={skillsInfo}
           skill={skill}
         />
       </div>
@@ -58,6 +60,7 @@ SkillsInfo.propTypes = {
   handleFormDisplay: PropTypes.func,
   handleSkillsChange: PropTypes.func,
   handleSkillAdd: PropTypes.func,
+  skillsInfo: PropTypes.arrayOf(PropTypes.shape({})),
   skill: PropTypes.shape({}),
 };
 
@@ -71,6 +74,7 @@ SkillsInfo.defaultProps = {
   handleFormDisplay: () => {},
   handleSkillsChange: () => {},
   handleSkillAdd: () => {},
+  skillsInfo: [],
   skill: {},
 };
 

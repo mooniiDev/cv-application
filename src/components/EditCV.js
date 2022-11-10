@@ -83,6 +83,7 @@ class EditCV extends React.Component {
           handleFormDisplay={handleFormDisplay}
           handleSkillsChange={handleSkillsChange}
           handleSkillAdd={handleSkillAdd}
+          skillsInfo={cvInfo.skills}
           skill={skill}
         />
       </div>

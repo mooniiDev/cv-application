@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 // Components imports
 import Button from './Button';
+import SkillsList from './SkillsList';
 
 // Styling imports
 import '../styles/SkillsForm.css';
@@ -17,8 +18,13 @@ class SkillsForm extends React.Component {
   }
 
   render() {
-    const { formVisibility, handleSkillsChange, handleSkillAdd, skill } =
-      this.props;
+    const {
+      formVisibility,
+      handleSkillsChange,
+      handleSkillAdd,
+      skillsInfo,
+      skill,
+    } = this.props;
 
     // If skills form is clicked to be visible
     if (formVisibility) {
@@ -43,6 +49,9 @@ class SkillsForm extends React.Component {
             buttonText="add"
             buttonClass="add-skill-button fontAwesome-button"
           />
+
+          {/* If at least one skill is added - show the skills list */}
+          {skillsInfo.length > 0 ? <SkillsList skills={skillsInfo} /> : null}
         </form>
       );
     }
@@ -55,6 +64,13 @@ SkillsForm.propTypes = {
   formVisibility: PropTypes.bool,
   handleSkillsChange: PropTypes.func,
   handleSkillAdd: PropTypes.func,
+  skillsInfo: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string,
+      index: PropTypes.number,
+      id: PropTypes.string,
+    })
+  ),
   skill: PropTypes.shape({
     text: PropTypes.string,
     index: PropTypes.number,
@@ -67,6 +83,7 @@ SkillsForm.defaultProps = {
   formVisibility: false,
   handleSkillsChange: () => {},
   handleSkillAdd: () => {},
+  skillsInfo: {},
   skill: {},
 };
 

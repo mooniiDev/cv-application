@@ -274,7 +274,7 @@ class Main extends React.Component {
   };
 
   render() {
-    const { formDisplay, editMode, cvInfo, skill } = this.state;
+    const { formDisplay, editMode, skill, cvInfo } = this.state;
     const {
       handleFormDisplay,
       handleMode,
@@ -315,8 +315,8 @@ class Main extends React.Component {
             handleEducationalAdd={handleEducationalAdd}
             handleSkillsChange={handleSkillsChange}
             handleSkillAdd={handleSkillAdd}
-            cvInfo={cvInfo}
             skill={skill}
+            cvInfo={cvInfo}
           />
         </main>
       );
