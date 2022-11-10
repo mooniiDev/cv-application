@@ -266,8 +266,9 @@ class Main extends React.Component {
         skills: [...prevState.cvInfo.skills].concat(prevState.skill),
       },
       skill: {
-        ...prevState.skill,
         text: '',
+        index: prevState.skill.index + 1,
+        id: uniqid(),
       },
     }));
   };

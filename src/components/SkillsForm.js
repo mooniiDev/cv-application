@@ -57,8 +57,8 @@ SkillsForm.propTypes = {
   handleSkillAdd: PropTypes.func,
   skill: PropTypes.shape({
     text: PropTypes.string,
-    id: PropTypes.string,
     index: PropTypes.number,
+    id: PropTypes.string,
   }),
 };
 
