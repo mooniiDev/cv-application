@@ -33,6 +33,7 @@ class EditCV extends React.Component {
       handleSkillAdd,
       cvInfo,
       skill,
+      error,
     } = this.props;
 
     return (
@@ -85,6 +86,7 @@ class EditCV extends React.Component {
           handleSkillAdd={handleSkillAdd}
           skillsInfo={cvInfo.skills}
           skill={skill}
+          error={error}
         />
       </div>
     );
@@ -114,6 +116,7 @@ EditCV.propTypes = {
     skills: PropTypes.arrayOf(PropTypes.shape({})),
   }),
   skill: PropTypes.shape({}),
+  error: PropTypes.bool,
 };
 
 // Creating default props
@@ -134,6 +137,7 @@ EditCV.defaultProps = {
   handleSkillAdd: () => {},
   cvInfo: { personal: {}, practice: [], education: [], skills: [] },
   skill: {},
+  error: false,
 };
 
 export default EditCV;

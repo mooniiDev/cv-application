@@ -65,6 +65,7 @@ class Main extends React.Component {
         index: 0,
         id: uniqid(),
       },
+      error: false,
     };
   }
 
@@ -259,22 +260,34 @@ class Main extends React.Component {
   };
 
   // A function that handles addition of a skill
-  handleSkillAdd = () => {
-    this.setState((prevState) => ({
-      cvInfo: {
-        ...prevState.cvInfo,
-        skills: [...prevState.cvInfo.skills].concat(prevState.skill),
-      },
-      skill: {
-        text: '',
-        index: prevState.skill.index + 1,
-        id: uniqid(),
-      },
-    }));
+  handleSkillAdd = (e) => {
+    // If a value of input is empty - show an error after clicking '+' button
+    if (
+      e.target.parentElement.firstElementChild.firstElementChild.value === ''
+    ) {
+      this.setState(() => ({
+        error: true,
+      }));
+
+      // If a value of input isn't empty - show added skill after clicking '+' button
+    } else {
+      this.setState((prevState) => ({
+        cvInfo: {
+          ...prevState.cvInfo,
+          skills: [...prevState.cvInfo.skills].concat(prevState.skill),
+        },
+        skill: {
+          text: '',
+          index: prevState.skill.index + 1,
+          id: uniqid(),
+        },
+        error: false,
+      }));
+    }
   };
 
   render() {
-    const { formDisplay, editMode, skill, cvInfo } = this.state;
+    const { formDisplay, editMode, skill, error, cvInfo } = this.state;
     const {
       handleFormDisplay,
       handleMode,
@@ -316,6 +329,7 @@ class Main extends React.Component {
             handleSkillsChange={handleSkillsChange}
             handleSkillAdd={handleSkillAdd}
             skill={skill}
+            error={error}
             cvInfo={cvInfo}
           />
         </main>

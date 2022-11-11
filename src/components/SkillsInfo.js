@@ -25,6 +25,7 @@ class SkillsInfo extends React.Component {
       handleSkillAdd,
       skillsInfo,
       skill,
+      error,
     } = this.props;
 
     return (
@@ -44,6 +45,7 @@ class SkillsInfo extends React.Component {
           handleSkillAdd={handleSkillAdd}
           skillsInfo={skillsInfo}
           skill={skill}
+          error={error}
         />
       </div>
     );
@@ -62,6 +64,7 @@ SkillsInfo.propTypes = {
   handleSkillAdd: PropTypes.func,
   skillsInfo: PropTypes.arrayOf(PropTypes.shape({})),
   skill: PropTypes.shape({}),
+  error: PropTypes.bool,
 };
 
 // Creating default props
@@ -76,6 +79,7 @@ SkillsInfo.defaultProps = {
   handleSkillAdd: () => {},
   skillsInfo: [],
   skill: {},
+  error: false,
 };
 
 export default SkillsInfo;

@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 // Components imports
 import Button from './Button';
+import ErrorMessage from './ErrorMessage';
 import SkillsList from './SkillsList';
 
 // Styling imports
@@ -24,6 +25,7 @@ class SkillsForm extends React.Component {
       handleSkillAdd,
       skillsInfo,
       skill,
+      error,
     } = this.props;
 
     // If skills form is clicked to be visible
@@ -49,6 +51,9 @@ class SkillsForm extends React.Component {
             buttonText="add"
             buttonClass="add-skill-button fontAwesome-button"
           />
+
+          {/* If a value of input is empty - show an error after clicking '+' button */}
+          {error === true ? <ErrorMessage /> : null}
 
           {/* If at least one skill is added - show the skills list */}
           {skillsInfo.length > 0 ? <SkillsList skills={skillsInfo} /> : null}
@@ -76,6 +81,7 @@ SkillsForm.propTypes = {
     index: PropTypes.number,
     id: PropTypes.string,
   }),
+  error: PropTypes.bool,
 };
 
 // Creating default props
@@ -85,6 +91,7 @@ SkillsForm.defaultProps = {
   handleSkillAdd: () => {},
   skillsInfo: {},
   skill: {},
+  error: false,
 };
 
 export default SkillsForm;
