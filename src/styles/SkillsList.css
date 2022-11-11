@@ -10,8 +10,12 @@
   margin: 5px;
   padding: 5px 10px;
   font-size: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
   background-color: var(--grey);
   border-radius: 2px;
+  -webkit-animation: slideDown-small 0.3s;
+  animation: slideDown-small 0.3s;
 }
 
 .skill:hover {

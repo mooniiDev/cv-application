@@ -14,7 +14,7 @@ class ErrorMessage extends React.Component {
   render() {
     return (
       <p className="error-message">
-        You can&#39;t add a skill of ... nothing. 🤭
+        Oops, add a skill of ... <i>something</i> 🤭
       </p>
     );
   }

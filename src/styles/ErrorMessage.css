@@ -1,4 +1,10 @@
 .error-message {
-  font-weight: 900;
-  color: var(--dark-red);
+  margin: 25px 15px 0 13px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 400;
+  background-color: var(--red);
+  border-radius: 2px;
+  -webkit-animation: slideDown-small 0.3s;
+  animation: slideDown-small 0.3s;
 }
