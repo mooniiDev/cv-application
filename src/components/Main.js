@@ -286,6 +286,20 @@ class Main extends React.Component {
     }
   };
 
+  // A function that handles deletion of a skill
+  // eslint-disable-next-line class-methods-use-this
+  handleSkillDelete = (e) => {
+    this.setState((prevState) => ({
+      cvInfo: {
+        ...prevState.cvInfo,
+        skills: prevState.cvInfo.skills.filter(
+          (skill) => skill.id !== e.target.parentElement.getAttribute('data-id')
+        ),
+      },
+      error: false,
+    }));
+  };
+
   render() {
     const { formDisplay, editMode, skill, error, cvInfo } = this.state;
     const {
@@ -300,6 +314,7 @@ class Main extends React.Component {
       handleEducationalAdd,
       handleSkillsChange,
       handleSkillAdd,
+      handleSkillDelete,
     } = this;
 
     if (editMode) {
@@ -328,6 +343,7 @@ class Main extends React.Component {
             handleEducationalAdd={handleEducationalAdd}
             handleSkillsChange={handleSkillsChange}
             handleSkillAdd={handleSkillAdd}
+            handleSkillDelete={handleSkillDelete}
             skill={skill}
             error={error}
             cvInfo={cvInfo}

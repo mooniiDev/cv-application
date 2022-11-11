@@ -17,18 +17,19 @@ class SkillsList extends React.Component {
   }
 
   render() {
-    const { skills } = this.props;
+    const { skills, handleSkillDelete } = this.props;
 
     return (
       <div className="skills-list">
         {skills.map((skill) => {
           return (
-            <div key={skill.id} className="skill">
+            <div key={skill.id} data-id={skill.id} className="skill">
               <p key={skill.id} className="skill-text">
                 {skill.text}
               </p>
               <Button
                 type="button"
+                buttonEvent={handleSkillDelete}
                 buttonText="delete"
                 buttonClass="delete-skill-button"
               />
@@ -43,11 +44,13 @@ class SkillsList extends React.Component {
 // Validating prop types
 SkillsList.propTypes = {
   skills: PropTypes.arrayOf(PropTypes.shape({})),
+  handleSkillDelete: PropTypes.func,
 };
 
 // // Creating default props
 SkillsList.defaultProps = {
   skills: [],
+  handleSkillDelete: () => {},
 };
 
 export default SkillsList;

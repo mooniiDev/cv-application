@@ -23,6 +23,7 @@ class SkillsForm extends React.Component {
       formVisibility,
       handleSkillsChange,
       handleSkillAdd,
+      handleSkillDelete,
       skillsInfo,
       skill,
       error,
@@ -55,7 +56,12 @@ class SkillsForm extends React.Component {
           </div>
 
           {/* If at least one skill is added - show the list of skills */}
-          {skillsInfo.length > 0 ? <SkillsList skills={skillsInfo} /> : null}
+          {skillsInfo.length > 0 ? (
+            <SkillsList
+              skills={skillsInfo}
+              handleSkillDelete={handleSkillDelete}
+            />
+          ) : null}
 
           {/* If a value of input is empty - show an error after clicking '+' button */}
           {error === true ? <ErrorMessage /> : null}
@@ -71,6 +77,7 @@ SkillsForm.propTypes = {
   formVisibility: PropTypes.bool,
   handleSkillsChange: PropTypes.func,
   handleSkillAdd: PropTypes.func,
+  handleSkillDelete: PropTypes.func,
   skillsInfo: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string,
@@ -91,6 +98,7 @@ SkillsForm.defaultProps = {
   formVisibility: false,
   handleSkillsChange: () => {},
   handleSkillAdd: () => {},
+  handleSkillDelete: () => {},
   skillsInfo: {},
   skill: {},
   error: false,

@@ -31,6 +31,7 @@ class EditCV extends React.Component {
       handleEducationalAdd,
       handleSkillsChange,
       handleSkillAdd,
+      handleSkillDelete,
       cvInfo,
       skill,
       error,
@@ -84,6 +85,7 @@ class EditCV extends React.Component {
           handleFormDisplay={handleFormDisplay}
           handleSkillsChange={handleSkillsChange}
           handleSkillAdd={handleSkillAdd}
+          handleSkillDelete={handleSkillDelete}
           skillsInfo={cvInfo.skills}
           skill={skill}
           error={error}
@@ -109,6 +111,7 @@ EditCV.propTypes = {
   handleEducationalAdd: PropTypes.func,
   handleSkillsChange: PropTypes.func,
   handleSkillAdd: PropTypes.func,
+  handleSkillDelete: PropTypes.func,
   cvInfo: PropTypes.shape({
     personal: PropTypes.shape({}),
     practice: PropTypes.arrayOf(PropTypes.shape({})),
@@ -135,6 +138,7 @@ EditCV.defaultProps = {
   handleEducationalAdd: () => {},
   handleSkillsChange: () => {},
   handleSkillAdd: () => {},
+  handleSkillDelete: () => {},
   cvInfo: { personal: {}, practice: [], education: [], skills: [] },
   skill: {},
   error: false,

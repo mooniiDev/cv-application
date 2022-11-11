@@ -23,6 +23,7 @@ class SkillsInfo extends React.Component {
       handleFormDisplay,
       handleSkillsChange,
       handleSkillAdd,
+      handleSkillDelete,
       skillsInfo,
       skill,
       error,
@@ -43,6 +44,7 @@ class SkillsInfo extends React.Component {
           formVisibility={formVisibility}
           handleSkillsChange={handleSkillsChange}
           handleSkillAdd={handleSkillAdd}
+          handleSkillDelete={handleSkillDelete}
           skillsInfo={skillsInfo}
           skill={skill}
           error={error}
@@ -62,6 +64,7 @@ SkillsInfo.propTypes = {
   handleFormDisplay: PropTypes.func,
   handleSkillsChange: PropTypes.func,
   handleSkillAdd: PropTypes.func,
+  handleSkillDelete: PropTypes.func,
   skillsInfo: PropTypes.arrayOf(PropTypes.shape({})),
   skill: PropTypes.shape({}),
   error: PropTypes.bool,
@@ -77,6 +80,7 @@ SkillsInfo.defaultProps = {
   handleFormDisplay: () => {},
   handleSkillsChange: () => {},
   handleSkillAdd: () => {},
+  handleSkillDelete: () => {},
   skillsInfo: [],
   skill: {},
   error: false,
