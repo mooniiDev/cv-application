@@ -25,9 +25,10 @@
   --white: #ffffff;
   --grey: #ececec;
   --dark-blue: #394066;
-  --green: #c0dad9;
-  --red: #f2c9c9;
   --light-blue: #c4d7f4;
+  --dark-red: #b15959;
+  --light-red: #f2c9c9;
+  --green: #c0dad9;
   --orange: #fdd5c0;
   --purple: #dfc6e3;
 }

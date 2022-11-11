@@ -54,7 +54,7 @@
 }
 
 .delete-button:hover {
-  background-color: var(--red);
+  background-color: var(--light-red);
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -73,7 +73,7 @@
 }
 
 .red-hover:hover {
-  background-color: var(--red);
+  background-color: var(--light-red);
 }
 
 .blue-hover:hover {

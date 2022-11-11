@@ -1,6 +1,9 @@
 // Packages imports
 import React from 'react';
 
+// Styling imports
+import '../styles/ErrorMessage.css';
+
 class ErrorMessage extends React.Component {
   constructor(props) {
     super(props);
@@ -9,7 +12,11 @@ class ErrorMessage extends React.Component {
   }
 
   render() {
-    return <p>You can&#39;t add a skill of ... nothing. 🤭</p>;
+    return (
+      <p className="error-message">
+        You can&#39;t add a skill of ... nothing. 🤭
+      </p>
+    );
   }
 }
 

@@ -1,9 +1,9 @@
 .personal-form {
-  border-bottom: 3px solid var(--red);
+  border-bottom: 3px solid var(--light-red);
 }
 
 .personal-form input:focus {
-  border: 1px solid var(--red);
+  border: 1px solid var(--light-red);
 }
 
 #about {
@@ -20,6 +20,6 @@
 
 #about:focus {
   outline: none;
-  border: 1px solid var(--red);
+  border: 1px solid var(--light-red);
   transition: 0.3s;
 }
