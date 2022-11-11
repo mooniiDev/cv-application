@@ -112,6 +112,7 @@ class Main extends React.Component {
           ...prevState.formDisplay,
           isSkillsFormDisplayed: !prevState.formDisplay.isSkillsFormDisplayed,
         },
+        error: false,
       }));
     }
   };
