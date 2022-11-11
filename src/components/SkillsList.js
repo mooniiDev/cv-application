@@ -2,8 +2,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Components imports
+import Button from './Button';
+
 // Styling imports
 import '../styles/SkillsList.css';
+import '../styles/Button.css';
 
 class SkillsList extends React.Component {
   constructor(props) {
@@ -19,9 +23,16 @@ class SkillsList extends React.Component {
       <div className="skills-list">
         {skills.map((skill) => {
           return (
-            <p key={skill.id} className="skill">
-              {skill.text}
-            </p>
+            <div key={skill.id} className="skill">
+              <p key={skill.id} className="skill-text">
+                {skill.text}
+              </p>
+              <Button
+                type="button"
+                buttonText="delete"
+                buttonClass="delete-skill-button"
+              />
+            </div>
           );
         })}
       </div>

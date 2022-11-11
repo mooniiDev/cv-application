@@ -67,6 +67,20 @@
   transition: all 0.3s;
 }
 
+/* Deleting an added skill */
+.delete-skill-button {
+  font-size: 1rem;
+  color: var(--dark-blue);
+  border: none;
+  transition: 0.3s;
+}
+
+.delete-skill-button:hover {
+  cursor: pointer;
+  background-color: var(--red);
+  transition: 0.3s;
+}
+
 /* Font Awesome buttons hovers colors */
 .green-hover:hover {
   background-color: var(--green);
