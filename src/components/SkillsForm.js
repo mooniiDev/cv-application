@@ -32,31 +32,33 @@ class SkillsForm extends React.Component {
     if (formVisibility) {
       return (
         <form className="skills-form">
-          {/* Skill input */}
-          <label htmlFor="skill">
-            Skill
-            <input
-              id="skill"
-              type="text"
-              name="skill"
-              value={skill.text}
-              onChange={handleSkillsChange}
-              placeholder="Ex: React.js"
-            />
-          </label>
+          <div className="skills-handling">
+            {/* Skill input */}
+            <label htmlFor="skill">
+              Skill
+              <input
+                id="skill"
+                type="text"
+                name="skill"
+                value={skill.text}
+                onChange={handleSkillsChange}
+                placeholder="Ex: React.js"
+              />
+            </label>
 
-          {/* A button to add another skill */}
-          <Button
-            buttonEvent={handleSkillAdd}
-            buttonText="add"
-            buttonClass="add-skill-button fontAwesome-button"
-          />
+            {/* A button to add another skill */}
+            <Button
+              buttonEvent={handleSkillAdd}
+              buttonText="add"
+              buttonClass="add-skill-button fontAwesome-button"
+            />
+          </div>
+
+          {/* If at least one skill is added - show the list of skills */}
+          {skillsInfo.length > 0 ? <SkillsList skills={skillsInfo} /> : null}
 
           {/* If a value of input is empty - show an error after clicking '+' button */}
           {error === true ? <ErrorMessage /> : null}
-
-          {/* If at least one skill is added - show the skills list */}
-          {skillsInfo.length > 0 ? <SkillsList skills={skillsInfo} /> : null}
         </form>
       );
     }

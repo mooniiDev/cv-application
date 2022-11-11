@@ -1,0 +1,19 @@
+.skills-list {
+  width: 450px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-left: 7px;
+}
+
+.skill {
+  margin: 5px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  background-color: var(--grey);
+  border-radius: 2px;
+}
+
+.skill:hover {
+  cursor: pointer;
+}

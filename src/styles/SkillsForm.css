@@ -1,6 +1,4 @@
 .skills-form {
-  display: flex;
-  justify-content: space-between;
   border-bottom: 3px solid var(--purple);
 }
 
@@ -10,4 +8,9 @@
 
 .skills-form input:focus {
   border: 1px solid var(--purple);
+}
+
+.skills-handling {
+  display: flex;
+  justify-content: space-between;
 }
