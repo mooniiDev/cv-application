@@ -51,7 +51,7 @@ class PracticeForm extends React.Component {
             <div>
               {/* Position title */}
               <label htmlFor="position-title">
-                Title*
+                Title
                 <input
                   type="text"
                   id="position-title"
@@ -61,12 +61,11 @@ class PracticeForm extends React.Component {
                   value={practice.title}
                   onChange={handlePracticalChange}
                   placeholder="Ex: Front-End Web Developer"
-                  required
                 />
               </label>
               {/* Company name */}
               <label htmlFor="company-name">
-                Company name*
+                Company name
                 <input
                   type="text"
                   id="company-name"
@@ -76,7 +75,6 @@ class PracticeForm extends React.Component {
                   value={practice.company}
                   onChange={handlePracticalChange}
                   placeholder="Ex: Tesonet"
-                  required
                 />
               </label>
             </div>
@@ -85,7 +83,7 @@ class PracticeForm extends React.Component {
             <div className="task-and-type">
               {/* Main task */}
               <label htmlFor="main-task">
-                Main task*
+                Main task
                 <input
                   type="text"
                   id="main-task"
@@ -95,7 +93,6 @@ class PracticeForm extends React.Component {
                   value={practice.task}
                   onChange={handlePracticalChange}
                   placeholder="Ex: Maintaining user interface"
-                  required
                 />
               </label>
               {/* Employment type */}
@@ -123,7 +120,7 @@ class PracticeForm extends React.Component {
 
             {/* Practice start date */}
             <fieldset>
-              <legend>Start date*</legend>
+              <legend>Start date</legend>
               <label htmlFor="practice-start-year">
                 Year
                 <input
@@ -134,7 +131,6 @@ class PracticeForm extends React.Component {
                   data-key={practice.id}
                   value={practice.startYear}
                   onChange={handlePracticalChange}
-                  required
                 />
               </label>
               <label

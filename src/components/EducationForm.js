@@ -52,7 +52,7 @@ class EducationForm extends React.Component {
             <div>
               {/* School name */}
               <label htmlFor="school-name">
-                School*
+                School
                 <input
                   type="text"
                   id="school-name"
@@ -62,12 +62,11 @@ class EducationForm extends React.Component {
                   value={education.school}
                   onChange={handleEducationalChange}
                   placeholder="Ex: Harvard University"
-                  required
                 />
               </label>
               {/* Field of study */}
               <label htmlFor="study-title">
-                Field of study*
+                Field of study
                 <input
                   type="text"
                   id="study-title"
@@ -77,7 +76,6 @@ class EducationForm extends React.Component {
                   value={education.field}
                   onChange={handleEducationalChange}
                   placeholder="Ex: Software Engineering"
-                  required
                 />
               </label>
             </div>
@@ -115,7 +113,7 @@ class EducationForm extends React.Component {
 
             {/* Education start date */}
             <fieldset>
-              <legend>Start date*</legend>
+              <legend>Start date</legend>
               <label htmlFor="education-start-year">
                 Year
                 <input
@@ -126,7 +124,6 @@ class EducationForm extends React.Component {
                   data-key={education.id}
                   value={education.startYear}
                   onChange={handleEducationalChange}
-                  required
                 />
               </label>
               <label

@@ -24,7 +24,7 @@ class PersonalForm extends React.Component {
           <div>
             {/* First name */}
             <label htmlFor="first-name">
-              First name*
+              First name
               <input
                 type="text"
                 id="first-name"
@@ -32,12 +32,11 @@ class PersonalForm extends React.Component {
                 data-info="firstName"
                 value={personalInfo.firstName}
                 onChange={handlePersonalChange}
-                required
               />
             </label>
             {/* Last name */}
             <label htmlFor="last-name" className="last-name">
-              Last name*
+              Last name
               <input
                 type="text"
                 id="last-name"
@@ -45,7 +44,6 @@ class PersonalForm extends React.Component {
                 data-info="lastName"
                 value={personalInfo.lastName}
                 onChange={handlePersonalChange}
-                required
               />
             </label>
           </div>
@@ -54,7 +52,7 @@ class PersonalForm extends React.Component {
           <div>
             {/* Phone */}
             <label htmlFor="phone">
-              Phone*
+              Phone
               <input
                 type="text"
                 id="phone"
@@ -62,12 +60,11 @@ class PersonalForm extends React.Component {
                 data-info="phone"
                 value={personalInfo.phone}
                 onChange={handlePersonalChange}
-                required
               />
             </label>
             {/* Email */}
             <label htmlFor="email">
-              Email*
+              Email
               <input
                 type="email"
                 id="email"
@@ -75,7 +72,6 @@ class PersonalForm extends React.Component {
                 data-info="email"
                 value={personalInfo.email}
                 onChange={handlePersonalChange}
-                required
               />
             </label>
           </div>
