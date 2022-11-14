@@ -53,6 +53,11 @@
   margin-top: 20px;
 }
 
+/* Deleting a skill */
+.delete-skill-button {
+  background-color: var(--grey);
+}
+
 .delete-button:hover {
   background-color: var(--red);
   cursor: pointer;
