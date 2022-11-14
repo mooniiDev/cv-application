@@ -288,7 +288,6 @@ class Main extends React.Component {
   };
 
   // A function that handles deletion of a skill
-  // eslint-disable-next-line class-methods-use-this
   handleSkillDelete = (e) => {
     this.setState((prevState) => ({
       cvInfo: {
