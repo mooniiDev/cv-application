@@ -24,8 +24,8 @@ class Main extends React.Component {
       editMode: true,
       cvInfo: {
         personal: {
-          firstName: '',
-          lastName: '',
+          name: '',
+          professionalTitle: '',
           phone: '',
           email: '',
           linkedin: '',

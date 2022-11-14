@@ -22,28 +22,29 @@ class PersonalForm extends React.Component {
         <form className="personal-form">
           {/* Personal information */}
           <div>
-            {/* First name */}
-            <label htmlFor="first-name">
-              First name
+            {/* Name */}
+            <label htmlFor="name">
+              Name
               <input
                 type="text"
-                id="first-name"
-                name="first-name"
-                data-info="firstName"
-                value={personalInfo.firstName}
+                id="name"
+                name="name"
+                data-info="name"
+                value={personalInfo.name}
                 onChange={handlePersonalChange}
               />
             </label>
-            {/* Last name */}
-            <label htmlFor="last-name" className="last-name">
-              Last name
+            {/* Professional title */}
+            <label htmlFor="professionalTitle" className="professional-title">
+              Professional Title
               <input
                 type="text"
-                id="last-name"
-                name="last-name"
-                data-info="lastName"
-                value={personalInfo.lastName}
+                id="professional-title"
+                name="professionalTitle"
+                data-info="professionalTitle"
+                value={personalInfo.professionalTitle}
                 onChange={handlePersonalChange}
+                placeholder="Ex: Front-End Web Developer"
               />
             </label>
           </div>
@@ -130,8 +131,8 @@ PersonalForm.propTypes = {
   formVisibility: PropTypes.bool,
   handlePersonalChange: PropTypes.func,
   personalInfo: PropTypes.shape({
-    firstName: PropTypes.string,
-    lastName: PropTypes.string,
+    name: PropTypes.string,
+    professionalTitle: PropTypes.string,
     phone: PropTypes.string,
     email: PropTypes.string,
     linkedin: PropTypes.string,
