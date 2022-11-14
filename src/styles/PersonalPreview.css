@@ -1,5 +1,5 @@
 .person-name {
-  margin: 30px 0 10px 0;
+  margin: 25px 0 0 0;
   padding: 20px;
   background-color: var(--dark-blue);
   font-family: 'Raleway-SemiBold';
@@ -8,18 +8,26 @@
   border-radius: 2px;
 }
 
+.person-title {
+  text-transform: capitalize;
+}
+
 .person-contacts {
   display: flex;
   justify-content: space-around;
-}
-
-.person-contacts span {
-  font-family: 'Raleway-SemiBold';
+  padding: 25px 0;
 }
 
 .person-about {
-  padding: 20px;
+  margin: 0;
+  padding: 25px;
   text-align: center;
-  border-top: 1px solid var(--dark-blue);
-  border-bottom: 1px solid var(--dark-blue);
+  background-color: var(--grey);
+  border-bottom: 3px solid var(--red);
+  border-radius: 2px 2px 0 0;
+}
+
+.person-contacts span,
+.person-about span {
+  font-family: 'Raleway-SemiBold';
 }

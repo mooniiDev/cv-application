@@ -16,11 +16,11 @@ class PersonalPreview extends React.Component {
     const { personalInfo } = this.props;
 
     return (
-      <div className="personal-preview-box">
-        {/* Name and surname of the person */}
+      <>
+        {/* Name and professional title of the person */}
         <h2 className="person-name">
-          {personalInfo.firstName.toUpperCase()}{' '}
-          {personalInfo.lastName.toUpperCase()}
+          {personalInfo.name.toUpperCase()} | &nbsp;
+          <span className="person-title">{personalInfo.professionalTitle}</span>
         </h2>
 
         {/* Contacts of the person */}
@@ -28,27 +28,31 @@ class PersonalPreview extends React.Component {
           {/* Phone and email of the person */}
           <div>
             <p>
-              <span>Phone:</span> &nbsp;{personalInfo.phone}
+              <span>Email:</span>&nbsp;{personalInfo.email.toLowerCase()}
             </p>
             <p>
-              <span>Email:</span> &nbsp;{personalInfo.email}
+              <span>Phone:</span>&nbsp;{personalInfo.phone}
             </p>
           </div>
 
           {/* Socials of the person */}
           <div>
             <p>
-              <span>LinkedIn:</span> &nbsp;{personalInfo.linkedin}
+              <span>LinkedIn:</span>&nbsp;{personalInfo.linkedin}
             </p>
             <p>
-              <span>GitHub:</span> &nbsp;{personalInfo.github}
+              <span>GitHub:</span>&nbsp;{personalInfo.github}
             </p>
           </div>
         </div>
 
         {/* 'About' information of the person */}
-        <p className="person-about">{personalInfo.about}</p>
-      </div>
+        <p className="person-about">
+          <span>&ldquo;</span>
+          {personalInfo.about}
+          <span>&rdquo;</span>
+        </p>
+      </>
     );
   }
 }
@@ -56,8 +60,8 @@ class PersonalPreview extends React.Component {
 // Validating prop types
 PersonalPreview.propTypes = {
   personalInfo: PropTypes.shape({
-    firstName: PropTypes.string,
-    lastName: PropTypes.string,
+    name: PropTypes.string,
+    professionalTitle: PropTypes.string,
     phone: PropTypes.string,
     email: PropTypes.string,
     linkedin: PropTypes.string,
@@ -69,8 +73,8 @@ PersonalPreview.propTypes = {
 // Creating default props
 PersonalPreview.defaultProps = {
   personalInfo: {
-    firstName: '',
-    lastName: '',
+    name: '',
+    professionalTitle: '',
     phone: '',
     email: '',
     linkedin: '',
