@@ -1,9 +1,10 @@
 .personal-preview {
+  padding-bottom: 30px;
   border-bottom: 3px solid var(--red);
 }
 
 .person-name {
-  margin: 20px 0 0 0;
+  margin: 20px 0;
   padding: 20px;
   background-color: var(--dark-blue);
   font-family: 'Raleway-SemiBold';
@@ -19,12 +20,15 @@
 .person-contacts {
   display: flex;
   justify-content: space-between;
-  margin: 0 20px;
-  padding: 15px 0 0 0;
+  margin: 20px;
+}
+
+.person-contacts p {
+  margin: 0 0 10px 0;
 }
 
 .person-about {
-  margin: 0 20px 25px 20px;
+  margin: 0 20px;
 }
 
 .person-contacts span,

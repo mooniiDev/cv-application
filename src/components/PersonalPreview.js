@@ -47,7 +47,7 @@ class PersonalPreview extends React.Component {
         </div>
 
         {/* 'About' information of the person */}
-        <p className="preview-info-title">ABOUT</p>
+        <h3 className="preview-info-heading">ABOUT</h3>
         <p className="person-about">
           <span>&ldquo;</span>
           {personalInfo.about}

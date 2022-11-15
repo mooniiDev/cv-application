@@ -17,12 +17,12 @@ class SkillsPreview extends React.Component {
 
     return (
       <div className="skills-preview">
-        <p className="preview-info-title">ADDITIONAL SKILLS</p>
+        <h3 className="preview-info-heading">ADDITIONAL SKILLS</h3>
         <div className="skills-preview-list">
           {skillsInfo.map((skill) => {
             return (
               <p key={skill.id} className="skills-preview-text">
-                {skill.text}
+                {skill.text.toLowerCase()}
               </p>
             );
           })}
