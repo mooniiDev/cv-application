@@ -17,11 +17,11 @@ class SkillsList extends React.Component {
   }
 
   render() {
-    const { skills, handleSkillDelete } = this.props;
+    const { skillsInfo, handleSkillDelete } = this.props;
 
     return (
       <div className="skills-list">
-        {skills.map((skill) => {
+        {skillsInfo.map((skill) => {
           return (
             <div key={skill.id} data-id={skill.id} className="skill">
               <p key={skill.id} className="skill-text">
@@ -43,13 +43,13 @@ class SkillsList extends React.Component {
 
 // Validating prop types
 SkillsList.propTypes = {
-  skills: PropTypes.arrayOf(PropTypes.shape({})),
+  skillsInfo: PropTypes.arrayOf(PropTypes.shape({})),
   handleSkillDelete: PropTypes.func,
 };
 
 // // Creating default props
 SkillsList.defaultProps = {
-  skills: [],
+  skillsInfo: [],
   handleSkillDelete: () => {},
 };
 

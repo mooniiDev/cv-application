@@ -58,7 +58,7 @@ class SkillsForm extends React.Component {
           {/* If at least one skill is added - show the list of skills */}
           {skillsInfo.length > 0 ? (
             <SkillsList
-              skills={skillsInfo}
+              skillsInfo={skillsInfo}
               handleSkillDelete={handleSkillDelete}
             />
           ) : null}

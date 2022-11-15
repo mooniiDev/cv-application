@@ -1,0 +1,18 @@
+.skills-preview {
+  border-bottom: 3px solid var(--light-blue);
+}
+
+.skills-preview-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 15px;
+  padding-bottom: 20px;
+}
+
+.skills-preview-text {
+  margin: 5px;
+  padding: 8px 10px;
+  background-color: var(--grey);
+  text-transform: capitalize;
+  border-radius: 2px;
+}
