@@ -8,3 +8,7 @@
   -webkit-animation: slideDown-small 0.3s;
   animation: slideDown-small 0.3s;
 }
+
+.error-message span {
+  font-style: italic;
+}

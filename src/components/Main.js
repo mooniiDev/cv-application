@@ -22,6 +22,12 @@ class Main extends React.Component {
         isSkillsFormDisplayed: false,
       },
       editMode: true,
+      skill: {
+        text: '',
+        index: 0,
+        id: uniqid(),
+      },
+      error: false,
       cvInfo: {
         personal: {
           name: '',
@@ -32,6 +38,7 @@ class Main extends React.Component {
           github: '',
           about: '',
         },
+        skills: [],
         practice: [
           {
             title: '',
@@ -58,14 +65,7 @@ class Main extends React.Component {
             id: uniqid(),
           },
         ],
-        skills: [],
       },
-      skill: {
-        text: '',
-        index: 0,
-        id: uniqid(),
-      },
-      error: false,
     };
   }
 
@@ -136,6 +136,57 @@ class Main extends React.Component {
           [e.target.getAttribute('data-info')]: e.target.value,
         },
       },
+    }));
+  };
+
+  // SKILLS HANDLING
+  // A function that handles changes in skills form's input field
+  handleSkillsChange = (e) => {
+    this.setState((prevState) => ({
+      skill: {
+        ...prevState.skill,
+        text: e.target.value,
+      },
+    }));
+  };
+
+  // A function that handles addition of a skill
+  handleSkillAdd = (e) => {
+    // If a value of input is empty - show an error after clicking '+' button
+    if (
+      e.target.parentElement.firstElementChild.firstElementChild.value === ''
+    ) {
+      this.setState(() => ({
+        error: true,
+      }));
+
+      // If a value of input isn't empty - show added skill after clicking '+' button
+    } else {
+      this.setState((prevState) => ({
+        cvInfo: {
+          ...prevState.cvInfo,
+          skills: [...prevState.cvInfo.skills].concat(prevState.skill),
+        },
+        skill: {
+          text: '',
+          index: prevState.skill.index + 1,
+          id: uniqid(),
+        },
+        error: false,
+      }));
+    }
+  };
+
+  // A function that handles deletion of a skill
+  handleSkillDelete = (e) => {
+    this.setState((prevState) => ({
+      cvInfo: {
+        ...prevState.cvInfo,
+        skills: prevState.cvInfo.skills.filter(
+          (skill) => skill.id !== e.target.parentElement.getAttribute('data-id')
+        ),
+      },
+      error: false,
     }));
   };
 
@@ -249,72 +300,21 @@ class Main extends React.Component {
     }));
   };
 
-  // SKILLS HANDLING
-  // A function that handles changes in skills form's input field
-  handleSkillsChange = (e) => {
-    this.setState((prevState) => ({
-      skill: {
-        ...prevState.skill,
-        text: e.target.value,
-      },
-    }));
-  };
-
-  // A function that handles addition of a skill
-  handleSkillAdd = (e) => {
-    // If a value of input is empty - show an error after clicking '+' button
-    if (
-      e.target.parentElement.firstElementChild.firstElementChild.value === ''
-    ) {
-      this.setState(() => ({
-        error: true,
-      }));
-
-      // If a value of input isn't empty - show added skill after clicking '+' button
-    } else {
-      this.setState((prevState) => ({
-        cvInfo: {
-          ...prevState.cvInfo,
-          skills: [...prevState.cvInfo.skills].concat(prevState.skill),
-        },
-        skill: {
-          text: '',
-          index: prevState.skill.index + 1,
-          id: uniqid(),
-        },
-        error: false,
-      }));
-    }
-  };
-
-  // A function that handles deletion of a skill
-  handleSkillDelete = (e) => {
-    this.setState((prevState) => ({
-      cvInfo: {
-        ...prevState.cvInfo,
-        skills: prevState.cvInfo.skills.filter(
-          (skill) => skill.id !== e.target.parentElement.getAttribute('data-id')
-        ),
-      },
-      error: false,
-    }));
-  };
-
   render() {
     const { formDisplay, editMode, skill, error, cvInfo } = this.state;
     const {
       handleFormDisplay,
       handleMode,
       handlePersonalChange,
+      handleSkillsChange,
+      handleSkillAdd,
+      handleSkillDelete,
       handlePracticalChange,
       handlePracticalDelete,
       handlePracticalAdd,
       handleEducationalChange,
       handleEducationalDelete,
       handleEducationalAdd,
-      handleSkillsChange,
-      handleSkillAdd,
-      handleSkillDelete,
     } = this;
 
     if (editMode) {
@@ -329,24 +329,30 @@ class Main extends React.Component {
 
           {/* Main 'edit' mode content */}
           <EditCV
+            // Forms displaying
             handleFormDisplay={handleFormDisplay}
             personalDisplay={formDisplay.isPersonalFormDisplayed}
             practiceDisplay={formDisplay.isPracticeFormDisplayed}
             educationDisplay={formDisplay.isEducationFormDisplayed}
             skillsDisplay={formDisplay.isSkillsFormDisplayed}
+            // All the data from forms
+            cvInfo={cvInfo}
+            // Personal info handling
             handlePersonalChange={handlePersonalChange}
-            handlePracticalChange={handlePracticalChange}
-            handlePracticalDelete={handlePracticalDelete}
-            handlePracticalAdd={handlePracticalAdd}
-            handleEducationalChange={handleEducationalChange}
-            handleEducationalDelete={handleEducationalDelete}
-            handleEducationalAdd={handleEducationalAdd}
+            // Skills info handling
             handleSkillsChange={handleSkillsChange}
             handleSkillAdd={handleSkillAdd}
             handleSkillDelete={handleSkillDelete}
             skill={skill}
             error={error}
-            cvInfo={cvInfo}
+            // Practice info handling
+            handlePracticalChange={handlePracticalChange}
+            handlePracticalDelete={handlePracticalDelete}
+            handlePracticalAdd={handlePracticalAdd}
+            // Education info handling
+            handleEducationalChange={handleEducationalChange}
+            handleEducationalDelete={handleEducationalDelete}
+            handleEducationalAdd={handleEducationalAdd}
           />
         </main>
       );

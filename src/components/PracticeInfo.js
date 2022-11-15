@@ -68,8 +68,8 @@ PracticeInfo.propTypes = {
 PracticeInfo.defaultProps = {
   formType: 'practice',
   title: 'PRACTICAL EXPERIENCE',
-  border: 'blue-border',
-  hover: 'blue-hover',
+  border: 'orange-border',
+  hover: 'orange-hover',
   formVisibility: false,
   handleFormDisplay: () => {},
   handlePracticalChange: () => {},

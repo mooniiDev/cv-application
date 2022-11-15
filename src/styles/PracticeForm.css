@@ -1,13 +1,13 @@
 .practice-form {
   padding-bottom: 60px;
-  border-bottom: 3px solid var(--light-blue);
+  border-bottom: 3px solid var(--orange);
 }
 
 .practice-form input:focus,
 #employment-type:focus,
 #practice-start-month:focus,
 #practice-end-month:focus {
-  border: 1px solid var(--light-blue);
+  border: 1px solid var(--orange);
 }
 
 .employment-label {
@@ -22,5 +22,5 @@
 
 .add-practice-form {
   padding-bottom: 48px;
-  border-bottom: 3px solid var(--light-blue);
+  border-bottom: 3px solid var(--orange);
 }

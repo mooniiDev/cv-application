@@ -74,8 +74,8 @@ SkillsInfo.propTypes = {
 SkillsInfo.defaultProps = {
   formType: 'skills',
   title: 'SKILLS',
-  border: 'purple-border',
-  hover: 'purple-hover',
+  border: 'blue-border',
+  hover: 'blue-hover',
   formVisibility: false,
   handleFormDisplay: () => {},
   handleSkillsChange: () => {},

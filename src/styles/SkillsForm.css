@@ -1,5 +1,5 @@
 .skills-form {
-  border-bottom: 3px solid var(--purple);
+  border-bottom: 3px solid var(--light-blue);
 }
 
 .skills-form label {
@@ -7,7 +7,7 @@
 }
 
 .skills-form input:focus {
-  border: 1px solid var(--purple);
+  border: 1px solid var(--light-blue);
 }
 
 .skills-handling {

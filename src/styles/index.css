@@ -24,10 +24,10 @@
 :root {
   --white: #ffffff;
   --grey: #f0f0f0;
+  --green: #c0dad9;
+  --red: #f2c9c9;
   --dark-blue: #394066;
   --light-blue: #c4d7f4;
-  --red: #f2c9c9;
-  --green: #c0dad9;
   --orange: #fdd5c0;
   --purple: #dfc6e3;
 }

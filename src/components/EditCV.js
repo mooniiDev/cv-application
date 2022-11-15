@@ -19,22 +19,22 @@ class EditCV extends React.Component {
     const {
       handleFormDisplay,
       personalDisplay,
+      skillsDisplay,
       practiceDisplay,
       educationDisplay,
-      skillsDisplay,
+      cvInfo,
       handlePersonalChange,
+      handleSkillsChange,
+      handleSkillAdd,
+      handleSkillDelete,
+      skill,
+      error,
       handlePracticalChange,
       handlePracticalDelete,
       handlePracticalAdd,
       handleEducationalChange,
       handleEducationalDelete,
       handleEducationalAdd,
-      handleSkillsChange,
-      handleSkillAdd,
-      handleSkillDelete,
-      cvInfo,
-      skill,
-      error,
     } = this.props;
 
     return (
@@ -50,11 +50,26 @@ class EditCV extends React.Component {
           personalInfo={cvInfo.personal}
         />
 
+        <SkillsInfo
+          formType="skills"
+          title="ADDITIONAL SKILLS"
+          border="blue-border"
+          hover="blue-hover"
+          formVisibility={skillsDisplay}
+          handleFormDisplay={handleFormDisplay}
+          handleSkillsChange={handleSkillsChange}
+          handleSkillAdd={handleSkillAdd}
+          handleSkillDelete={handleSkillDelete}
+          skill={skill}
+          error={error}
+          skillsInfo={cvInfo.skills}
+        />
+
         <PracticeInfo
           formType="practice"
           title="PRACTICAL EXPERIENCE"
-          border="blue-border"
-          hover="blue-hover"
+          border="orange-border"
+          hover="orange-hover"
           formVisibility={practiceDisplay}
           handleFormDisplay={handleFormDisplay}
           handlePracticalChange={handlePracticalChange}
@@ -66,29 +81,14 @@ class EditCV extends React.Component {
         <EducationInfo
           formType="education"
           title="EDUCATIONAL EXPERIENCE"
-          border="orange-border"
-          hover="orange-hover"
+          border="purple-border"
+          hover="purple-hover"
           formVisibility={educationDisplay}
           handleFormDisplay={handleFormDisplay}
           handleEducationalChange={handleEducationalChange}
           handleEducationalDelete={handleEducationalDelete}
           handleEducationalAdd={handleEducationalAdd}
           educationInfo={cvInfo.education}
-        />
-
-        <SkillsInfo
-          formType="skills"
-          title="ADDITIONAL SKILLS"
-          border="purple-border"
-          hover="purple-hover"
-          formVisibility={skillsDisplay}
-          handleFormDisplay={handleFormDisplay}
-          handleSkillsChange={handleSkillsChange}
-          handleSkillAdd={handleSkillAdd}
-          handleSkillDelete={handleSkillDelete}
-          skillsInfo={cvInfo.skills}
-          skill={skill}
-          error={error}
         />
       </div>
     );
@@ -102,24 +102,29 @@ EditCV.propTypes = {
   educationDisplay: PropTypes.bool,
   skillsDisplay: PropTypes.bool,
   handleFormDisplay: PropTypes.func,
+
   handlePersonalChange: PropTypes.func,
-  handlePracticalChange: PropTypes.func,
-  handlePracticalDelete: PropTypes.func,
-  handlePracticalAdd: PropTypes.func,
-  handleEducationalChange: PropTypes.func,
-  handleEducationalDelete: PropTypes.func,
-  handleEducationalAdd: PropTypes.func,
+
   handleSkillsChange: PropTypes.func,
   handleSkillAdd: PropTypes.func,
   handleSkillDelete: PropTypes.func,
-  cvInfo: PropTypes.shape({
-    personal: PropTypes.shape({}),
-    practice: PropTypes.arrayOf(PropTypes.shape({})),
-    education: PropTypes.arrayOf(PropTypes.shape({})),
-    skills: PropTypes.arrayOf(PropTypes.shape({})),
-  }),
   skill: PropTypes.shape({}),
   error: PropTypes.bool,
+
+  handlePracticalChange: PropTypes.func,
+  handlePracticalDelete: PropTypes.func,
+  handlePracticalAdd: PropTypes.func,
+
+  handleEducationalChange: PropTypes.func,
+  handleEducationalDelete: PropTypes.func,
+  handleEducationalAdd: PropTypes.func,
+
+  cvInfo: PropTypes.shape({
+    personal: PropTypes.shape({}),
+    skills: PropTypes.arrayOf(PropTypes.shape({})),
+    practice: PropTypes.arrayOf(PropTypes.shape({})),
+    education: PropTypes.arrayOf(PropTypes.shape({})),
+  }),
 };
 
 // Creating default props
@@ -129,19 +134,24 @@ EditCV.defaultProps = {
   educationDisplay: false,
   skillsDisplay: false,
   handleFormDisplay: () => {},
+
   handlePersonalChange: () => {},
-  handlePracticalChange: () => {},
-  handlePracticalDelete: () => {},
-  handlePracticalAdd: () => {},
-  handleEducationalChange: () => {},
-  handleEducationalDelete: () => {},
-  handleEducationalAdd: () => {},
+
   handleSkillsChange: () => {},
   handleSkillAdd: () => {},
   handleSkillDelete: () => {},
-  cvInfo: { personal: {}, practice: [], education: [], skills: [] },
   skill: {},
   error: false,
+
+  handlePracticalChange: () => {},
+  handlePracticalDelete: () => {},
+  handlePracticalAdd: () => {},
+
+  handleEducationalChange: () => {},
+  handleEducationalDelete: () => {},
+  handleEducationalAdd: () => {},
+
+  cvInfo: { personal: {}, skills: [], practice: [], education: [] },
 };
 
 export default EditCV;

@@ -68,8 +68,8 @@ EducationlInfo.propTypes = {
 EducationlInfo.defaultProps = {
   formType: 'education',
   title: 'EDUCATIONAL EXPERIENCE',
-  border: 'orange-border',
-  hover: 'orange-hover',
+  border: 'purple-border',
+  hover: 'purple-hover',
   formVisibility: () => {},
   handleFormDisplay: () => {},
   handleEducationalChange: () => {},
