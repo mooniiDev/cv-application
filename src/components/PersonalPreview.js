@@ -16,7 +16,7 @@ class PersonalPreview extends React.Component {
     const { personalInfo } = this.props;
 
     return (
-      <>
+      <div className="personal-preview">
         {/* Name and professional title of the person */}
         <h2 className="person-name">
           {personalInfo.name.toUpperCase()} | &nbsp;
@@ -47,12 +47,13 @@ class PersonalPreview extends React.Component {
         </div>
 
         {/* 'About' information of the person */}
+        <p className="preview-info-title">ABOUT</p>
         <p className="person-about">
           <span>&ldquo;</span>
           {personalInfo.about}
           <span>&rdquo;</span>
         </p>
-      </>
+      </div>
     );
   }
 }

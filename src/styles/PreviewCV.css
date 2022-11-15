@@ -3,3 +3,9 @@
   -webkit-animation: slideDown 0.3s;
   animation: slideDown 0.3s;
 }
+
+.preview-info-title {
+  margin: 30px 20px 15px 20px;
+  font-family: 'Raleway-SemiBold';
+  font-size: 1.3rem;
+}
