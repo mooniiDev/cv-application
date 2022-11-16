@@ -166,7 +166,7 @@ class PracticeForm extends React.Component {
 
             {/* Practice end date */}
             <fieldset>
-              <legend>End date (or expected)</legend>
+              <legend>End date</legend>
               <label htmlFor="practice-end-year">
                 Year
                 <input
@@ -208,7 +208,7 @@ class PracticeForm extends React.Component {
                   <option value="Nov.">November</option>
                   <option value="Dec.">December</option>
                 </select>
-                <p className="present">
+                <p className="present-comment">
                   Select &apos;Present&apos; if currently working in this
                   position
                 </p>

@@ -133,3 +133,8 @@ fieldset {
   width: 222px;
   margin: 5px 0 0 28px;
 }
+
+.present-comment {
+  margin: 5px 0;
+  font-size: 0.85rem;
+}
