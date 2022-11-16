@@ -20,6 +20,16 @@
   width: 222px;
 }
 
+.asterisk {
+  display: contents;
+  font-family: 'Raleway-ExtraBold';
+}
+
+.present {
+  margin: 5px 0;
+  font-size: 0.85rem;
+}
+
 .add-practice-form {
   padding-bottom: 48px;
   border-bottom: 3px solid var(--orange);
