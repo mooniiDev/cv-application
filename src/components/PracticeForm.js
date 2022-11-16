@@ -183,7 +183,7 @@ class PracticeForm extends React.Component {
                 htmlFor="practice-end-month"
                 className="practice-end-month"
               >
-                Month<span className="asterisk">*</span>
+                Month
                 <select
                   type="text"
                   id="practice-end-month"
@@ -209,8 +209,8 @@ class PracticeForm extends React.Component {
                   <option value="Dec.">December</option>
                 </select>
                 <p className="present">
-                  <span className="asterisk ">*</span>Select &apos;Present&apos;
-                  if currently working in this position
+                  Select &apos;Present&apos; if currently working in this
+                  position
                 </p>
               </label>
             </fieldset>
