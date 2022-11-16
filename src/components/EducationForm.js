@@ -202,7 +202,8 @@ class EducationForm extends React.Component {
                   <option value="Dec.">December</option>
                 </select>
                 <p className="present-comment">
-                  Select &apos;Present&apos; if currently studying in this field
+                  Select &apos;Present&apos; if you are currently studying in
+                  this field
                 </p>
               </label>
             </fieldset>

@@ -107,7 +107,7 @@ class PracticeForm extends React.Component {
                   value={practice.type}
                   onChange={handlePracticalChange}
                 >
-                  <option value="type">Please select</option>
+                  <option value="">Please select</option>
                   <option value="full-time">Full-time</option>
                   <option value="part-time">Part-time</option>
                   <option value="contract">Contract</option>
@@ -209,8 +209,8 @@ class PracticeForm extends React.Component {
                   <option value="Dec.">December</option>
                 </select>
                 <p className="present-comment">
-                  Select &apos;Present&apos; if currently working in this
-                  position
+                  Select &apos;Present&apos; if you are currently working in
+                  this position
                 </p>
               </label>
             </fieldset>

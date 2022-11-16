@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import InfoTitle from './InfoTitle';
 import EducationForm from './EducationForm';
 
-class EducationlInfo extends React.Component {
+class EducationInfo extends React.Component {
   constructor(props) {
     super(props);
 
@@ -51,7 +51,7 @@ class EducationlInfo extends React.Component {
 }
 
 // Validating prop types
-EducationlInfo.propTypes = {
+EducationInfo.propTypes = {
   formType: PropTypes.string,
   title: PropTypes.string,
   border: PropTypes.string,
@@ -65,7 +65,7 @@ EducationlInfo.propTypes = {
 };
 
 // Creating default props
-EducationlInfo.defaultProps = {
+EducationInfo.defaultProps = {
   formType: 'education',
   title: 'EDUCATIONAL EXPERIENCE',
   border: 'purple-border',
@@ -78,4 +78,4 @@ EducationlInfo.defaultProps = {
   educationInfo: [],
 };
 
-export default EducationlInfo;
+export default EducationInfo;

@@ -134,6 +134,41 @@ fieldset {
   margin: 5px 0 0 28px;
 }
 
+.practice-title,
+.education-school {
+  margin: 0 20px 5px 20px;
+  font-family: 'Raleway-SemiBold';
+  text-transform: capitalize;
+}
+
+.practice-company,
+.education-field {
+  font-family: 'Raleway-Regular';
+  font-style: italic;
+}
+
+.preview-date {
+  margin: 0 20px;
+}
+
+.practice-task,
+.education-degree {
+  margin: 10px 20px;
+}
+
+.practice-type,
+.education-grade {
+  margin: 0 20px 20px 20px;
+  padding-bottom: 10px;
+}
+
+.practice-task span,
+.practice-type span,
+.education-degree span,
+.education-grade span {
+  font-family: 'Raleway-SemiBold';
+}
+
 .present-comment {
   margin: 5px 0;
   font-size: 0.85rem;

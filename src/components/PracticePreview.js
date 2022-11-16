@@ -20,7 +20,7 @@ class PracticePreview extends React.Component {
         <h3 className="preview-info-heading">PRACTICE</h3>
         {practiceInfo.map((practice) => {
           return (
-            <>
+            <div key={practice.id}>
               <p className="practice-title">
                 {practice.title.toLowerCase()}{' '}
                 <span className="practice-company">
@@ -28,20 +28,20 @@ class PracticePreview extends React.Component {
                 </span>
               </p>
 
-              <p className="practice-date">
+              <p className="preview-date">
                 {practice.startMonth} {practice.startYear} - {practice.endMonth}{' '}
-                {/* do not show end year if this is the current position */}
+                {/* Do not show end year if this is the current position */}
                 {practice.endMonth === 'Present' ? null : practice.endYear}
               </p>
 
               <p className="practice-task">
-                <span>Main Task:</span> {practice.task}
+                <span>Main task:</span> {practice.task}
               </p>
 
               <p className="practice-type">
-                <span>Employment Type:</span> {practice.type}
+                <span>Employment type:</span> {practice.type}
               </p>
-            </>
+            </div>
           );
         })}
       </div>
