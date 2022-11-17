@@ -319,7 +319,7 @@ class Main extends React.Component {
 
     if (editMode) {
       return (
-        <main id="main">
+        <main id="Main">
           {/* A button to show 'preview' mode content */}
           <Button
             buttonEvent={handleMode}
@@ -355,15 +355,20 @@ class Main extends React.Component {
             handleEducationalAdd={handleEducationalAdd}
           />
 
-          {/* A button to scroll back to the top */}
+          {/* A button to scroll back to top */}
           <div className="floating-container">
-            <Button buttonText="up" buttonClass="floating-button green-hover" />
+            <a href="#Header">
+              <Button
+                buttonText="up"
+                buttonClass="floating-button green-hover"
+              />
+            </a>
           </div>
         </main>
       );
     }
     return (
-      <main id="main">
+      <main id="Main">
         {/* A button to show 'edit' mode content */}
         <Button
           buttonEvent={handleMode}
@@ -374,9 +379,11 @@ class Main extends React.Component {
         {/* Main 'preview' mode content */}
         <PreviewCV cvInfo={cvInfo} />
 
-        {/* A button to scroll back to the top */}
+        {/* A button to scroll back to top */}
         <div className="floating-container">
-          <Button buttonText="up" buttonClass="floating-button green-hover" />
+          <a href="#Header">
+            <Button buttonText="up" buttonClass="floating-button green-hover" />
+          </a>
         </div>
       </main>
     );
