@@ -51,7 +51,7 @@ class SkillsForm extends React.Component {
             <Button
               buttonEvent={handleSkillAdd}
               buttonText="add"
-              buttonClass="add-skill-button fontAwesome-button"
+              buttonClass="add-skill-button green-hover fontAwesome-button"
             />
           </div>
 

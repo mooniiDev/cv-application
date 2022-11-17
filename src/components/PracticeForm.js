@@ -33,7 +33,7 @@ class PracticeForm extends React.Component {
             <Button
               buttonEvent={handlePracticalAdd}
               buttonText="add"
-              buttonClass="add-first-form-button fontAwesome-button"
+              buttonClass="add-first-form-button green-hover fontAwesome-button"
             />
           </form>
         );
@@ -221,7 +221,7 @@ class PracticeForm extends React.Component {
               <Button
                 buttonEvent={handlePracticalAdd}
                 buttonText="add"
-                buttonClass="add-button fontAwesome-button"
+                buttonClass="add-button green-hover fontAwesome-button"
               />
             ) : null}
 
@@ -229,7 +229,7 @@ class PracticeForm extends React.Component {
             <Button
               buttonEvent={handlePracticalDelete}
               buttonText="delete"
-              buttonClass="delete-button fontAwesome-button"
+              buttonClass="delete-button red-hover fontAwesome-button"
             />
           </form>
         );

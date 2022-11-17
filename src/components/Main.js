@@ -324,7 +324,7 @@ class Main extends React.Component {
           <Button
             buttonEvent={handleMode}
             buttonText="PREVIEW"
-            buttonClass="main-button"
+            buttonClass="main-button green-hover"
           />
 
           {/* Main 'edit' mode content */}
@@ -354,6 +354,11 @@ class Main extends React.Component {
             handleEducationalDelete={handleEducationalDelete}
             handleEducationalAdd={handleEducationalAdd}
           />
+
+          {/* A button to scroll back to the top */}
+          <div className="floating-container">
+            <Button buttonText="up" buttonClass="floating-button green-hover" />
+          </div>
         </main>
       );
     }
@@ -363,11 +368,16 @@ class Main extends React.Component {
         <Button
           buttonEvent={handleMode}
           buttonText="EDIT"
-          buttonClass="main-button"
+          buttonClass="main-button green-hover"
         />
 
         {/* Main 'preview' mode content */}
         <PreviewCV cvInfo={cvInfo} />
+
+        {/* A button to scroll back to the top */}
+        <div className="floating-container">
+          <Button buttonText="up" buttonClass="floating-button green-hover" />
+        </div>
       </main>
     );
   }

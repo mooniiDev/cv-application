@@ -9,6 +9,7 @@ import {
   faEyeSlash,
   faTrashAlt,
   faPlus,
+  faArrowUp,
 } from '@fortawesome/free-solid-svg-icons';
 
 // Styling imports
@@ -55,6 +56,14 @@ class Button extends React.Component {
     } else if (buttonValue === 'add') {
       buttonValue = (
         <FontAwesomeIcon icon={faPlus} className="fa-fw" pointerEvents="none" />
+      );
+    } else if (buttonValue === 'up') {
+      buttonValue = (
+        <FontAwesomeIcon
+          icon={faArrowUp}
+          className="fa-fw"
+          pointerEvents="none"
+        />
       );
     }
 

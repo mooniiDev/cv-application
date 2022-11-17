@@ -4,3 +4,11 @@
   flex-direction: column;
   align-items: center;
 }
+
+.floating-container {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+}

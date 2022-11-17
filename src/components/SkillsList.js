@@ -31,7 +31,7 @@ class SkillsList extends React.Component {
                 type="button"
                 buttonEvent={handleSkillDelete}
                 buttonText="delete"
-                buttonClass="delete-skill-button"
+                buttonClass="delete-skill-button red-hover"
               />
             </div>
           );
