@@ -1,7 +1,7 @@
 .info-title {
   display: flex;
   justify-content: space-between;
-  min-width: 500px;
+  width: 500px;
   margin: 20px 0;
 }
 
@@ -30,4 +30,20 @@
 
 .purple-border {
   border-bottom: 16px solid var(--purple);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 40rem) {
+  .info-title {
+    width: 360px;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  .info-title {
+    width: 340px;
+    margin: 15px;
+    font-size: 1.2rem;
+  }
 }

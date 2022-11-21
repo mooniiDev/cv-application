@@ -13,3 +13,17 @@
   letter-spacing: 2px;
   border-bottom: 25px solid var(--green);
 }
+
+/* Responsive styles */
+@media screen and (max-width: 40rem) {
+  #Header {
+    padding-bottom: 15px;
+  }
+
+  .cv-title {
+    padding: 0 15px;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    border-bottom: 20px solid var(--green);
+  }
+}

@@ -21,6 +21,14 @@
 }
 
 .add-practice-form {
-  padding-bottom: 48px;
+  padding-bottom: 50px;
   border-bottom: 3px solid var(--orange);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 40rem) {
+  #employment-type {
+    width: 322px;
+    margin-bottom: 10px;
+  }
 }

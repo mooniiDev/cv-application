@@ -114,6 +114,7 @@ fieldset {
 #practice-end-month,
 #education-start-month,
 #education-end-month {
+  padding: 2px 10px;
   height: 31px;
   border: 1px solid var(--dark-blue);
   background-color: var(--white);
@@ -175,6 +176,57 @@ fieldset {
 }
 
 .present-comment {
-  margin: 5px 0;
+  margin: 5px 0 0 0;
   font-size: 0.85rem;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 40rem) {
+  form {
+    font-size: 1rem;
+  }
+
+  form div {
+    flex-direction: column;
+  }
+
+  form input {
+    width: 300px;
+  }
+
+  form label {
+    margin: 0 auto;
+  }
+
+  fieldset {
+    flex-direction: column;
+    padding: 15px 5px 20px 5px;
+  }
+
+  .practice-start-month,
+  .practice-end-month,
+  .education-start-month,
+  .education-end-month {
+    width: 322px;
+    margin: 0 13px;
+  }
+}
+
+@media screen and (max-width: 30rem) {
+  fieldset {
+    padding: 15px 5px;
+    border: none;
+  }
+
+  fieldset legend {
+    margin-left: 16px;
+    height: 10px;
+  }
+
+  .practice-start-month,
+  .practice-end-month,
+  .education-start-month,
+  .education-end-month {
+    margin-left: 18px;
+  }
 }

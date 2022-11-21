@@ -23,3 +23,10 @@
   border: 1px solid var(--red);
   transition: 0.3s;
 }
+
+/* Responsive styles */
+@media screen and (max-width: 40rem) {
+ #about {
+  width: 300px;
+ }
+}
