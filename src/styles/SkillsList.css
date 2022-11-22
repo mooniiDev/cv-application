@@ -12,8 +12,8 @@
   overflow-y: auto;
   background-color: var(--grey);
   border-radius: 2px;
-  -webkit-animation: slideDown-small 0.3s;
-  animation: slideDown-small 0.3s;
+  -webkit-animation: slideDown 0.3s;
+  animation: slideDown 0.3s;
 }
 
 .skill-text {
@@ -23,7 +23,7 @@
 @media screen and (max-width: 40rem) {
   .skills-list {
     max-width: 350px;
-    margin-left: 14px;
+    margin-left: 18px;
   }
 
   .skill {

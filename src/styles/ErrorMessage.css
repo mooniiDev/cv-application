@@ -5,8 +5,8 @@
   font-weight: 400;
   background-color: var(--red);
   border-radius: 2px;
-  -webkit-animation: slideDown-small 0.3s;
-  animation: slideDown-small 0.3s;
+  -webkit-animation: slideDown 0.3s;
+  animation: slideDown 0.3s;
 }
 
 .error-message span {
