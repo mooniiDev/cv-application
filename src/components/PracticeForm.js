@@ -109,12 +109,12 @@ class PracticeForm extends React.Component {
                   onChange={handlePracticalChange}
                 >
                   <option value="">Please select</option>
-                  <option value="full-time">Full-time</option>
-                  <option value="part-time">Part-time</option>
-                  <option value="contract">Contract</option>
-                  <option value="temporary">Temporary</option>
-                  <option value="internship">Internship</option>
-                  <option value="other">Other</option>
+                  <option value="Full-time">Full-time</option>
+                  <option value="Part-time">Part-time</option>
+                  <option value="Contract">Contract</option>
+                  <option value="Temporary">Temporary</option>
+                  <option value="Internship">Internship</option>
+                  <option value="Other">Other</option>
                 </select>
               </label>
             </div>

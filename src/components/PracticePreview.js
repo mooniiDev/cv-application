@@ -23,10 +23,8 @@ class PracticePreview extends React.Component {
           return (
             <div key={practice.id}>
               <p className="practice-title">
-                {practice.title.toLowerCase()}{' '}
-                <span className="practice-company">
-                  — {practice.company.toLowerCase()}
-                </span>
+                {practice.title}{' '}
+                <span className="practice-company">— {practice.company}</span>
               </p>
 
               <p className="preview-date">

@@ -23,10 +23,8 @@ class EducationPreview extends React.Component {
           return (
             <div key={education.id}>
               <p className="education-school">
-                {education.school.toLowerCase()}{' '}
-                <span className="education-field">
-                  — {education.field.toLowerCase()}
-                </span>
+                {education.school}{' '}
+                <span className="education-field">— {education.field}</span>
               </p>
 
               <p className="preview-date">
