@@ -19,7 +19,7 @@ class PersonalPreview extends React.Component {
       <div className="personal-preview">
         {/* Name and professional title of a person */}
         <h2 className="person-name">
-          {personalInfo.name.toUpperCase()}&nbsp; | &nbsp;
+          {personalInfo.name.toUpperCase()}&nbsp;|&nbsp;
           <span className="person-title">{personalInfo.professionalTitle}</span>
         </h2>
 
