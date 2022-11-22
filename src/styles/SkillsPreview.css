@@ -17,3 +17,10 @@
   text-overflow: ellipsis;
   border-radius: 2px;
 }
+
+/* Responsive styles */
+@media screen and (max-width: 30rem) {
+  .skills-preview-list {
+    padding: 0 10px;
+  }
+}

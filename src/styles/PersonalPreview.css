@@ -35,3 +35,15 @@
 .person-about span {
   font-family: 'Raleway-SemiBold';
 }
+
+/* Responsive styles */
+@media screen and (max-width: 30rem) {
+  .person-contacts p {
+    font-size: 0.8rem;
+  }
+
+  .person-contacts,
+  .person-about {
+    padding: 0 10px;
+  }
+ }

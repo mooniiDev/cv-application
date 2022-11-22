@@ -27,6 +27,10 @@
    margin: 20px 10px;
   }
 
+  .preview-info-heading {
+    padding: 0 10px;
+  }
+
   .person-name {
     font-size: 1.2rem;
   }
