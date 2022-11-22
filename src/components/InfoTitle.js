@@ -29,7 +29,7 @@ class InfoTitle extends React.Component {
       <h2 className="info-title" data-form={formType}>
         <span className={`${border} info-border`}>{title}</span>
 
-        {/* A button to show or hide a form */}
+        {/* The button to show/hide a form */}
         <span>
           <Button
             type="button"
@@ -48,8 +48,8 @@ InfoTitle.propTypes = {
   title: PropTypes.string,
   border: PropTypes.string,
   hover: PropTypes.string,
-  formType: PropTypes.string,
-  handleFormDisplay: PropTypes.func,
+  formType: PropTypes.string.isRequired,
+  handleFormDisplay: PropTypes.func.isRequired,
   formVisibility: PropTypes.bool,
 };
 
@@ -58,8 +58,6 @@ InfoTitle.defaultProps = {
   title: '❗TEXT ERROR',
   border: 'green-border',
   hover: 'green-hover',
-  formType: '',
-  handleFormDisplay: () => {},
   formVisibility: false,
 };
 

@@ -42,6 +42,7 @@
   }
 }
 
+/* General styles */
 html {
   scroll-behavior: smooth;
 }
@@ -87,7 +88,6 @@ form input:focus {
   outline: none;
   transition: 0.3s;
 }
-
 
 select {
   border-radius: 2px;

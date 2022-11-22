@@ -12,7 +12,7 @@
   line-height: 3px;
 }
 
-/* Info titles borders styling */
+/* Styles of borders for info titles */
 .green-border {
   border-bottom: 16px solid var(--green);
 }

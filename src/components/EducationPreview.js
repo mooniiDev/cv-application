@@ -18,6 +18,7 @@ class EducationPreview extends React.Component {
     return (
       <div className="education-preview">
         <h3 className="preview-info-heading">EDUCATION</h3>
+
         {educationInfo.map((education) => {
           return (
             <div key={education.id}>
@@ -31,7 +32,7 @@ class EducationPreview extends React.Component {
               <p className="preview-date">
                 {education.startMonth} {education.startYear} -{' '}
                 {education.endMonth}{' '}
-                {/* Do not show end year if this is the current field of studies */}
+                {/* Don't show end year if this is the current field of studies */}
                 {education.endMonth === 'Present' ? null : education.endYear}
               </p>
 
@@ -63,21 +64,7 @@ EducationPreview.propTypes = {
       endYear: PropTypes.string,
       endMonth: PropTypes.string,
     })
-  ),
-};
-
-// Creating default props
-EducationPreview.defaultProps = {
-  educationInfo: {
-    school: '',
-    field: '',
-    degree: '',
-    grade: '',
-    startYear: '',
-    startMonth: '',
-    endYear: '',
-    endMonth: '',
-  },
+  ).isRequired,
 };
 
 export default EducationPreview;

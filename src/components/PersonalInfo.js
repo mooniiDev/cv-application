@@ -53,9 +53,9 @@ PersonalInfo.propTypes = {
   border: PropTypes.string,
   hover: PropTypes.string,
   formVisibility: PropTypes.bool,
-  handleFormDisplay: PropTypes.func,
-  handlePersonalChange: PropTypes.func,
-  personalInfo: PropTypes.shape({}),
+  handleFormDisplay: PropTypes.func.isRequired,
+  handlePersonalChange: PropTypes.func.isRequired,
+  personalInfo: PropTypes.shape({}).isRequired,
 };
 
 // Creating default props
@@ -65,9 +65,6 @@ PersonalInfo.defaultProps = {
   border: 'red-border',
   hover: 'red-hover',
   formVisibility: true,
-  handleFormDisplay: () => {},
-  handlePersonalChange: () => {},
-  personalInfo: {},
 };
 
 export default PersonalInfo;

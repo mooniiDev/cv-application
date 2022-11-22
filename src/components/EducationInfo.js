@@ -57,11 +57,11 @@ EducationInfo.propTypes = {
   border: PropTypes.string,
   hover: PropTypes.string,
   formVisibility: PropTypes.bool,
-  handleFormDisplay: PropTypes.func,
-  handleEducationalChange: PropTypes.func,
-  handleEducationalDelete: PropTypes.func,
-  handleEducationalAdd: PropTypes.func,
-  educationInfo: PropTypes.arrayOf(PropTypes.shape({})),
+  handleFormDisplay: PropTypes.func.isRequired,
+  handleEducationalChange: PropTypes.func.isRequired,
+  handleEducationalDelete: PropTypes.func.isRequired,
+  handleEducationalAdd: PropTypes.func.isRequired,
+  educationInfo: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 // Creating default props
@@ -70,12 +70,7 @@ EducationInfo.defaultProps = {
   title: 'EDUCATIONAL EXPERIENCE',
   border: 'purple-border',
   hover: 'purple-hover',
-  formVisibility: () => {},
-  handleFormDisplay: () => {},
-  handleEducationalChange: () => {},
-  handleEducationalDelete: () => {},
-  handleEducationalAdd: () => {},
-  educationInfo: [],
+  formVisibility: false,
 };
 
 export default EducationInfo;

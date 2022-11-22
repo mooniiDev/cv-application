@@ -17,22 +17,39 @@ class EditCV extends React.Component {
 
   render() {
     const {
+      // Functions of showing/hiding forms
       handleFormDisplay,
       personalDisplay,
       skillsDisplay,
       practiceDisplay,
       educationDisplay,
+
+      // All the information of CV object
       cvInfo,
+      // Watching changes in inputs of the personal form
       handlePersonalChange,
+
+      // Watching changes in the input of skills form
       handleSkillsChange,
-      handleSkillAdd,
+      // Deleting/adding a skill
       handleSkillDelete,
+      handleSkillAdd,
+
+      // Object of a skill
       skill,
+
+      // Boolean of an error
       error,
+
+      // Watching changes in inputs of practice form
       handlePracticalChange,
+      // Deleting/adding a practice form
       handlePracticalDelete,
       handlePracticalAdd,
+
+      // Watching changes in inputs of education form
       handleEducationalChange,
+      // Deleting/adding an education form
       handleEducationalDelete,
       handleEducationalAdd,
     } = this.props;
@@ -97,34 +114,36 @@ class EditCV extends React.Component {
 
 // Validating prop types
 EditCV.propTypes = {
+  handleFormDisplay: PropTypes.func.isRequired,
   personalDisplay: PropTypes.bool,
   practiceDisplay: PropTypes.bool,
   educationDisplay: PropTypes.bool,
   skillsDisplay: PropTypes.bool,
-  handleFormDisplay: PropTypes.func,
 
-  handlePersonalChange: PropTypes.func,
+  handlePersonalChange: PropTypes.func.isRequired,
 
-  handleSkillsChange: PropTypes.func,
-  handleSkillAdd: PropTypes.func,
-  handleSkillDelete: PropTypes.func,
-  skill: PropTypes.shape({}),
+  handleSkillsChange: PropTypes.func.isRequired,
+  handleSkillDelete: PropTypes.func.isRequired,
+  handleSkillAdd: PropTypes.func.isRequired,
+
+  skill: PropTypes.shape({}).isRequired,
+
   error: PropTypes.bool,
 
-  handlePracticalChange: PropTypes.func,
-  handlePracticalDelete: PropTypes.func,
-  handlePracticalAdd: PropTypes.func,
+  handlePracticalChange: PropTypes.func.isRequired,
+  handlePracticalDelete: PropTypes.func.isRequired,
+  handlePracticalAdd: PropTypes.func.isRequired,
 
-  handleEducationalChange: PropTypes.func,
-  handleEducationalDelete: PropTypes.func,
-  handleEducationalAdd: PropTypes.func,
+  handleEducationalChange: PropTypes.func.isRequired,
+  handleEducationalDelete: PropTypes.func.isRequired,
+  handleEducationalAdd: PropTypes.func.isRequired,
 
   cvInfo: PropTypes.shape({
     personal: PropTypes.shape({}),
     skills: PropTypes.arrayOf(PropTypes.shape({})),
     practice: PropTypes.arrayOf(PropTypes.shape({})),
     education: PropTypes.arrayOf(PropTypes.shape({})),
-  }),
+  }).isRequired,
 };
 
 // Creating default props
@@ -133,25 +152,7 @@ EditCV.defaultProps = {
   practiceDisplay: false,
   educationDisplay: false,
   skillsDisplay: false,
-  handleFormDisplay: () => {},
-
-  handlePersonalChange: () => {},
-
-  handleSkillsChange: () => {},
-  handleSkillAdd: () => {},
-  handleSkillDelete: () => {},
-  skill: {},
   error: false,
-
-  handlePracticalChange: () => {},
-  handlePracticalDelete: () => {},
-  handlePracticalAdd: () => {},
-
-  handleEducationalChange: () => {},
-  handleEducationalDelete: () => {},
-  handleEducationalAdd: () => {},
-
-  cvInfo: { personal: {}, skills: [], practice: [], education: [] },
 };
 
 export default EditCV;

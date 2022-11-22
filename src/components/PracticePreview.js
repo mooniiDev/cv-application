@@ -18,6 +18,7 @@ class PracticePreview extends React.Component {
     return (
       <div className="practice-preview">
         <h3 className="preview-info-heading">PRACTICE</h3>
+
         {practiceInfo.map((practice) => {
           return (
             <div key={practice.id}>
@@ -30,7 +31,7 @@ class PracticePreview extends React.Component {
 
               <p className="preview-date">
                 {practice.startMonth} {practice.startYear} - {practice.endMonth}{' '}
-                {/* Do not show end year if this is the current position */}
+                {/* Don't show end year if this is the current work position */}
                 {practice.endMonth === 'Present' ? null : practice.endYear}
               </p>
 
@@ -62,21 +63,7 @@ PracticePreview.propTypes = {
       endYear: PropTypes.string,
       endMonth: PropTypes.string,
     })
-  ),
-};
-
-// Creating default props
-PracticePreview.defaultProps = {
-  practiceInfo: {
-    title: '',
-    company: '',
-    task: '',
-    type: '',
-    startYear: '',
-    startMonth: '',
-    endYear: '',
-    endMonth: '',
-  },
+  ).isRequired,
 };
 
 export default PracticePreview;

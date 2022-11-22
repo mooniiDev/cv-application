@@ -24,12 +24,13 @@ class PracticeForm extends React.Component {
       practiceInfo,
     } = this.props;
 
+    // If a practice form is clicked to be visible
     if (formVisibility) {
       // If there are no forms created yet
       if (practiceInfo.length === 0) {
         return (
           <form className="add-practice-form">
-            {/* A button to add the first practice form */}
+            {/* The button to add the first practice form */}
             <Button
               buttonEvent={handlePracticalAdd}
               buttonText="add"
@@ -208,6 +209,7 @@ class PracticeForm extends React.Component {
                   <option value="Nov.">November</option>
                   <option value="Dec.">December</option>
                 </select>
+                {/* A tip for selecting the right value */}
                 <p className="present-comment">
                   Select &apos;Present&apos; if you are currently working in
                   this position
@@ -215,9 +217,9 @@ class PracticeForm extends React.Component {
               </label>
             </fieldset>
 
-            {/* Make a '+' button to appear just after the last form */}
+            {/* Make the '+' button to appear just after the last form */}
             {index === practiceInfo.length - 1 ? (
-              // A button to add one more form
+              // The button to add one more form
               <Button
                 buttonEvent={handlePracticalAdd}
                 buttonText="add"
@@ -225,7 +227,7 @@ class PracticeForm extends React.Component {
               />
             ) : null}
 
-            {/* A button to delete a form */}
+            {/* The button to delete a form */}
             <Button
               buttonEvent={handlePracticalDelete}
               buttonText="delete"
@@ -242,9 +244,9 @@ class PracticeForm extends React.Component {
 // Validating prop types
 PracticeForm.propTypes = {
   formVisibility: PropTypes.bool,
-  handlePracticalChange: PropTypes.func,
-  handlePracticalDelete: PropTypes.func,
-  handlePracticalAdd: PropTypes.func,
+  handlePracticalChange: PropTypes.func.isRequired,
+  handlePracticalDelete: PropTypes.func.isRequired,
+  handlePracticalAdd: PropTypes.func.isRequired,
   practiceInfo: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string,
@@ -257,16 +259,12 @@ PracticeForm.propTypes = {
       endMonth: PropTypes.string,
       id: PropTypes.string,
     })
-  ),
+  ).isRequired,
 };
 
 // Creating default props
 PracticeForm.defaultProps = {
   formVisibility: false,
-  handlePracticalChange: () => {},
-  handlePracticalDelete: () => {},
-  handlePracticalAdd: () => {},
-  practiceInfo: {},
 };
 
 export default PracticeForm;

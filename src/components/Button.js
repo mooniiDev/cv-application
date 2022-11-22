@@ -26,13 +26,13 @@ class Button extends React.Component {
     const { buttonEvent, buttonText, buttonClass } = this.props;
     let buttonValue = buttonText;
 
-    // Button icon of showing a form
+    // Button's icon of showing a form
     if (buttonValue === 'show') {
       buttonValue = (
         <FontAwesomeIcon icon={faEye} className="fa-fw" pointerEvents="none" />
       );
 
-      // Button icon of hiding a form
+      // Button's icon of hiding a form
     } else if (buttonValue === 'hide') {
       buttonValue = (
         <FontAwesomeIcon
@@ -42,7 +42,7 @@ class Button extends React.Component {
         />
       );
 
-      // Button icon of deleting a form
+      // Button's icon of deleting a form
     } else if (buttonValue === 'delete') {
       buttonValue = (
         <FontAwesomeIcon
@@ -52,11 +52,13 @@ class Button extends React.Component {
         />
       );
 
-      // Button icon of adding a form
+      // Button's icon of adding a form
     } else if (buttonValue === 'add') {
       buttonValue = (
         <FontAwesomeIcon icon={faPlus} className="fa-fw" pointerEvents="none" />
       );
+
+      // Button's icon of scrolling to top
     } else if (buttonValue === 'up') {
       buttonValue = (
         <FontAwesomeIcon
@@ -79,14 +81,13 @@ class Button extends React.Component {
 Button.propTypes = {
   buttonEvent: PropTypes.func,
   buttonText: PropTypes.string,
-  buttonClass: PropTypes.string,
+  buttonClass: PropTypes.string.isRequired,
 };
 
 // Creating default props
 Button.defaultProps = {
   buttonEvent: () => {},
   buttonText: '❗TEXT ERROR',
-  buttonClass: '',
 };
 
 export default Button;

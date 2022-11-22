@@ -30,7 +30,7 @@ class EducationForm extends React.Component {
       if (educationInfo.length === 0) {
         return (
           <form className="add-education-form">
-            {/* A button to add the first education form */}
+            {/* The button to add the first education form */}
             <Button
               buttonEvent={handleEducationalAdd}
               buttonText="add"
@@ -201,6 +201,7 @@ class EducationForm extends React.Component {
                   <option value="Nov.">November</option>
                   <option value="Dec.">December</option>
                 </select>
+                {/* A tip for selecting the right value */}
                 <p className="present-comment">
                   Select &apos;Present&apos; if you are currently studying in
                   this field
@@ -208,9 +209,9 @@ class EducationForm extends React.Component {
               </label>
             </fieldset>
 
-            {/* Make a '+' button to appear just after the last form */}
+            {/* Make the '+' button to appear just after the last form */}
             {index === educationInfo.length - 1 ? (
-              // A button to add one more form
+              // The button to add one more form
               <Button
                 buttonEvent={handleEducationalAdd}
                 buttonText="add"
@@ -218,7 +219,7 @@ class EducationForm extends React.Component {
               />
             ) : null}
 
-            {/* A button to delete a form */}
+            {/* The button to delete a form */}
             <Button
               buttonEvent={handleEducationalDelete}
               buttonText="delete"
@@ -235,9 +236,9 @@ class EducationForm extends React.Component {
 // Validating prop types
 EducationForm.propTypes = {
   formVisibility: PropTypes.bool,
-  handleEducationalChange: PropTypes.func,
-  handleEducationalDelete: PropTypes.func,
-  handleEducationalAdd: PropTypes.func,
+  handleEducationalChange: PropTypes.func.isRequired,
+  handleEducationalDelete: PropTypes.func.isRequired,
+  handleEducationalAdd: PropTypes.func.isRequired,
   educationInfo: PropTypes.arrayOf(
     PropTypes.shape({
       school: PropTypes.string,
@@ -250,16 +251,12 @@ EducationForm.propTypes = {
       endMonth: PropTypes.string,
       id: PropTypes.string,
     })
-  ),
+  ).isRequired,
 };
 
 // Creating default props
 EducationForm.defaultProps = {
   formVisibility: false,
-  handleEducationalChange: () => {},
-  handleEducationalDelete: () => {},
-  handleEducationalAdd: () => {},
-  educationInfo: {},
 };
 
 export default EducationForm;

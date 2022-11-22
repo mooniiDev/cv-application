@@ -18,11 +18,12 @@ class SkillsPreview extends React.Component {
     return (
       <div className="skills-preview">
         <h3 className="preview-info-heading">ADDITIONAL SKILLS</h3>
+
         <div className="skills-preview-list">
           {skillsInfo.map((skill) => {
             return (
               <p key={skill.id} className="skills-preview-text">
-                {skill.text.toLowerCase()}
+                {skill.text}
               </p>
             );
           })}
@@ -40,16 +41,7 @@ SkillsPreview.propTypes = {
       index: PropTypes.number,
       id: PropTypes.string,
     })
-  ),
-};
-
-// Creating default props
-SkillsPreview.defaultProps = {
-  skillsInfo: {
-    text: '',
-    index: 0,
-    id: '',
-  },
+  ).isRequired,
 };
 
 export default SkillsPreview;

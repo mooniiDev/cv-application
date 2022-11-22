@@ -20,17 +20,13 @@ class PreviewCV extends React.Component {
 
   render() {
     const { cvInfo } = this.props;
-    const personalInfo = cvInfo.personal;
-    const skillsInfo = cvInfo.skills;
-    const practiceInfo = cvInfo.practice;
-    const educationInfo = cvInfo.education;
 
     return (
       <div className="preview-box">
-        <PersonalPreview personalInfo={personalInfo} />
-        <SkillsPreview skillsInfo={skillsInfo} />
-        <PracticePreview practiceInfo={practiceInfo} />
-        <EducationPreview educationInfo={educationInfo} />
+        <PersonalPreview personalInfo={cvInfo.personal} />
+        <SkillsPreview skillsInfo={cvInfo.skills} />
+        <PracticePreview practiceInfo={cvInfo.practice} />
+        <EducationPreview educationInfo={cvInfo.education} />
       </div>
     );
   }
@@ -43,17 +39,7 @@ PreviewCV.propTypes = {
     skills: PropTypes.arrayOf(PropTypes.shape({})),
     practice: PropTypes.arrayOf(PropTypes.shape({})),
     education: PropTypes.arrayOf(PropTypes.shape({})),
-  }),
-};
-
-// Creating default props
-PreviewCV.defaultProps = {
-  cvInfo: {
-    personal: {},
-    skills: [],
-    practice: [],
-    education: [],
-  },
+  }).isRequired,
 };
 
 export default PreviewCV;

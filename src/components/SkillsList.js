@@ -27,6 +27,8 @@ class SkillsList extends React.Component {
               <p key={skill.id} className="skill-text">
                 {skill.text}
               </p>
+
+              {/* The button to delete an added skill */}
               <Button
                 type="button"
                 buttonEvent={handleSkillDelete}
@@ -43,14 +45,8 @@ class SkillsList extends React.Component {
 
 // Validating prop types
 SkillsList.propTypes = {
-  skillsInfo: PropTypes.arrayOf(PropTypes.shape({})),
-  handleSkillDelete: PropTypes.func,
-};
-
-// // Creating default props
-SkillsList.defaultProps = {
-  skillsInfo: [],
-  handleSkillDelete: () => {},
+  skillsInfo: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  handleSkillDelete: PropTypes.func.isRequired,
 };
 
 export default SkillsList;

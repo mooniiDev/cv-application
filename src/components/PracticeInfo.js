@@ -57,11 +57,11 @@ PracticeInfo.propTypes = {
   border: PropTypes.string,
   hover: PropTypes.string,
   formVisibility: PropTypes.bool,
-  handleFormDisplay: PropTypes.func,
-  handlePracticalChange: PropTypes.func,
-  handlePracticalDelete: PropTypes.func,
-  handlePracticalAdd: PropTypes.func,
-  practiceInfo: PropTypes.arrayOf(PropTypes.shape({})),
+  handleFormDisplay: PropTypes.func.isRequired,
+  handlePracticalChange: PropTypes.func.isRequired,
+  handlePracticalDelete: PropTypes.func.isRequired,
+  handlePracticalAdd: PropTypes.func.isRequired,
+  practiceInfo: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };
 
 // Creating default props
@@ -71,11 +71,6 @@ PracticeInfo.defaultProps = {
   border: 'orange-border',
   hover: 'orange-hover',
   formVisibility: false,
-  handleFormDisplay: () => {},
-  handlePracticalChange: () => {},
-  handlePracticalDelete: () => {},
-  handlePracticalAdd: () => {},
-  practiceInfo: [],
 };
 
 export default PracticeInfo;

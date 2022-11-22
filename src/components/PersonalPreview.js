@@ -17,15 +17,15 @@ class PersonalPreview extends React.Component {
 
     return (
       <div className="personal-preview">
-        {/* Name and professional title of the person */}
+        {/* Name and professional title of a person */}
         <h2 className="person-name">
-          {personalInfo.name.toUpperCase()} | &nbsp;
+          {personalInfo.name.toUpperCase()}&nbsp; | &nbsp;
           <span className="person-title">{personalInfo.professionalTitle}</span>
         </h2>
 
-        {/* Contacts of the person */}
+        {/* Contacts of a person */}
         <div className="person-contacts">
-          {/* Phone and email of the person */}
+          {/* Phone and email of a person */}
           <div>
             <p>
               <span>Email:</span>&nbsp;{personalInfo.email.toLowerCase()}
@@ -35,7 +35,7 @@ class PersonalPreview extends React.Component {
             </p>
           </div>
 
-          {/* Socials of the person */}
+          {/* Socials of a person */}
           <div>
             <p>
               <span>LinkedIn:</span>&nbsp;{personalInfo.linkedin}
@@ -46,7 +46,7 @@ class PersonalPreview extends React.Component {
           </div>
         </div>
 
-        {/* 'About' information of the person */}
+        {/* 'About' information of a person */}
         <h3 className="preview-info-heading">ABOUT</h3>
         <p className="person-about">
           <span>&ldquo;</span>
@@ -68,20 +68,7 @@ PersonalPreview.propTypes = {
     linkedin: PropTypes.string,
     github: PropTypes.string,
     about: PropTypes.string,
-  }),
-};
-
-// Creating default props
-PersonalPreview.defaultProps = {
-  personalInfo: {
-    name: '',
-    professionalTitle: '',
-    phone: '',
-    email: '',
-    linkedin: '',
-    github: '',
-    about: '',
-  },
+  }).isRequired,
 };
 
 export default PersonalPreview;

@@ -15,6 +15,5 @@
   background-color: var(--grey);
   overflow: hidden;
   text-overflow: ellipsis;
-  text-transform: capitalize;
   border-radius: 2px;
 }

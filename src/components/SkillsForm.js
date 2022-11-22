@@ -34,7 +34,7 @@ class SkillsForm extends React.Component {
       return (
         <form className="skills-form">
           <div className="skills-handling">
-            {/* Skill input */}
+            {/* The input of a skill */}
             <label htmlFor="skill">
               Skill
               <input
@@ -47,7 +47,7 @@ class SkillsForm extends React.Component {
               />
             </label>
 
-            {/* A button to add another skill */}
+            {/* The button to add another skill */}
             <Button
               buttonEvent={handleSkillAdd}
               buttonText="add"
@@ -63,7 +63,7 @@ class SkillsForm extends React.Component {
             />
           ) : null}
 
-          {/* If a value of input is empty - show an error after clicking '+' button */}
+          {/* If a value of the input is empty - show an error after clicking the '+' button */}
           {error === true ? <ErrorMessage /> : null}
         </form>
       );
@@ -75,32 +75,30 @@ class SkillsForm extends React.Component {
 // Validating prop types
 SkillsForm.propTypes = {
   formVisibility: PropTypes.bool,
-  handleSkillsChange: PropTypes.func,
-  handleSkillAdd: PropTypes.func,
-  handleSkillDelete: PropTypes.func,
+  handleSkillsChange: PropTypes.func.isRequired,
+  handleSkillAdd: PropTypes.func.isRequired,
+  handleSkillDelete: PropTypes.func.isRequired,
+
   skillsInfo: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string,
       index: PropTypes.number,
       id: PropTypes.string,
     })
-  ),
+  ).isRequired,
+
   skill: PropTypes.shape({
     text: PropTypes.string,
     index: PropTypes.number,
     id: PropTypes.string,
-  }),
+  }).isRequired,
+
   error: PropTypes.bool,
 };
 
 // Creating default props
 SkillsForm.defaultProps = {
   formVisibility: false,
-  handleSkillsChange: () => {},
-  handleSkillAdd: () => {},
-  handleSkillDelete: () => {},
-  skillsInfo: {},
-  skill: {},
   error: false,
 };
 

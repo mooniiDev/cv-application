@@ -129,7 +129,7 @@ class PersonalForm extends React.Component {
 // Validating Prop Types
 PersonalForm.propTypes = {
   formVisibility: PropTypes.bool,
-  handlePersonalChange: PropTypes.func,
+  handlePersonalChange: PropTypes.func.isRequired,
   personalInfo: PropTypes.shape({
     name: PropTypes.string,
     professionalTitle: PropTypes.string,
@@ -138,14 +138,12 @@ PersonalForm.propTypes = {
     linkedin: PropTypes.string,
     github: PropTypes.string,
     about: PropTypes.string,
-  }),
+  }).isRequired,
 };
 
 // Creating default props
 PersonalForm.defaultProps = {
   formVisibility: true,
-  handlePersonalChange: () => {},
-  personalInfo: {},
 };
 
 export default PersonalForm;

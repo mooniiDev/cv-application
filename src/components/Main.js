@@ -75,7 +75,7 @@ class Main extends React.Component {
     const formType =
       e.target.parentElement.parentElement.getAttribute('data-form');
 
-    // Displaying and hiding personal form
+    // Display/hide a personal form
     if (formType === 'personal') {
       this.setState((prevState) => ({
         formDisplay: {
@@ -85,7 +85,17 @@ class Main extends React.Component {
         },
       }));
 
-      // Displaying and hiding practice form
+      // Display/hide skills form
+    } else if (formType === 'skills') {
+      this.setState((prevState) => ({
+        formDisplay: {
+          ...prevState.formDisplay,
+          isSkillsFormDisplayed: !prevState.formDisplay.isSkillsFormDisplayed,
+        },
+        error: false,
+      }));
+
+      // Display/hide a practice form
     } else if (formType === 'practice') {
       this.setState((prevState) => ({
         formDisplay: {
@@ -95,7 +105,7 @@ class Main extends React.Component {
         },
       }));
 
-      // Displaying and hiding education form
+      // Display/hide an education form
     } else if (formType === 'education') {
       this.setState((prevState) => ({
         formDisplay: {
@@ -104,29 +114,19 @@ class Main extends React.Component {
             !prevState.formDisplay.isEducationFormDisplayed,
         },
       }));
-
-      // Displaying and hiding skills form
-    } else if (formType === 'skills') {
-      this.setState((prevState) => ({
-        formDisplay: {
-          ...prevState.formDisplay,
-          isSkillsFormDisplayed: !prevState.formDisplay.isSkillsFormDisplayed,
-        },
-        error: false,
-      }));
     }
   };
 
-  // MODE HANDLING
-  // A function that changes content mode when main button is clicked
+  // HANDLING OF MODE
+  // A function to change mode of content when the main button is clicked
   handleMode = () => {
     this.setState((prevState) => ({
       editMode: !prevState.editMode,
     }));
   };
 
-  // PERSONAL INFORMATION AND FORMS HANDLING
-  // A function that handles changes in personal form's inputs fields
+  // HANDLING OF PERSONAL INFORMATION
+  // A function to handle changes in inputs fields of a personal form
   handlePersonalChange = (e) => {
     this.setState((prevState) => ({
       cvInfo: {
@@ -139,8 +139,8 @@ class Main extends React.Component {
     }));
   };
 
-  // SKILLS HANDLING
-  // A function that handles changes in skills form's input field
+  // HANDLING OF SKILLS INFORMATION
+  // A function to handle changes in the input field of skills form
   handleSkillsChange = (e) => {
     this.setState((prevState) => ({
       skill: {
@@ -150,9 +150,9 @@ class Main extends React.Component {
     }));
   };
 
-  // A function that handles addition of a skill
+  // A function to handle addition of a skill
   handleSkillAdd = (e) => {
-    // If a value of input is empty - show an error after clicking '+' button
+    // If a value of the input is empty - show an error after clicking '+' button
     if (
       e.target.parentElement.firstElementChild.firstElementChild.value === ''
     ) {
@@ -160,7 +160,7 @@ class Main extends React.Component {
         error: true,
       }));
 
-      // If a value of input isn't empty - show added skill after clicking '+' button
+      // If a value of the input isn't empty - show added skill after clicking '+' button
     } else {
       this.setState((prevState) => ({
         cvInfo: {
@@ -177,7 +177,7 @@ class Main extends React.Component {
     }
   };
 
-  // A function that handles deletion of a skill
+  // A function to handle deletion of a skill
   handleSkillDelete = (e) => {
     this.setState((prevState) => ({
       cvInfo: {
@@ -190,8 +190,8 @@ class Main extends React.Component {
     }));
   };
 
-  // PRACTICAL INFORMATION HANDLING
-  // A function that handles changes in practice form's inputs fields
+  // HANDLING OF PRACTICAL INFORMATION
+  // A function to handle changes in the input field of a practice form
   handlePracticalChange = (e) => {
     this.setState((prevState) => ({
       cvInfo: {
@@ -209,7 +209,7 @@ class Main extends React.Component {
     }));
   };
 
-  // A function that handles deletion of a practice form
+  // A function to handle deletion of a practice form
   handlePracticalDelete = (e) => {
     this.setState((prevState) => ({
       cvInfo: {
@@ -222,7 +222,7 @@ class Main extends React.Component {
     }));
   };
 
-  // A function that handles addition of a practice form
+  // A function to handle addition of a practice form
   handlePracticalAdd = () => {
     this.setState((prevState) => ({
       cvInfo: {
@@ -245,8 +245,8 @@ class Main extends React.Component {
     }));
   };
 
-  // EDUCATIONAL INFORMATION HANDLING
-  // A function that handles changes in education form's inputs fields
+  // HANDLING OF EDUCATIONAL INFORMATION
+  // A function to handle changes in the input field of an education form
   handleEducationalChange = (e) => {
     this.setState((prevState) => ({
       cvInfo: {
@@ -264,7 +264,7 @@ class Main extends React.Component {
     }));
   };
 
-  // A function that handles deletion of an education form
+  // A function to handle deletion of an education form
   handleEducationalDelete = (e) => {
     this.setState((prevState) => ({
       cvInfo: {
@@ -277,7 +277,7 @@ class Main extends React.Component {
     }));
   };
 
-  // A function that handles addition of an education form
+  // A function to handle addition of an education form
   handleEducationalAdd = () => {
     this.setState((prevState) => ({
       cvInfo: {
@@ -304,19 +304,25 @@ class Main extends React.Component {
     const { formDisplay, editMode, skill, error, cvInfo } = this.state;
     const {
       handleFormDisplay,
+
       handleMode,
+
       handlePersonalChange,
+
       handleSkillsChange,
-      handleSkillAdd,
       handleSkillDelete,
+      handleSkillAdd,
+
       handlePracticalChange,
       handlePracticalDelete,
       handlePracticalAdd,
+
       handleEducationalChange,
       handleEducationalDelete,
       handleEducationalAdd,
     } = this;
 
+    // If the current mode of content is 'edit'
     if (editMode) {
       return (
         <main id="Main">
@@ -335,27 +341,29 @@ class Main extends React.Component {
             practiceDisplay={formDisplay.isPracticeFormDisplayed}
             educationDisplay={formDisplay.isEducationFormDisplayed}
             skillsDisplay={formDisplay.isSkillsFormDisplayed}
-            // All the data from forms
+            // All data from forms
             cvInfo={cvInfo}
-            // Personal info handling
+            // Handling of the personal information
             handlePersonalChange={handlePersonalChange}
-            // Skills info handling
+            // Handling of skills information
             handleSkillsChange={handleSkillsChange}
-            handleSkillAdd={handleSkillAdd}
             handleSkillDelete={handleSkillDelete}
+            handleSkillAdd={handleSkillAdd}
+            // Information of a skill
             skill={skill}
+            // Boolean of an error
             error={error}
-            // Practice info handling
+            // Handling of the practice information
             handlePracticalChange={handlePracticalChange}
             handlePracticalDelete={handlePracticalDelete}
             handlePracticalAdd={handlePracticalAdd}
-            // Education info handling
+            // Handling of the education information
             handleEducationalChange={handleEducationalChange}
             handleEducationalDelete={handleEducationalDelete}
             handleEducationalAdd={handleEducationalAdd}
           />
 
-          {/* A button to scroll back to top */}
+          {/* The button to scroll back to top */}
           <div className="floating-container">
             <a href="#Header">
               <Button
@@ -367,9 +375,11 @@ class Main extends React.Component {
         </main>
       );
     }
+
+    // If the current mode of content is 'preview'
     return (
       <main id="Main">
-        {/* A button to show 'edit' mode content */}
+        {/* The button to show 'edit' mode content */}
         <Button
           buttonEvent={handleMode}
           buttonText="EDIT"
@@ -379,7 +389,7 @@ class Main extends React.Component {
         {/* Main 'preview' mode content */}
         <PreviewCV cvInfo={cvInfo} />
 
-        {/* A button to scroll back to top */}
+        {/* The button to scroll back to the top */}
         <div className="floating-container">
           <a href="#Header">
             <Button buttonText="up" buttonClass="floating-button green-hover" />

@@ -61,13 +61,13 @@ SkillsInfo.propTypes = {
   border: PropTypes.string,
   hover: PropTypes.string,
   formVisibility: PropTypes.bool,
-  handleFormDisplay: PropTypes.func,
-  skill: PropTypes.shape({}),
+  handleFormDisplay: PropTypes.func.isRequired,
+  skill: PropTypes.shape({}).isRequired,
   error: PropTypes.bool,
-  skillsInfo: PropTypes.arrayOf(PropTypes.shape({})),
-  handleSkillsChange: PropTypes.func,
-  handleSkillAdd: PropTypes.func,
-  handleSkillDelete: PropTypes.func,
+  skillsInfo: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+  handleSkillsChange: PropTypes.func.isRequired,
+  handleSkillAdd: PropTypes.func.isRequired,
+  handleSkillDelete: PropTypes.func.isRequired,
 };
 
 // Creating default props
@@ -77,13 +77,7 @@ SkillsInfo.defaultProps = {
   border: 'blue-border',
   hover: 'blue-hover',
   formVisibility: false,
-  handleFormDisplay: () => {},
-  skill: {},
   error: false,
-  skillsInfo: [],
-  handleSkillsChange: () => {},
-  handleSkillAdd: () => {},
-  handleSkillDelete: () => {},
 };
 
 export default SkillsInfo;

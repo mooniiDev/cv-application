@@ -24,7 +24,7 @@
   transition: all 0.3s;
 }
 
-/* Deleting and adding info */
+/* Deleting/adding information */
 .delete-button,
 .add-button {
   margin-top: 5px;
@@ -62,7 +62,7 @@
   transition: all 0.3s;
 }
 
-/* Buttons hovers colors */
+/* Colors of buttons hovers */
 .green-hover:hover {
   background-color: var(--green);
   cursor: pointer;
@@ -111,13 +111,13 @@
     margin-right: 0;
   }
 
-  .add-skill-button {
-    margin-right: 15px;
-  }
-
   .add-button,
   .add-first-form-button,
   .delete-button {
+    margin-right: 15px;
+  }
+
+  .add-skill-button {
     margin-right: 15px;
   }
 }
