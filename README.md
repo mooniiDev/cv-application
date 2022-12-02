@@ -57,7 +57,6 @@ CV Application project, created with React [library](https://reactjs.org/) and `
 
 ### Third Party Code
 
-- [uniqid package](https://www.npmjs.com/package/uniqid)
 - [Font Awesome icons](https://fontawesome.com/)
 
 <img alt="Edit mode interface" src="https://user-images.githubusercontent.com/51089302/203577993-b67502d3-a98d-499f-b1cc-bcc5134e730c.png">
